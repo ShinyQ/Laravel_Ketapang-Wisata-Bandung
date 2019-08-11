@@ -2,71 +2,65 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use ApiBuilder;
+use Session;
+use Hash;
+use Bcrypt;
+use Carbon\Carbon;
+use App\User;
+use App\Mail\VerifyMail;
+use Mail;
+use Auth;
+use Validator;
+use App\Http\Requests\RegisterValidation;
 
 class RegisterController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
-
-    use RegistersUsers;
-
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest');
+   public function index(){
+      if (Auth::user()) {
+        return redirect('/studio');
+      } else {
+      return view('auth.register');
+      }
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
+    public function doRegister(RegisterValidation $request)
     {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+
+      $user = User::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'role' => 'user',
+        'password' => Bcrypt($request->password),
+        'token' => str_random(40)
+      ]);
+      Mail::to($request->email)->send(new VerifyMail($user));
+      Session::flash('message', 'Sukses Mendaftar Akun Silahkan, Cek Email Untuk Konfirmasi');
+      return redirect('/login');
     }
 
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
+
+    public function verifyUser($token)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+      $verifyUser = User::where('token', $token)->first();
+      if(isset($verifyUser) ){
+          if($verifyUser->email_verified_at == null) {
+              $time = Carbon::now();
+              $verifyUser->email_verified_at = $time;
+              $verifyUser->save();
+              Session::flash('message', 'Sukses Melakukan Konfirmasi, Silahkan Login');
+          }else{
+            Session::flash('message_gagal', 'Anda Sudah Mengkonfirmasi Akun');
+          }
+      }else{
+          Session::flash('message_gagal', 'Akun Tersebut Tidak Ditemukan');
+          return redirect('/login');
+      }
+
+      return redirect('/login');
     }
+
+
 }
