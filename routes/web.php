@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/login', 'Auth\LoginController@index')->name('login');
 Route::get('/register', 'Auth\RegisterController@index');
 Route::get('/doLogout', 'Auth\LoginController@doLogout');
@@ -24,3 +25,9 @@ Route::post('/doLogin', 'Auth\LoginController@doLogin');
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+
+Route::prefix('wisata')->group(function(){
+    Route::get('/', 'WisataController@index');
+    Route::post('/','WisataController@store');
+    Route::get('/{id}/delete','WisataController@destroy');
+  });
