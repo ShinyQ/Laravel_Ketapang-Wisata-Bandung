@@ -33,13 +33,12 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
-    
+
     'google' => [
         'client_id'     => env('GOOGLE_ID'),
         'client_secret' => env('GOOGLE_SECRET'),
         'redirect'      => env('GOOGLE_URL'),
     ],
-
 
     'stripe' => [
         'model' => App\User::class,

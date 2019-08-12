@@ -19,4 +19,11 @@
   <div class="text-center">
     <button type="submit" class="btn btn-primary my-4">Sign in</button>
   </div>
+
+  <div class="btn-wrapper text-center">
+    <a href="/auth/google" class="btn btn-neutral btn-icon">
+      <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
+      <span class="btn-inner--text">Google</span>
+    </a>
+  </div>
 </form>
