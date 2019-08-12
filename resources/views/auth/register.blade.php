@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Registrasi Akun</title>
+    <link href="{{url('img/icon.png')}}" rel="icon" type="image/png">
   </head>
   <body>
     <form action="/doRegister" method="post">
