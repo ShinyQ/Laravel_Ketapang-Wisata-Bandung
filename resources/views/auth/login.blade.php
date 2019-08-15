@@ -35,10 +35,14 @@
 						<input class="login-form-btn" type="submit" name="submit" id="submit" value="Login" class="btn">
 					</div>
 					<div class="text-center p-t-136">
-						<a  href="/register">
+						<!--<a  href="/register">
 							<font size="3px">Belum Punya Akun ?</font>
-						</a>
+						</a>-->
+            <font size="3px" color="#9e9e9e">atau</font>
 					</div>
+          <div class="text-center google-auth-btn">
+            <img src="https://user-images.githubusercontent.com/1531669/41761219-0e0e4d80-7629-11e8-9663-aabe62025d57.png" width="200px" alt="">
+          </div>
 				</form>
 			</div>
 		</div>

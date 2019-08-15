@@ -361,7 +361,7 @@ input:focus + label {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 10px;
   margin-bottom: 10px;
   transition: all 0.4s;
 }
@@ -369,6 +369,10 @@ input:focus + label {
 .login-form-btn:hover {
   background: #f8ba10;
   cursor: pointer;
+}
+
+.google-auth-btn{
+  padding-top: 10px;
 }
 
 /* Admin Style */
