@@ -28,10 +28,10 @@ class WisataController extends Controller
 
   public function store(Request $request)
   {
-    $data = new Wisata($request->except("_token"));
-    $imageName = time().'.'.request()->background->getClientOriginalExtension();
-    request()->background->move(public_path('images'), $imageName);
-    $data->background = $imageName;
+    $data = new Wisata($request->all());
+    // $imageName = time().'.'.request()->background->getClientOriginalExtension();
+    // request()->background->move(public_path('images'), $imageName);
+    // $data->background = $imageName;
     $data->save();
 
     $request->session()->flash('message','Berhasil Menambahkan Data');

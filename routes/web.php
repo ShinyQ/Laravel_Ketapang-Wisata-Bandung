@@ -15,12 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::prefix('login')->group(function(){
+  Route::get('/', 'Auth\LoginController@index')->name('login');
+  Route::post('/', 'Auth\LoginController@doLogin');
+});
 
-Route::get('/login', 'Auth\LoginController@index')->name('login');
-Route::get('/register', 'Auth\RegisterController@index');
+Route::prefix('register')->group(function(){
+  Route::get('/', 'Auth\RegisterController@index');
+  Route::post('/', 'Auth\RegisterController@doRegister');
+});
+
 Route::get('/logout', 'Auth\LoginController@doLogout');
-Route::post('/doRegister', 'Auth\RegisterController@doRegister');
-Route::post('/doLogin', 'Auth\LoginController@doLogin');
+
 
 Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
@@ -30,4 +36,5 @@ Route::prefix('wisata')->group(function(){
     Route::get('/', 'WisataController@index');
     Route::post('/','WisataController@store');
     Route::get('/{id}/delete','WisataController@destroy');
+    Route::post('/{id}','WisataController@store');
   });
