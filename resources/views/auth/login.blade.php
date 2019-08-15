@@ -1,29 +1,50 @@
-<form role="form" action ="/doLogin" method="post">
-  @csrf
-  <div class="form-group">
-    <div class="input-group input-group-alternative mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
-      </div>
-      <input name="email" class="form-control" placeholder="Email" type="email">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="input-group input-group-alternative">
-      <div class="input-group-prepend">
-        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-      </div>
-      <input name="password" class="form-control" placeholder="Password" type="password">
-    </div>
-  </div>
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary my-4">Sign in</button>
-  </div>
+<html lang="en">
 
-  <div class="btn-wrapper text-center">
-    <a href="/auth/google" class="btn btn-neutral btn-icon">
-      <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
-      <span class="btn-inner--text">Google</span>
-    </a>
-  </div>
-</form>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{{url('assets/styles/bootstrap/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{url('assets/styles/styles.css')}}" />
+    <title>Ketapang</title>
+</head>
+
+<body style="background-color: #f5f5f5;">
+    <div class="limiter">
+		<div class="container-login">
+			<div class="wrap-login">
+				<div class="login-pic js-tilt" data-tilt>
+				</div>
+        <form role="form" action ="/doLogin" method="post">
+          @csrf
+				<span class="login-form-title">
+					<img src="{{url('assets/images/logo/KetapangLogo-Color.png')}}" width="220px" alt="Logo">
+				</span>
+
+					<div class="input-container">
+						<input name="email" id="email" class="input font-segoe" type="email" required placeholder="Email"/>
+					</div>
+					<div class="input-container">
+						<input name="password" id="password" class="input font-segoe" type="password" required placeholder="Password"/>
+					</div>
+
+					<div class="container-login-form-btn">
+						<input class="login-form-btn" type="submit" name="submit" id="submit" value="Login" class="btn">
+					</div>
+					<div class="text-center p-t-136">
+						<a  href="/register">
+							<font size="3px">Belum Punya Akun ?</font>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="{{url('assets/scripts/jquery.min.js')}}"></script>
+<script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{url('assets/scripts/bootstrap/bootstrap.bundle.min.js')}}"></script>
+<script src="{{url('assets/scripts/masonry.pkgd.min.js')}}"></script>
+<script src="{{url('assets/scripts/index.js')}}"></script>
+
+</html>

@@ -56,7 +56,7 @@ class WisataController extends Controller
 
   public function update($id)
   {
-    $data = Wisata::find($id, Request $request);
+    $data = Wisata::find($id);
         if($request->background){
           $imageName = time().'.'.request()->foto->getClientOriginalExtension();
           request()->background->move(public_path('images'), $imageName);
