@@ -15,7 +15,7 @@ class UpdateTransaksiTable extends Migration
     {
       Schema::table('transaksis', function (Blueprint $table) {
         $table->string('bukti')->after('harga');
-        $table->int('id_paket')->after('id_user');
+        $table->integer('id_paket')->after('id_user');
       });
     }
 

@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use ApiBuilder;
 use Session;
 use Hash;
 use Bcrypt;
@@ -30,7 +29,6 @@ class LoginController extends Controller
   }
 
   public function doLogin(LoginValidation $request){
-
       if(!Auth::attempt([
         'email' => $request->email,
         'password' => $request->password
@@ -50,7 +48,6 @@ class LoginController extends Controller
         Session::flash('message', 'Halo Penguna Selamat Datang !');
           return redirect('/');
       }
-
    }
 
   /**
