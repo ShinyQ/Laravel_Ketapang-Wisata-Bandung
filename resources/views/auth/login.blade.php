@@ -14,6 +14,9 @@
 		<div class="container-login">
 			<div class="wrap-login">
 				<div class="login-pic js-tilt" data-tilt>
+          <center>
+            <img src="{{url('assets/images/gedung_sate.png')}}" width="250px" alt="">
+          </center>
 				</div>
         <form role="form" action ="/doLogin" method="post">
           @csrf
