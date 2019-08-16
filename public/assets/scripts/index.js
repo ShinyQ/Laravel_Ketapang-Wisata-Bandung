@@ -60,6 +60,8 @@ const newsUrl =
   "https://newsapi.org/v2/everything?apiKey=f8fd87d48cf746e0a817a4f7a21bafe4&q=bandung AND (wisata OR travel OR turis OR alam OR pemandangan)&language=id";
 axios.get(newsUrl).then(resp => {
   for (let i = 0; i < 6; i++) {
+    var d = new Date(resp.data.articles[i].publishedAt);
+    d = d.getDate()+'-'+(d.getMonth()+1)+'-'+d.getFullYear()+' '+(d.getHours() > 12 ? d.getHours() - 12 : d.getHours())+':'+d.getMinutes()+' '+(d.getHours() >= 12 ? "PM" : "AM");
     $("#newsContainer").append(`
     <div class="col-md-4 col-sm-6 col-xs-6">
     <a href="${resp.data.articles[i].url}" target="_blank">
@@ -68,7 +70,7 @@ axios.get(newsUrl).then(resp => {
     }")'>
         <div class="news-content">
                 <h5>${resp.data.articles[i].title}</h5>
-                <p>${resp.data.articles[i].publishedAt}</p>
+                <p>${ d }</p>
         </div>
     </div>
     </a>
