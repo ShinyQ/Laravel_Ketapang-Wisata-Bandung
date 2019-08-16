@@ -39,6 +39,12 @@
               </div>
             @endif
 				<div class="login-pic js-tilt" data-tilt>
+          <center>
+            <img src="{{url('assets/images/gedung_sate.png')}}" width="250px" alt="">
+          </center>
+          <center>
+            <p class="title-logo font-segoe">Ke Tempat Wisata Bandung</p>
+          </center>
 				</div>
 				<form action="/register" method="post">
           @csrf
@@ -60,10 +66,17 @@
 						<input class="login-form-btn" type="submit" name="submit" id="submit" value="Daftar" class="btn">
 					</div>
           <div class="text-center p-t-136">
+            <font size="3px" color="#9e9e9e">atau</font>
+          </div>
+          <div class="text-center google-auth-btn">
+            <img src="https://user-images.githubusercontent.com/1531669/41761219-0e0e4d80-7629-11e8-9663-aabe62025d57.png" width="200px" alt="">
+          </div>
+          <div class="text-center p-t-136">
             <a class="txt2"  href="/login">
               <font size="3px">Sudah Punya Akun ?</font>
               <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
             </a>
+          </div>
           </div>
 				</form>
 			</div>
