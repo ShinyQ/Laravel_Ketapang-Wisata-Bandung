@@ -14,7 +14,7 @@
             <div class="row">
                 @foreach($wisata as $data)
                 <div class="col-md-3 col-sm-6">
-                    <a href="/admin/wisata/{{$data->id}}">
+                    <a href="/admin/wisata/{{$data->id}}/edit">
                         <div class="wisata-card" style="background-image: url({{asset('images')}}/{{ $data->background }})">
                             <div class="wisata-card-desc">
                                 <h5>{{ $data->nama }}</h5>

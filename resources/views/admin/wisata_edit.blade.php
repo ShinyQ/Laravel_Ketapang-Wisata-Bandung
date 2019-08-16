@@ -7,20 +7,36 @@
 
      <div class="header-admin">
          <h4>
-             <a href="dashboard-wisata.html">
+             <a href="/admin/wisata">
                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                      <path d="M0 0h24v24H0z" fill="none" />
                      <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z" /></svg>
              </a>
-             Farmhouse Lembang
+            {{ $data->nama }}
          </h4>
      </div>
      <div class="row">
+       <div class="col-md-4">
+           <div class="content-admin">
+             <form role="form" action ="/admin/wisata/{{ $data->id }}" method="post" enctype="multipart/form-data">
+               @csrf
+               <div class="content-admin content-bg">
+                 <img src="{{asset('images')}}/{{ $data->background }}" class="img-fluid"/>
+                 <div class="form-group row">
+                     <div class="col-sm-12">
+                         <div class="custom-file">
+                             <input name="background" type="file" class="custom-file-input" id="customFile">
+                             <label class="custom-file-label" for="customFile">Pilih file</label>
+                         </div>
+                     </div>
+                 </div>
+               </div>
+           </div>
+       </div>
+
          <div class="col-md-8">
              <div class="content-admin">
                  <div class="content-admin content-bg">
-                   <form role="form" action ="/admin/wisata" method="post" enctype="multipart/form-data">
-                     @csrf
                      <div class="form-group row">
                        @if (Session::has('message'))
                        <div class="col-sm-12">
@@ -49,61 +65,46 @@
                        <div class="form-group row">
                            <label for="inputNamaWisata" class="col-sm-2 col-form-label">Nama Wisata</label>
                            <div class="col-sm-10">
-                               <input type="text" name="nama" class="form-control" id="inputNamaWisata"
+                               <input type="text" value="{{ $data->nama }}" name="nama" class="form-control" id="inputNamaWisata"
                                    placeholder="E.g. Farmhouse Lembang">
                            </div>
                        </div>
                        <div class="form-group row">
                            <label for="inputAlamatWisata" class="col-sm-2 col-form-label">Alamat</label>
                            <div class="col-sm-10">
-                               <textarea name="alamat" class="form-control" id="inputAlamatWisata" rows="2"></textarea>
+                               <textarea name="alamat" class="form-control" id="inputAlamatWisata" rows="2">{{ $data->alamat }}</textarea>
                            </div>
                        </div>
                        <div class="form-group row">
                            <label for="inputJamBuka" class="col-sm-2 col-form-label">Jam Buka</label>
                            <div class="col-sm-10">
-                               <input name="waktu" type="text" class="form-control" id="inputJamBuka"
+                               <input name="waktu" value="{{ $data->waktu }}" type="text" class="form-control" id="inputJamBuka"
                                    placeholder="E.g. Setiap Hari, 08.00-21.00">
                            </div>
                        </div>
                        <div class="form-group row">
                            <label for="inputTanggalDidirikan" class="col-sm-2 col-form-label">Tanggal Didirikan</label>
                            <div class="col-sm-10">
-                               <input name="tanggal_dibangun" type="date" class="form-control" id="inputTanggalDidirikan"
+                               <input name="tanggal_dibangun" value="{{ $data->tanggal_dibangun }}" type="date" class="form-control" id="inputTanggalDidirikan"
                                    placeholder="E.g. Desember 2015">
                            </div>
                        </div>
                        <div class="form-group row">
                            <label for="inputNoTelp" class="col-sm-2 col-form-label">No Telepon</label>
                            <div class="col-sm-10">
-                               <input name="telepon" type="text" class="form-control" id="inputNoTelp" placeholder="E.g. 082239473609">
+                               <input name="telepon" value="{{ $data->telepon }}" type="text" class="form-control" id="inputNoTelp" placeholder="E.g. 082239473609">
                            </div>
                        </div>
                        <div class="form-group row">
                            <label for="inputAbout" class="col-sm-2 col-form-label">Deskripsi</label>
                            <div class="col-sm-10">
-                               <textarea name="deskripsi" class="form-control" id="inputAbout" rows="4"></textarea>
+                               <textarea name="deskripsi" class="form-control" id="inputAbout" rows="4">{{ $data->deskripsi }}</textarea>
                            </div>
                        </div>
                        <div class="d-flex justify-content-end">
                            <button type="submit" class="btn btn-primary btn-submit-wisata">Submit</button>
                        </div>
                    </form>
-                 </div>
-             </div>
-         </div>
-         <div class="col-md-4">
-             <div class="content-admin">
-                 <div class="content-admin content-bg">
-                   <img src="">
-                   <div class="form-group row">
-                       <div class="col-sm-10">
-                           <div class="custom-file">
-                               <input name="background" type="file" class="custom-file-input" id="customFile">
-                               <label class="custom-file-label" for="customFile">Pilih file</label>
-                           </div>
-                       </div>
-                   </div>
                  </div>
              </div>
          </div>
