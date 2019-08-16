@@ -373,6 +373,7 @@ input:focus + label {
 
 .google-auth-btn{
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Admin Style */
