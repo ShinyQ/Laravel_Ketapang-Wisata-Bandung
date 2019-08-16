@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('wisata/detail/{id}', function () {
+    return view('wisata_detail');
+});
+
 Route::prefix('login')->group(function(){
   Route::get('/', 'Auth\LoginController@index')->name('login');
   Route::post('/', 'Auth\LoginController@doLogin');
@@ -32,17 +36,12 @@ Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
-Route::prefix('wisata')->group(function(){
-    Route::get('/', 'WisataController@index');
-    Route::post('/','WisataController@store');
-    Route::get('/{id}/delete','WisataController@destroy');
-    Route::post('/{id}','WisataController@store');
-  });
-
 Route::prefix('admin')->group(function(){
   Route::prefix('wisata')->group(function(){
     Route::get('/', 'Admin\WisataController@index');
     Route::get('/create', 'Admin\WisataController@create');
     Route::post('/', 'Admin\WisataController@store');
+    Route::get('/{id}/edit', 'Admin\WisataController@edit');
+    Route::post('/{id}', 'Admin\WisataController@update');
   });
 });

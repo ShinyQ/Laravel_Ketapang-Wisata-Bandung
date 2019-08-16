@@ -25,12 +25,10 @@ class WisataValidation extends FormRequest
     {
         return [
           'nama' => 'required|unique:wisatas',
-          'deskripsi' => 'required|min:100|max:500',
+          'deskripsi' => 'required|min:100',
           'alamat' => 'required',
           'waktu' => 'required',
-          'tanggal_dibangun' => 'required',
           'background' => 'required',
-          'telepon' => 'required'
         ];
     }
 }

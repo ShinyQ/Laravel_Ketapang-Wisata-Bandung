@@ -61,7 +61,7 @@ class WisataController extends Controller
     return view('admin.wisata_edit', compact('data'));
   }
 
-  public function update($id)
+  public function update($id, Request $request)
   {
     $data = Wisata::find($id);
         if($request->background){

@@ -19,17 +19,41 @@
             <img style="margin-top:10px" src="{{url('assets/images/gedung_sate.png')}}" width="300px" alt="">
           </center>
 				</div>
-        <form role="form" action ="/doLogin" method="post">
+        <form role="form" action ="/login" method="post">
           @csrf
 				<span class="login-form-title">
 					<img src="{{url('assets/images/logo/KetapangLogo-Color.png')}}" width="220px" alt="Logo">
 				</span>
 
+        @if ($errors->any())
+            <div class="input-container">
+              <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+                @endforeach
+              </div>
+            </div>
+            @endif
+            @if (Session::has('message'))
+              <div class="input-container">
+                <div class="alert alert-success">
+                    {{ Session::get('message') }}
+                </div>
+              </div>
+            @endif
+            @if (Session::has('message_gagal'))
+              <div class="input-container">
+                <div class="alert alert-danger">
+                    {{ Session::get('message_gagal') }}
+                </div>
+              </div>
+       @endif
+
 					<div class="input-container">
-						<input name="email" id="email" class="input font-segoe" type="email" required placeholder="Email"/>
+						<input name="email" id="email" class="input font-segoe" type="email"  placeholder="Email"/>
 					</div>
 					<div class="input-container">
-						<input name="password" id="password" class="input font-segoe" type="password" required placeholder="Password"/>
+						<input name="password" id="password" class="input font-segoe" type="password" placeholder="Password"/>
 					</div>
 
 					<div class="container-login-form-btn">
