@@ -152,9 +152,7 @@
             </div>
         </div>
     </section>
-    @endsection
 
-    <!-- Footer  -->
     <section class="footer">
         <div class="container">
             <p class="float-right">Copyright &copy; 2019 - Ketapang - Telkom University</p>
@@ -169,5 +167,6 @@
 <script src="{{url('assets/scripts/owl.carousel.min.js')}}"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="{{url('assets/scripts/index.js')}}"></script>
+    @endsection
 
 </html>

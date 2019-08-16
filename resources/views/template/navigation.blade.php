@@ -17,7 +17,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
-            <a class="navbar-brand nav-home" href="#">
+            <a class="navbar-brand nav-home" href="/">
                 <div class="nav-brand">
                     <img src="{{url('assets/images/logo/KetapangLogoOnly-White.png')}}" height="50" alt="">
 
