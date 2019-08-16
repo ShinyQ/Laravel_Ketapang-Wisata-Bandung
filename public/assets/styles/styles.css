@@ -423,6 +423,50 @@ a:hover{
   padding: 100px 60px 40px 60px;
 }
 
+@media only screen and (max-width: 768px) {
+    .wrap-login {
+        padding: 50px 10px 0px 70px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .wrap-login{
+      padding: 0px 200px 0px 50px;
+    }
+    .login-pic{
+      visibility: hidden;
+    }
+}
+@media only screen and (max-width : 414px)
+{
+  .wrap-login{
+    padding: 0px 200px 0px 70px;
+  }
+  .login-pic{
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width : 375px)
+{
+  .wrap-login{
+    padding: 0px 50px 0px 50px;
+  }
+}
+@media only screen and (max-width : 320px)
+{
+  .wrap-login{
+    padding: 0px 50px 0px 30px;
+  }
+  .login-pic{
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width : 360px)
+{
+  .wrap-login{
+    padding: 0px 0px 0px 50px;
+  }
+}
+
 /*------------------------------------------------------------------
 [  ]*/
 .login-pic {
