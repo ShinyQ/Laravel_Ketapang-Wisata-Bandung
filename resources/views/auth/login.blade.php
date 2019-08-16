@@ -14,14 +14,10 @@
     <div class="limiter">
 		<div class="container-login">
 			<div class="wrap-login">
-				<div class="login-pic js-tilt" data-tilt>
+        <div class="login-pic js-tilt" data-tilt>
           <center>
-            <img src="{{url('assets/images/gedung_sate.png')}}" width="250px" alt="">
+            <img style="margin-top:10px" src="{{url('assets/images/gedung_sate.png')}}" width="300px" alt="">
           </center>
-          <center>
-            <p class="title-logo font-segoe">Ke Tempat Wisata Bandung</p>
-          </center>
-
 				</div>
         <form role="form" action ="/doLogin" method="post">
           @csrf
@@ -43,13 +39,16 @@
             <font size="3px" color="#9e9e9e">atau</font>
 					</div>
           <div class="text-center google-auth-btn">
-            <img src="https://user-images.githubusercontent.com/1531669/41761219-0e0e4d80-7629-11e8-9663-aabe62025d57.png" width="200px" alt="">
-          </div>
-          <div class="text-center p-t-136">
-            <a  href="/register">
-              <font size="3px">Belum Punya Akun ?</font>
+            <a href="/auth/google">
+              <img src="https://user-images.githubusercontent.com/1531669/41761219-0e0e4d80-7629-11e8-9663-aabe62025d57.png" width="250px" alt="">
             </a>
           </div>
+          <center>
+            <font size="3px">Belum Punya Akun ?</font>
+            <a class="txt2"  href="/register">
+              <font size="3px">Daftar</font>
+            </a>
+          </center>
 				</form>
 			</div>
 		</div>

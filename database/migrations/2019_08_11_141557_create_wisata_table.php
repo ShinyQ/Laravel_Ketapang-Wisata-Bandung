@@ -17,7 +17,7 @@ class CreateWisataTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->string('deskripsi', '500');
-            $table->string('alamat');
+            $table->text('alamat');
             $table->string('waktu')->nullable();
             $table->string('tanggal_dibangun')->nullable();
             $table->string('background');

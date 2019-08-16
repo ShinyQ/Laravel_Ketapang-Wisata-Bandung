@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{url('assets/styles/owl/owl.theme.default.css')}}">
     <link rel="stylesheet" href="{{url('assets/styles/owl/owl.theme.green.css')}}">
     <link rel="stylesheet" href="{{url('assets/styles/styles.css')}}" />
+    <link href="{{url('img/icon.png')}}" rel="icon" type="image/png">
     <title>Ketapang</title>
 </head>
 

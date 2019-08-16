@@ -405,7 +405,7 @@ a:hover{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 130px 130px 33px 110px;
+  padding: 50px 110px 50px 110px;
 }
 
 .wrap-register {
@@ -554,7 +554,7 @@ input:focus + label {
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #57b846;
+  background: #F8BA10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -564,7 +564,7 @@ input:focus + label {
 }
 
 .login-form-btn:hover {
-  background: #f8ba10;
+  background: #FFDE83;
   cursor: pointer;
 }
 
