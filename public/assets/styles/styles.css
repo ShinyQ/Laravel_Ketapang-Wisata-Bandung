@@ -238,7 +238,7 @@ a:hover{
 }
 .detail-text-hl {
   padding: 10px;
-  font-weight: 100;
+  font-weight: 400;
   background: #f8ba10;
 }
 
@@ -246,7 +246,6 @@ a:hover{
   max-height: 340px;
   width: 100%;
   min-height: 300px;
-  background-image: url("../images/wisata/farmhouse-lembang.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

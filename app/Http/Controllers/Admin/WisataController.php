@@ -55,6 +55,12 @@ class WisataController extends Controller
     return redirect()->back();
   }
 
+  public function detail($id)
+  {
+    $data = Wisata::find($id);
+    return view('wisata_detail', compact('data'));
+  }
+
   public function edit($id)
   {
     $data = Wisata::find($id);
