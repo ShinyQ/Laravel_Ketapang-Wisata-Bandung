@@ -22,7 +22,7 @@ a:hover{
   color: #212121;
 }
 .verticalline-left{
-  
+
 }
 
 /* Landing Style */
@@ -440,6 +440,7 @@ a:hover{
     }
     .login-pic{
       visibility: hidden;
+       display: none;
     }
 }
 @media only screen and (max-width : 414px)
@@ -449,12 +450,18 @@ a:hover{
   }
   .login-pic{
     visibility: hidden;
+    display: none;
   }
 }
 @media only screen and (max-width : 375px)
 {
   .wrap-login{
     padding: 0px 50px 0px 50px;
+  }
+
+  .login-pic{
+    visibility: hidden;
+    display: none;
   }
 }
 @media only screen and (max-width : 320px)
@@ -464,7 +471,10 @@ a:hover{
   }
   .login-pic{
     visibility: hidden;
+    display: none;
   }
+
+
 }
 @media only screen and (max-width : 360px)
 {
