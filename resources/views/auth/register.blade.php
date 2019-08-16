@@ -15,29 +15,6 @@
     <div class="limiter">
 		<div class="container-login">
 			<div class="wrap-login">
-        @if ($errors->any())
-            <div class="col-sm-12">
-              <div class="alert alert-danger">
-                @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
-                @endforeach
-              </div>
-            </div>
-            @endif
-            @if (Session::has('message'))
-              <div class="col-sm-12">
-                <div class="alert alert-success">
-                    {{ Session::get('message') }}
-                </div>
-              </div>
-            @endif
-            @if (Session::has('message_gagal'))
-              <div class="col-sm-12">
-                <div class="alert alert-danger">
-                    {{ Session::get('message_gagal') }}
-                </div>
-              </div>
-            @endif
 				<div class="login-pic js-tilt" data-tilt>
           <center>
             <img style="margin-top:50px" src="{{url('assets/images/gedung_sate.png')}}" width="500px" alt="">
@@ -49,14 +26,38 @@
 					<img src="{{url('assets/images/logo/KetapangLogo-Color.png')}}" width="220px" alt="Logo">
 				</span>
 
+        @if ($errors->any())
+            <div class="input-container">
+              <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+                @endforeach
+              </div>
+            </div>
+            @endif
+            @if (Session::has('message'))
+              <div class="input-container">
+                <div class="alert alert-success">
+                    {{ Session::get('message') }}
+                </div>
+              </div>
+            @endif
+            @if (Session::has('message_gagal'))
+              <div class="input-container">
+                <div class="alert alert-danger">
+                    {{ Session::get('message_gagal') }}
+                </div>
+              </div>
+       @endif
+
 					<div class="input-container">
-						<input id="name" name="name" class="input font-segoe" type="text" required placeholder="Nama"/>
+						<input id="name" name="name" class="input font-segoe" type="text" placeholder="Nama"/>
 					</div>
 					<div class="input-container">
-						<input id="email" name="email" class="input font-segoe" type="email" required placeholder="Email"/>
+						<input id="email" name="email" class="input font-segoe" type="email" placeholder="Email"/>
 					</div>
 					<div class="input-container">
-						<input id="password" name="password" class="input font-segoe" type="password" required placeholder="Password"/>
+						<input id="password" name="password" class="input font-segoe" type="password" placeholder="Password"/>
 					</div>
 
 					<div class="container-login-form-btn">
