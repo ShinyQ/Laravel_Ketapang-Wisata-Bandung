@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 use App\Wisata;
 use Session;
 use Illuminate\Http\Request;
+use App\Http\Requests\WisataValidation;
 
 class WisataController extends Controller
 {
@@ -26,12 +28,17 @@ class WisataController extends Controller
     return view('admin.wisata', compact('wisata','counter'));
   }
 
-  public function store(Request $request)
+  public function create()
   {
-    $data = new Wisata($request->all());
-    // $imageName = time().'.'.request()->background->getClientOriginalExtension();
-    // request()->background->move(public_path('images'), $imageName);
-    // $data->background = $imageName;
+      return view('admin.wisata_add');
+  }
+
+  public function store(WisataValidation $request)
+  {
+    $data = new Wisata($request->except("_token"));
+    $imageName = time().'.'.request()->background->getClientOriginalExtension();
+    request()->background->move(public_path('images'), $imageName);
+    $data->background = $imageName;
     $data->save();
 
     $request->session()->flash('message','Berhasil Menambahkan Data');

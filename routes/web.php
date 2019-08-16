@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::prefix('login')->group(function(){
@@ -38,3 +38,11 @@ Route::prefix('wisata')->group(function(){
     Route::get('/{id}/delete','WisataController@destroy');
     Route::post('/{id}','WisataController@store');
   });
+
+Route::prefix('admin')->group(function(){
+  Route::prefix('wisata')->group(function(){
+    Route::get('/', 'Admin\WisataController@index');
+    Route::get('/create', 'Admin\WisataController@create');
+    Route::post('/', 'Admin\WisataController@store');
+  });
+});
