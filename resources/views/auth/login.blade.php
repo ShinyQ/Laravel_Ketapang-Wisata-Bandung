@@ -19,7 +19,7 @@
             <img style="margin-top:10px" src="{{url('assets/images/gedung_sate.png')}}" width="300px" alt="">
           </center>
 				</div>
-        <form role="form" action ="/doLogin" method="post">
+        <form role="form" action ="/login" method="post">
           @csrf
 				<span class="login-form-title">
 					<img src="{{url('assets/images/logo/KetapangLogo-Color.png')}}" width="220px" alt="Logo">
