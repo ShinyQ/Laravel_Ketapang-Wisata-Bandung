@@ -2,11 +2,7 @@
 
 @section('konten')
 <!-- Admin Wisata Content -->
-<style>
-  .wisata-card{
-     background-image: url("/assets/img/background.png")
-  }
-</style>
+
     <div class="main-admin">
         <div class="header-admin">
             <h4>List Tempat Wisata</h4>
@@ -18,8 +14,8 @@
             <div class="row">
                 @foreach($wisata as $data)
                 <div class="col-md-3 col-sm-6">
-                    <a href="dashboard-wisata-detail.html">
-                        <div class="wisata-card">
+                    <a href="/admin/wisata/{{$data->id}}">
+                        <div class="wisata-card" style="background-image: url({{asset('images')}}/{{ $data->background }})">
                             <div class="wisata-card-desc">
                                 <h5>{{ $data->nama }}</h5>
                                 <p>{{ $data->alamat }}</p>
