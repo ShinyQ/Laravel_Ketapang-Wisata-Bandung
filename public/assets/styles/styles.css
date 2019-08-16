@@ -21,6 +21,9 @@ a:hover{
 .color-black {
   color: #212121;
 }
+.verticalline-left{
+  
+}
 
 /* Landing Style */
  .nav-home{
@@ -205,8 +208,11 @@ a:hover{
 
 
  .footer{
-   background: white;
+   background: #FAAC14;
    margin-top: 128px;
+ }
+ .footer p{
+   margin-bottom: 0;
  }
 
  @media (max-width: 970px) {
