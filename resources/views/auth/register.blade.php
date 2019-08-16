@@ -42,6 +42,9 @@
           <center>
             <img src="{{url('assets/images/gedung_sate.png')}}" width="250px" alt="">
           </center>
+          <center>
+            <p class="title-logo font-segoe">Ke Tempat Wisata Bandung</p>
+          </center>
 				</div>
 				<form action="/register" method="post">
           @csrf

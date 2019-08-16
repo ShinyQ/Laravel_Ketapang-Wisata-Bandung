@@ -240,6 +240,11 @@ a:hover{
 .login-pic img {
   max-width: 100%;
 }
+.title-logo{
+  font-size: 35px;
+  font-style: italic;
+  margin-top: 10px;
+}
 
 /*------------------------------------------------------------------
 [  ]*/
