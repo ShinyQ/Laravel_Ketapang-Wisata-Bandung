@@ -91,6 +91,9 @@ a:hover{
  .header{
    padding-top: 110px;
  }
+ .header-img{
+   overflow: hidden;
+ }
 
  @media only screen and (max-width: 360px) {
      .header{

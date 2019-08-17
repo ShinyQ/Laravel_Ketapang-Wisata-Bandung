@@ -8,9 +8,9 @@
             <span></span>
         </div>
         <div class="hero-content d-flex align-items-center">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-4">
                       <div class="header">
                         <h1>Ketapang</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa vel, provident libero eius
@@ -18,9 +18,9 @@
                             fugit magnam rem eveniet!</p>
                       </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-8 nopadding">
                       <center>
-                        <img src="{{url('assets/images/wisata/gedungsate_bitmap.png')}}" width="90%" alt="">
+                        <img class="float-right header-img" src="{{url('assets/images/wisata/gedungsate_bitmap.png')}}" width="100%" alt="">
                       </center>
                     </div>
                 </div>
@@ -43,7 +43,6 @@
         </div>
     </section>
     <section class="landing features">
-
         <div class="container features-content">
             <div class="row ">
                 <div class="col-md-4">
@@ -92,6 +91,9 @@
             </div>
             <div class="item">
                 <h4>4</h4>
+            </div>
+            <div class="item">
+                <h4>5</h4>
             </div>
         </div>
         <div class="container d-flex justify-content-end">
