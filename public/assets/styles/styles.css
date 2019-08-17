@@ -193,7 +193,8 @@ a:hover{
   border-radius: 50%;
 }
 .features h3{
-  color: #f8ba10
+  color: #f8ba10;
+  font-weight: bold;
 }
 .features p{
   margin-top: 16px;

@@ -47,32 +47,20 @@
         <div class="container features-content">
             <div class="row ">
                 <div class="col-md-4">
-                    <!-- <img src="https://via.placeholder.com/150" alt=""> -->
-                    <!-- Replace SVG with icon 150x150 -->
-                    <svg height="150" width="150">
-                        <circle cx="75" cy="75" r="60" fill="#ffd664" />
-                    </svg>
-                    <h3>Senyum</h3>
+                    <img src="{{url('assets/images/highlight/kuliner.png')}}" width="120px" alt="">
+                    <h3>Kuliner</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid aut quos temporibus
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <!-- <img src="https://via.placeholder.com/150" alt=""> -->
-                    <!-- Replace SVG with icon 150x150 -->
-                    <svg height="150" width="150">
-                        <circle cx="75" cy="75" r="60" fill="#ffd664" />
-                    </svg>
-                    <h3>Sapa</h3>
+                    <img src="{{url('assets/images/highlight/wisata.png')}}" width="120px" alt="">
+                    <h3>Wisata</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid aut quos temporibus
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <!-- <img src="https://via.placeholder.com/150" alt=""> -->
-                    <!-- Replace SVG with icon 150x150 -->
-                    <svg height="150" width="150">
-                        <circle cx="75" cy="75" r="60" fill="#ffd664" />
-                    </svg>
-                    <h3>Santuy</h3>
+                    <img src="{{url('assets/images/highlight/sejarah.png')}}" width="120px" alt="">
+                    <h3>Sejarah</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid aut quos temporibus
                     </p>
                 </div>
