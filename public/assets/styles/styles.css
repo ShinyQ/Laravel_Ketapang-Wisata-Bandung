@@ -304,8 +304,23 @@ a:hover {
 
 /* Detail Style */
 
+.container-wisata {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.list-wisata {
+    position: absolute;
+    width: 100%;
+    background: #ebebeb88;
+    padding: 16px;
+    height: 100%;
+    overflow-y: scroll;
+}
 .map-detail {
     height: 600px;
+}
+.map-wisata {
 }
 .detail-title {
     font-size: 4vh;
@@ -320,6 +335,14 @@ a:hover {
     padding: 10px;
     font-weight: 400;
     background: #f8ba10;
+}
+
+.hero-wisata {
+    max-height: 340px;
+    width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-detail {
