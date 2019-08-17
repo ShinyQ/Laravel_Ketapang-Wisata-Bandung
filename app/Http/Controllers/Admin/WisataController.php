@@ -6,9 +6,23 @@ use App\Wisata;
 use Session;
 use Illuminate\Http\Request;
 use App\Http\Requests\WisataValidation;
+use Illuminate\Support\Facades\Auth;
 
 class WisataController extends Controller
 {
+
+  public function __construct()
+  {
+    if(Auth::user()){
+        if(Auth::user()->role == "user"){
+          return redirect()->back();
+        }
+      }
+    else{
+      return view('auth.login');
+    }
+  }
+
   public function index()
   {
     $counter = 1;

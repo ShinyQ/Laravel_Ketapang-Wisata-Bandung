@@ -19,12 +19,17 @@ use App\Http\Requests\RegisterValidation;
 class RegisterController extends Controller
 {
    public function index(){
-      if (Auth::user()) {
-        return redirect('/studio');
-      } else {
-      return view('auth.register');
-      }
-    }
+       if(Auth::user()){
+         if(Auth::user()->role == "admin"){
+           return redirect('/admin/wisata');
+         }else{
+           return redirect('/');
+         }
+       }
+       else{
+         return view('auth.register');
+       }
+   }
 
     public function doRegister(RegisterValidation $request)
     {

@@ -18,7 +18,7 @@ class LoginController extends Controller
   public function index(){
        if(Auth::user()){
          if(Auth::user()->role == "admin"){
-           return redirect('/admin');
+           return redirect('/admin/wisata');
          }else{
            return redirect('/');
          }

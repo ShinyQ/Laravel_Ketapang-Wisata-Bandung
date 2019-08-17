@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateTransaksiTable extends Migration
+class CreatePaketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class UpdateTransaksiTable extends Migration
      */
     public function up()
     {
-      Schema::table('transaksis', function (Blueprint $table) {
-        $table->string('bukti')->after('harga');
-        $table->string('status')->after('bukti');
-        $table->integer('id_paket')->after('id_user');
-      });
+        Schema::create('pakets', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->string('nama');
+            $table->string('harga')
+        });
     }
 
     /**
@@ -27,6 +28,6 @@ class UpdateTransaksiTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('pakets');
     }
 }

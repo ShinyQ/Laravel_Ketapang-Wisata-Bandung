@@ -16,6 +16,7 @@ class CreateTransaksisTable extends Migration
         Schema::create('transaksis', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('id_user');
+            $table->date('tanggal');
             $table->string('harga');
             $table->timestamps();
         });

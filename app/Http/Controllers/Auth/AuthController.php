@@ -22,11 +22,7 @@ class AuthController extends Controller
     {
         $user = Socialite::driver($provider)->user();
         $result = $this->tokenValidasi($user->token);
-        //dd($user);
-        // $validation = new GoogleValidation($provider);
-        // $data = $validation->tokenValidasi($user->token);
-        // dd($user);
-
+        
         if (!$result) { return redirect('/login');}
 
         $authUser = $this->findOrCreateUser($user, $provider);
