@@ -88,6 +88,44 @@ a:hover{
   left: calc(100%/5);
  }
 
+ .header{
+   padding-top: 110px;
+ }
+
+ @media only screen and (max-width: 360px) {
+     .header{
+       padding: 0;
+     }
+     .hero-content{
+       margin-top: auto;
+       margin-bottom: auto;
+     }
+ }
+ @media only screen and (max-width: 768px) {
+     .header{
+       padding: 0;
+     }
+     .hero-content{
+       height: 550px;
+     }
+ }
+ @media only screen and (max-width: 375px) {
+     .header{
+       padding: 0;
+     }
+     .hero-content{
+       height: 600px;
+     }
+ }
+ @media only screen and (max-width: 414px) {
+     .header{
+       padding: 0;
+     }
+     .hero-content{
+       height: 650px;
+     }
+ }
+
  .landing{
   position: relative;
   margin-bottom: 128px;

@@ -10,14 +10,18 @@
         <div class="hero-content d-flex align-items-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-7">
+                      <div class="header">
                         <h1>Ketapang</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa vel, provident libero eius
                             dignissimos ducimus facere voluptate quae ex nostrum sit, non impedit earum atque suscipit
                             fugit magnam rem eveniet!</p>
+                      </div>
                     </div>
-                    <div class="col-md-4">
-
+                    <div class="col-md-5">
+                      <center>
+                        <img src="{{url('assets/images/wisata/gedungsate_bitmap.png')}}" width="90%" alt="">
+                      </center>
                     </div>
                 </div>
             </div>
