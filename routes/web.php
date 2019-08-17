@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('wisata/{id}', 'Admin\WisataController@detail');
+Route::prefix('wisata')->group(function(){
+  Route::get('/', function () { return view('wisata'); });
+  Route::get('/{id}', 'Admin\WisataController@detail');
+});
 
 Route::prefix('login')->group(function(){
   Route::get('/', 'Auth\LoginController@index')->name('login');
