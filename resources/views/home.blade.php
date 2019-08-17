@@ -48,19 +48,19 @@
                 <div class="col-md-4">
                     <img src="{{url('assets/images/highlight/kuliner.png')}}" width="120px" alt="">
                     <h3>Kuliner</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid aut quos temporibus
+                    <p>Kuliner enak dan murah meriah memang identik dengan kota yang satu ini. Kuliner jajanan yang unik dan legendaris menggoyang lidah pun ada disini.
                     </p>
                 </div>
                 <div class="col-md-4">
                     <img src="{{url('assets/images/highlight/wisata.png')}}" width="120px" alt="">
                     <h3>Wisata</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid aut quos temporibus
+                    <p>Bagi kalian yang berencana menghabiskan akhir tahun, Kota Bandung memang cocok untuk Anda kunjungi.
                     </p>
                 </div>
                 <div class="col-md-4">
                     <img src="{{url('assets/images/highlight/sejarah.png')}}" width="120px" alt="">
                     <h3>Sejarah</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid aut quos temporibus
+                    <p>Selain memiliki berbagai destinasi wisata alam, Bandung turut dihuni banyak bangunan bersejarah saksi kemerdekaan Indonesia.
                     </p>
                 </div>
             </div>
