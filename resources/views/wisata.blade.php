@@ -1,54 +1,45 @@
 @extends('template.navigation')
 
 @section('konten')
-    <!-- Detail Hero -->
-    <!-- <section style="" class="hero-wisata">
-        <div class="container d-flex flex-column-reverse align-items-start">
-            <p style="color:white" class="detail-text-hl">a</p>
-            <span class="detail-title">a</span>
-        </div>
-        <div class="hero-bg">
-
-        </div> -->
     </section>
     <!-- End of Detail Hero -->
-
+    <style>
+      .centered{
+        margin: 0;
+        text-align: center;
+      }
+    </style>
     <div class="container-wisata">
         <div class="row no-gutters">
             <div class="col-md-5">
+                <form class="navbar-search">
+                  <div class="form-group">
+                      <div class="input-group input-group-alternative">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-search"></i></span>
+                          </div>
+                          <form action="/wisata" method="GET">
+                            <input class="form-control" type="text" name="search" value="{{ request()->get('search') }}" placeholder="Cari Barang...">
+                          </form>
+                      </div>
+                  </div>
+                </form>
                 <div class="list-wisata">
                     <div class="row">
+                      @foreach($wisata as $data)
                         <div class="col-md-6">
-                        <a href="#">
-                        <div class="wisata-card" style="background-image: url('assets/images/wisata/farmhouse-lembang.jpg')">
-                            <div class="wisata-card-desc">
-                                <h5>Farmhouse Lembang</h5>
-                                <p>Jalan Danau Towuti G5E no 24</p>
-                            </div>
+                          <a href="/wisata/{{$data->id}}">
+                          <div class="wisata-card" style="background-image: url({{asset('images')}}/{{ $data->background }})">
+                              <div class="wisata-card-desc">
+                                  <h5>{{ $data->nama }}</h5>
+                                  <p>{{ $data->alamat }}</p>
+                              </div>
+                          </div>
+                          </a>
                         </div>
-                    </a>
-                        </div>
-                        <div class="col-md-6">
-                        <a href="#">
-                        <div class="wisata-card" style="background-image: url('assets/images/wisata/farmhouse-lembang.jpg')">
-                            <div class="wisata-card-desc">
-                                <h5>Farmhouse Lembang</h5>
-                                <p>Jalan Danau Towuti G5E no 24</p>
-                            </div>
-                        </div>
-                    </a>
-                        </div>
-                        <div class="col-md-6">
-                        <a href="#">
-                        <div class="wisata-card" style="background-image: url('assets/images/wisata/farmhouse-lembang.jpg')">
-                            <div class="wisata-card-desc">
-                                <h5>Farmhouse Lembang</h5>
-                                <p>Jalan Danau Towuti G5E no 24</p>
-                            </div>
-                        </div>
-                    </a>
-                        </div>
+                      @endforeach
                     </div>
+                    <ul class="pagination justify-content-center">{!! $wisata->appends(request()->all())->links() !!}</ul>
                 </div>
             </div>
             <div class="col-md-7">
@@ -61,7 +52,6 @@
     <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
     <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
     <script src="{{url('assets/scripts/bootstrap/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{url('assets/scripts/masonry.pkgd.min.js')}}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYTqP6EacKcUYlnQaaGs2TlrKwAhUonoY&callback=initMap"
     async defer></script>
     <script>
@@ -112,7 +102,7 @@
         }
       });
       })
-      
+
     }
     </script>
     </html>

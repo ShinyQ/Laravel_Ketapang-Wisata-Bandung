@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
 
 Route::prefix('wisata')->group(function(){
-  Route::get('/', function () { return view('wisata'); });
+  Route::get('/', 'HomeController@wisata');
   Route::get('/{id}', 'Admin\WisataController@detail');
 });
 

@@ -101,7 +101,7 @@
             </div>
         </div>
         <div class="container d-flex justify-content-end">
-            <a href="#">
+            <a href="/wisata">
                 Lihat Semua
             </a>
         </div>
