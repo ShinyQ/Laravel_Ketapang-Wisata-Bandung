@@ -3,14 +3,18 @@
 @section('konten')
 <!-- Hero Landing-->
     <section class="hero">
+    <div class="hero-overlay">
+            <span></span>
+            <span></span>
+        </div>
         <div class="hero-slanted">
             <span></span>
             <span></span>
         </div>
         <div class="hero-content d-flex align-items-center">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                       <div class="header">
                         <h1>Ketapang</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa vel, provident libero eius
@@ -18,10 +22,10 @@
                             fugit magnam rem eveniet!</p>
                       </div>
                     </div>
-                    <div class="col-md-8 nopadding">
-                      <center>
+                    <div class="col-md-7">
+                      <!-- <center>
                         <img class="float-right header-img" src="{{url('assets/images/wisata/gedungsate_bitmap.png')}}" width="100%" alt="">
-                      </center>
+                      </center> -->
                     </div>
                 </div>
             </div>
