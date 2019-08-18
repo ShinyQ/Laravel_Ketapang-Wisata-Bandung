@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Wisata;
+use App\Paket;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,7 @@ class HomeController extends Controller
     {
       $counter = 1;
       $wisata = Wisata::query()->orderBy('nama', 'asc');
+
       if (request()->has("search") && strlen(request()->query("search")) >= 1) {
         $wisata->where(
           "wisatas.nama", "like", "%" . request()->query("search") . "%"
@@ -34,6 +36,12 @@ class HomeController extends Controller
       }
 
       return view('wisata', compact('wisata','counter'));
+    }
+
+    public function paket($id)
+    {
+      $data = Paket::find($id);
+      return view('paket', compact('data'));
     }
 
 }

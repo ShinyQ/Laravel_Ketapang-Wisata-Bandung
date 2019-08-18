@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Transaksi;
 
 class TransaksiController extends Controller
 {
@@ -13,7 +14,8 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-
+      $data = Transaksi::where('id_user', \Auth::user()->id);
+      return view('transaksi', compact('$data'));
     }
 
     /**
@@ -34,7 +36,19 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $now = Carbon::today();
+
+      if($request->tanggal < $now){
+        $request->session()->flash('message_gagal','Tanggal Jadwal Sudah Lewat');
+        return redirect()->back();
+      }
+      else{
+        $data = new Transaksi($request->except("_token"));
+        $data->status = "Belum Dibayar";
+        $data->save();
+        $request->session()->flash('message','Sukses Menambah Jadwal, Silahkan Mengupload Bukti Bayar');
+        return redirect('tranasaksi');
+      }
     }
 
     /**
@@ -45,7 +59,8 @@ class TransaksiController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Transaksi::find($id);
+        return view('transaksi_detail', compact('data'));
     }
 
     /**
@@ -68,7 +83,30 @@ class TransaksiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $now = Carbon::today();
+
+      if($request->tanggal < $now){
+        $request->session()->flash('message_gagal','Tanggal Jadwal Sudah Lewat');
+        return redirect()->back();
+      }
+      else{
+        if($request->bukti){
+          $imageName = time().'.'.request()->foto->getClientOriginalExtension();
+          request()->background->move(public_path('images/bukti'), $imageName);
+          $data->bukti = $imageName;
+          $data->tanggal = $request->tanggal;
+          $data->save();
+          $request->session()->flash('message','Berhasil Menambahkan Bukti Bayar');
+          return redirect()->back();
+        }
+        else{
+          $data->tanggal = $request->tanggal;
+          $data->save();
+
+          $request->session()->flash('message','Berhasil Mengubah Tanggal');
+          return redirect()->back();
+        }
+      }
     }
 
     /**
@@ -79,6 +117,11 @@ class TransaksiController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $data = Transaksi::find($id);
+      $data->delete();
+      if($data) {
+          Session::flash('message','Berhasil menghapus Transaksi');
+      }
+      return redirect()->back();
     }
 }

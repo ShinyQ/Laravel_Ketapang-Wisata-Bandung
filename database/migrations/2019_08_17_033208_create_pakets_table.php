@@ -17,7 +17,7 @@ class CreatePaketsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('nama');
-            $table->string('harga')
+            $table->string('harga');
         });
     }
 
