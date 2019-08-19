@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Wisata;
+use App\Wisatas;
 use App\Paket;
 
 class HomeController extends Controller
@@ -14,14 +14,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $wisata = Wisata::query()->latest()->limit(5);
+      $wisata = Wisatas::query()->latest()->limit(5);
       return view('home', compact('wisata'));
     }
 
     public function wisata()
     {
       $counter = 1;
-      $wisata = Wisata::query()->orderBy('nama', 'asc');
+      $wisata = Wisatas::query()->orderBy('nama', 'asc');
 
       if (request()->has("search") && strlen(request()->query("search")) >= 1) {
         $wisata->where(

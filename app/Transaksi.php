@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Wisata extends Model
+class Transaksi extends Model
 {
     public $timestamps = true;
-    protected $fillable = ['nama','deskripsi','alamat','waktu','tanggal_dibangun','background'.'telepon'];
+    protected $fillable = ['id_user', 'id_paket', 'bukti', 'status'];
 }

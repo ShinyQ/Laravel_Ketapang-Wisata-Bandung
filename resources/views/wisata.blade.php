@@ -49,7 +49,7 @@
                         </div>
                       @endforeach
                     </div>
-                    <ul class="pagination justify-content-center">{!! $wisata->appends(request()->all())->links() !!}</ul>
+                    <ul style="padding-bottom:100px" class="pagination justify-content-center">{!! $wisata->appends(request()->all())->links() !!}</ul>
                 </div>
             </div>
             <div class="col-md-7">
@@ -68,9 +68,9 @@
 
 
     let locationArr = [];
+
     $(".wisata-card-desc p").each(function(a){
       locationArr.push($(this).text())
-      console.log($(this).text())
     })
     // Function to determine the size of the map div
     function resizeWindow(){
@@ -93,11 +93,6 @@
     }
 
     function geoLocation(geocoder, mapResults) {
-      const address = [
-        'Telkom University',
-        'Farmhouse Lembang',
-        'Bandung Digital Valley'
-      ];
 
       locationArr.map(location=>{
         geocoder.geocode({ address: location }, function(res, status) {

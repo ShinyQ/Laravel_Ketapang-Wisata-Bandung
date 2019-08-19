@@ -53,14 +53,14 @@
     <div class="admin-sidebar">
         <ul class="nav flex-column nav-sidebar">
             <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active" href="/admin/wisata">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M0 0h24v24H0z" fill="none" />
                         <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" /></svg>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/admin/transaksi">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M0 0h24v24H0z" fill="none" />
                         <path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z" /></svg>
@@ -75,6 +75,5 @@
   <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
   <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
   <script src="{{url('assets/scripts/bootstrap/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{url('assets/scripts/index.js')}}"></script>
   </html>
      <!-- End of Wisata Content -->
