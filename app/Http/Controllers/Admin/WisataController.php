@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
-use App\Wisata;
+use App\Wisatas;
 use Session;
 use Illuminate\Http\Request;
 use App\Http\Requests\WisataValidation;
@@ -13,20 +13,25 @@ class WisataController extends Controller
 
   public function __construct()
   {
-    if(Auth::user()){
-        if(Auth::user()->role == "user"){
-          return redirect()->back();
-        }
+    $this->middleware(function ($request, $next){
+      if(!Auth::user()){
+        return redirect('/login');
+        return $next($request);
       }
-    else{
-      return view('auth.login');
-    }
-  }
+      else if(Auth::user()->role == "admin"){
+        return $next($request);
+      }
+      else{
+        return redirect()->back();
+        return $next($request);
+      }
+    });
+}
 
   public function index()
   {
     $counter = 1;
-    $wisata = Wisata::query()->latest();
+    $wisata = Wisatas::query()->latest();
     if (request()->has("search") && strlen(request()->query("search")) >= 1) {
       $wisata->where(
         "wisata.nama", "like", "%" . request()->query("search") . "%"
@@ -49,7 +54,7 @@ class WisataController extends Controller
 
   public function store(WisataValidation $request)
   {
-    $data = new Wisata($request->except("_token"));
+    $data = new Wisatas($request->except("_token"));
     $imageName = time().'.'.request()->background->getClientOriginalExtension();
     request()->background->move(public_path('images'), $imageName);
     $data->background = $imageName;
@@ -61,7 +66,7 @@ class WisataController extends Controller
 
   public function destroy($id)
   {
-    $data = Wisata::find($id);
+    $data = Wisatas::find($id);
     $data->delete();
     if($data) {
         Session::flash('message','Berhasil menghapus Data');
@@ -71,19 +76,19 @@ class WisataController extends Controller
 
   public function detail($id)
   {
-    $data = Wisata::find($id);
+    $data = Wisatas::find($id);
     return view('wisata_detail', compact('data'));
   }
 
   public function edit($id)
   {
-    $data = Wisata::find($id);
+    $data = Wisatas::find($id);
     return view('admin.wisata_edit', compact('data'));
   }
 
   public function update($id, Request $request)
   {
-    $data = Wisata::find($id);
+    $data = Wisatas::find($id);
         if($request->background){
           $imageName = time().'.'.request()->foto->getClientOriginalExtension();
           request()->background->move(public_path('images'), $imageName);

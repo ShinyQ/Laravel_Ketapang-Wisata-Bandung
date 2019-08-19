@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Transaksi;
+use App\Wisata;
 use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,16 +22,21 @@ class TransaksiController extends Controller
     }
   }
 
+  public function index(){
+    $data = Transaksi::all();
+    return view('admin.transaksi', compact('data'));
+  }
+
   public function terima(){
     $data = Wisata::find($id);
-    $data->status = "Jadwal Wisata Diterima"
+    $data->status = "Jadwal Wisata Diterima";
     $request->session()->flash('message','Berhasil Menerima Jadwal Wisata');
     return redirect()->back();
   }
 
   public function tolak(){
     $data = Wisata::find($id);
-    $data->status = "Jadwal Wisata Ditolak"
+    $data->status = "Jadwal Wisata Ditolak";
     $request->session()->flash('message','Berhasil Menolak Data');
     return redirect()->back();
   }
