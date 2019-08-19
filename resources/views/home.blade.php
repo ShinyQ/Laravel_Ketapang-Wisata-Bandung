@@ -94,25 +94,49 @@
                     <span>Farmhouse Lembang</span>
                 </h4>
             </div> -->
-          <div class="item">
+          <div class="item shadow-sm">
             <a href="#">
               <div class="item-image">
-                <img class="item-image img-fluid" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}" width="auto" alt="">
+                <img class="item-image img-fluid" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}"  width="auto"  alt="">
               </div>
               <div class="item-text">
                 <span class="item-kicker">Gedung Sate</span>
-                <h3 class="item-title">Monumen Gubernur Jawa Barat</h3>
+                <h3 class="item-title">Jl. Diponegoro No.22, Citarum, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40115</h3>
               </div>
             </a>
           </div>
             <div class="item">
-                <h4>2</h4>
+              <a href="#">
+                <div class="item-image">
+                  <img class="item-image img-fluid" src="https://media.licdn.com/dms/image/C4E1BAQFDh6RkZHC8wQ/company-background_10000/0?e=2159024400&v=beta&t=y8YAaNEzLcxeayPjz_odIIuSRPEScsjKsNfboJvVAAU"  width="auto"  alt="">
+                </div>
+                <div class="item-text">
+                  <span class="item-kicker">Telkom University</span>
+                  <h3 class="item-title">Jl. Telekomunikasi Jl. Terusan Buah Batu No.01, Sukapura, Kec. Dayeuhkolot, Kota Bandung, Jawa Barat 40257</h3>
+                </div>
+              </a>
             </div>
             <div class="item">
-                <h4>2</h4>
+              <a href="#">
+                <div class="item-image">
+                  <img class="item-image img-fluid" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}"  width="auto"  alt="">
+                </div>
+                <div class="item-text">
+                  <span class="item-kicker">Gunung Tangkuban Parahu</span>
+                  <h3 class="item-title">Cikahuripan, Lembang, Kabupaten Bandung Barat, Jawa Barat</h3>
+                </div>
+              </a>
             </div>
             <div class="item">
-                <h4>2</h4>
+              <a href="#">
+                <div class="item-image">
+                  <img class="item-image img-fluid" src="http://yourbandung.com/wp-content/uploads/2018/09/DSCF3923.jpg"  width="auto"  alt="">
+                </div>
+                <div class="item-text">
+                  <span class="item-kicker">Alun Alun Bandung</span>
+                  <h3 class="item-title">Jl. Asia Afrika, Balonggede, Kec. Regol, Kota Bandung, Jawa Barat 40251</h3>
+                </div>
+              </a>
             </div>
         </div>
         <div class="container d-flex justify-content-end">

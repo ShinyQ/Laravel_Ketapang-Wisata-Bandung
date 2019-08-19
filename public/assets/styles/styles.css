@@ -360,35 +360,44 @@ a:hover {
 /* Carousel */
 
 .owl-carousel .item {
-    background: #fff;
+    background: linear-gradient( 45deg, rgba(247, 151, 30, 0.70) 0%, rgba(255, 210, 0, 0.75) 80% );
+    background-repeat: no-repeat;
     border: 1px solid #d9d7da;
     text-align: center;
 }
 
 .owl-carousel .item-text {
-    padding: 35px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+    padding-left: 5px;
 }
 
 .owl-carousel .item .item-kicker {
-    color: #f8ba10;
+    color: #fff;
     display: block;
-    font-size: 0.8em;
-    font-weight: 600;
+    font-weight: 700;
     height: 30px;
     margin-bottom: 16px;
-    overflow: hidden;
-    text-transform: uppercase;
-    font-size: 20px;
+    overflow: inherit;
+    text-transform: capitalize;
+    font-size: 25px;
+    margin-top: 25px;
+
 }
 
 .owl-carousel .item .item-title {
-    color: #f8ba10;
+    color: #f5f5f5;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 650;
     height: 38px;
     margin: 0;
     overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.item-image{
+  border-radius: 16px;
+  min-height: 212px;
 }
 
 /* End of Card */
