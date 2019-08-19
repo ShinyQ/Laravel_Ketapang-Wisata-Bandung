@@ -94,6 +94,17 @@
                     <span>Farmhouse Lembang</span>
                 </h4>
             </div>
+          <div class="item">
+            <a href="#">
+              <div class="item-image">
+                <img class="item-image img-fluid" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}" width="auto" alt="">
+              </div>
+              <div class="item-text">
+                <span class="item-kicker">Gedung Sate</span>
+                <h3 class="item-title">Monumen Gubernur Jawa Barat</h3>
+              </div>
+            </a>
+          </div>
             <div class="item">
                 <h4>2</h4>
             </div>
@@ -173,25 +184,46 @@
 <script>
 // Owl Carousel
 $('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:18,
-//   autoplay:true,
-  items:2,
-  center:true,
-  responsive:{
-      0:{
-          items:1,
-          center:false
-      },
-      600:{
-          center:false,
-          items:1
-      },
-      1000:{
-          items:2
-      }
+// <<<<<<< HEAD
+//   loop:true,
+//   margin:18,
+// //   autoplay:true,
+//   items:2,
+//   center:true,
+//   responsive:{
+//       0:{
+//           items:1,
+//           center:false
+//       },
+//       600:{
+//           center:false,
+//           items:1
+//       },
+//       1000:{
+//           items:2
+//       }
+// =======
+  loop: true,
+  margin: 30,
+  dots: false,
+  nav: false,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 2,
+      margin: 10,
+      stagePadding: 20,
+    },
+    600: {
+      items: 3,
+      margin: 20,
+      stagePadding: 50,
+    },
+    1000: {
+      items: 4
+    }
   }
-})
+});
 
 
 // Fetch News API
