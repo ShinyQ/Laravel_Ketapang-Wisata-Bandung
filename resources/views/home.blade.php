@@ -84,20 +84,24 @@
             <h2>Wisata Bandung</h2>
         </div>
         <div class="owl-carousel owl-theme">
-            <div class="item">
-                <h4>1</h4>
+            <div class="item item-wisata">
+                <div class="item-slanted">
+                    <div class="item-overlay">
+                    </div>
+                    <img src="{{url('assets/images/wisata/farmhouse-lembang.jpg')}}">
+                </div>
+                <h4 class="heading-item">
+                    <span>Farmhouse Lembang</span>
+                </h4>
             </div>
             <div class="item">
                 <h4>2</h4>
             </div>
             <div class="item">
-                <h4>3</h4>
+                <h4>2</h4>
             </div>
             <div class="item">
-                <h4>4</h4>
-            </div>
-            <div class="item">
-                <h4>5</h4>
+                <h4>2</h4>
             </div>
         </div>
         <div class="container d-flex justify-content-end">
@@ -171,6 +175,7 @@
 $('.owl-carousel').owlCarousel({
   loop:true,
   margin:18,
+//   autoplay:true,
   items:2,
   center:true,
   responsive:{
@@ -180,7 +185,7 @@ $('.owl-carousel').owlCarousel({
       },
       600:{
           center:false,
-          items:2
+          items:1
       },
       1000:{
           items:2
