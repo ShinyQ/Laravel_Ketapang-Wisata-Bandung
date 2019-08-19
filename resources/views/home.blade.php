@@ -84,7 +84,7 @@
             <h2>Wisata Bandung</h2>
         </div>
         <div class="owl-carousel owl-theme">
-            <div class="item item-wisata">
+            <!-- <div class="item item-wisata">
                 <div class="item-slanted">
                     <div class="item-overlay">
                     </div>
@@ -93,7 +93,7 @@
                 <h4 class="heading-item">
                     <span>Farmhouse Lembang</span>
                 </h4>
-            </div>
+            </div> -->
           <div class="item">
             <a href="#">
               <div class="item-image">
