@@ -31,10 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-        				<a data-scroll class="nav-link" href="#home">Beranda</a>
+        				<a data-scroll class="nav-link" href="#hero">Beranda</a>
         			</li>
         			<li class="nav-item">
-        				<a data-scroll class="nav-link" href="#berita">Berita</a>
+        				<a data-scroll class="nav-link" href="#news">Berita</a>
 			        </li>
               <li class="nav-item">
         				<a data-scroll class="nav-link" href="#wisata">Wisata</a>
@@ -62,5 +62,6 @@
         </div>
     </nav>
     <!-- End of Navbar -->
+  </body>
 
-    @yield('konten')
+@yield('konten')

@@ -2,7 +2,7 @@
 
 @section('konten')
 <!-- Hero Landing-->
-    <section class="hero">
+    <section class="hero" id="hero">
     <div class="hero-overlay">
             <span></span>
             <span></span>
@@ -70,7 +70,7 @@
             </div>
         </div>
     </section>
-    <section class="landing news">
+    <section class="landing news" id="news">
 
         <div class="container">
             <h2>Berita Terkini</h2>
@@ -79,7 +79,7 @@
             </div>
         </div>
     </section>
-    <section class="landing wisata">
+    <section class="landing wisata" id="wisata">
         <div class="container">
             <h2>Wisata Bandung</h2>
         </div>
@@ -148,7 +148,7 @@
 
             </div>
     </section>
-    <section class="landing paket">
+    <section class="landing paket" id="paket">
         <div class="container">
             <h2>Paket Wisata</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, hic dolor. Voluptates praesentium</p>
@@ -204,6 +204,7 @@
 <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
 <script src="{{url('assets/scripts/bootstrap/bootstrap.bundle.min.js')}}"></script>
 <script src="{{url('assets/scripts/owl.carousel.min.js')}}"></script>
+<script src="{{url('assets/scripts/smooth-scroll.polyfills.min.js')}}"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 // Owl Carousel
@@ -276,6 +277,22 @@ axios.get(newsUrl).then(resp => {
 });
 
 </script>
-    @endsection
+
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    // Function. Custom easing pattern
+    // If this is set to anything other than null, will override the easing option above
+    customEasing: function (time) {
+
+      // return <your formulate with time as a multiplier>
+
+      // Example: easeInOut Quad
+      return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+
+    }
+  });
+</script>
+
+@endsection
 
 </html>
