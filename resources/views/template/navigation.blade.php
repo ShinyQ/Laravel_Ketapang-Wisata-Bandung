@@ -30,7 +30,19 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-                @if(Auth::user())
+              <li class="nav-item">
+        				<a data-scroll class="nav-link" href="#home">Beranda</a>
+        			</li>
+        			<li class="nav-item">
+        				<a data-scroll class="nav-link" href="#berita">Berita</a>
+			        </li>
+              <li class="nav-item">
+        				<a data-scroll class="nav-link" href="#wisata">Wisata</a>
+			        </li>
+              <li class="nav-item">
+        				<a data-scroll class="nav-link" href="#paket">Paket</a>
+			        </li>
+             @if(Auth::user())
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ Auth::user()->name }}
