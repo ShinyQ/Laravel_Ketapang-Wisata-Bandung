@@ -25,7 +25,7 @@
                   </div>
                 </form>
                 <div class="list-wisata">
-                    <div class="row">
+                    <div class="row" id="list-wisata">
                       @foreach($wisata as $data)
                         <div class="col-md-6">
                           <a href="/wisata/{{$data->id}}">
@@ -56,6 +56,12 @@
     async defer></script>
     <script>
 
+
+    let locationArr = [];
+    $(".wisata-card-desc p").each(function(a){
+      locationArr.push($(this).text())
+      console.log($(this).text())
+    })
     // Function to determine the size of the map div
     function resizeWindow(){
         $('#mapWisata').css({"height":$(window).height()-$(".navbar").height()});
@@ -83,7 +89,7 @@
         'Bandung Digital Valley'
       ];
 
-      address.map(location=>{
+      locationArr.map(location=>{
         geocoder.geocode({ address: location }, function(res, status) {
         if (status == "OK") {
             // mapResults.setCenter(res[0].geometry.location);
