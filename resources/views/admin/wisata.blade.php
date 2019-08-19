@@ -25,9 +25,7 @@
                 </div>
                 @endforeach
             </div>
-            <center>
-              {!! $wisata->appends(request()->all())->links() !!}
-            </center>
+            <ul style="padding-bottom:50px" class="pagination justify-content-center">{!! $wisata->appends(request()->all())->links() !!}</ul>
         </div>
     </div>
     <!-- End of Wisata Content -->
