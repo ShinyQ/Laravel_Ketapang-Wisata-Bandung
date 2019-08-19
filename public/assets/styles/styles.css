@@ -302,6 +302,44 @@ a:hover {
 }
 /* End of Landing Style */
 
+/* Card of Owl Carousel */
+
+/* Carousel */
+
+.owl-carousel .item {
+  background: #fff;
+  border: 1px solid #D9D7DA;
+  text-align: center;
+}
+
+.owl-carousel .item-text {
+  padding: 35px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.owl-carousel .item .item-kicker {
+  color: #f8ba10;
+  display: block;
+  font-size: .8em;
+  font-weight: 600;
+  height: 30px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.owl-carousel .item .item-title {
+  color: #f8ba10;
+  font-size: 16px;
+  font-weight: 600;
+  height: 38px;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* End of Card */
+
 /* Detail Style */
 
 .container-wisata {
