@@ -19,11 +19,21 @@
                               <span class="input-group-text"><i class="fas fa-search"></i></span>
                           </div>
                           <form action="/wisata" method="GET">
-                            <input class="form-control" type="text" name="search" value="{{ request()->get('search') }}" placeholder="Cari Barang...">
+                            <input class="form-control" type="text" name="search" value="{{ request()->get('search') }}" placeholder="Cari Wisata">
                           </form>
                       </div>
                   </div>
                 </form>
+                <div class="container-toggler d-flex align-content-end justify-content-end">
+                <div class="btn-group btn-group-toggle d-lg-none d-sm-block" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked> List
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Maps
+                </label>
+              </div>
+                </div>
                 <div class="list-wisata">
                     <div class="row" id="list-wisata">
                       @foreach($wisata as $data)

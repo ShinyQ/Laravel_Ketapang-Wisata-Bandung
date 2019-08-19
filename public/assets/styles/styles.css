@@ -344,6 +344,9 @@ a:hover {
 .footer p {
     margin-bottom: 0;
 }
+.navbar-search {
+    margin: 16px;
+}
 
 @media (max-width: 970px) {
     .city {
@@ -357,35 +360,35 @@ a:hover {
 /* Carousel */
 
 .owl-carousel .item {
-  background: #fff;
-  border: 1px solid #D9D7DA;
-  text-align: center;
+    background: #fff;
+    border: 1px solid #d9d7da;
+    text-align: center;
 }
 
 .owl-carousel .item-text {
-  padding: 35px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .owl-carousel .item .item-kicker {
-  color: #f8ba10;
-  display: block;
-  font-size: .8em;
-  font-weight: 600;
-  height: 30px;
-  margin-bottom: 16px;
-  overflow: hidden;
-  text-transform: uppercase;
-  font-size: 20px;
+    color: #f8ba10;
+    display: block;
+    font-size: 0.8em;
+    font-weight: 600;
+    height: 30px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 20px;
 }
 
 .owl-carousel .item .item-title {
-  color: #f8ba10;
-  font-size: 16px;
-  font-weight: 600;
-  height: 38px;
-  margin: 0;
-  overflow: hidden;
+    color: #f8ba10;
+    font-size: 16px;
+    font-weight: 600;
+    height: 38px;
+    margin: 0;
+    overflow: hidden;
 }
 
 /* End of Card */
@@ -408,8 +411,7 @@ a:hover {
 .map-detail {
     height: 600px;
 }
-.map-wisata {
-}
+
 .detail-title {
     font-size: 4vh;
     background: #f8ba10;
@@ -536,12 +538,33 @@ a:hover {
     padding: 1.3rem;
 }
 
+.container-toggler {
+    margin: 16px;
+}
+
 @media (max-width: 800px) {
     .detail-content-desc {
         text-align: left;
     }
     .detail-content-inf {
         padding-left: 15px;
+    }
+
+    .map-wisata {
+        display: none;
+    }
+    .list-wisata {
+        position: relative;
+        width: 100%;
+        background: #ebebeb88;
+        padding: 16px;
+        height: auto;
+        overflow-y: auto;
+    }
+    .container-wisata {
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 }
 @media (min-width: 576px) {
