@@ -104,7 +104,8 @@ a:hover {
 
 .hero-content p {
     letter-spacing: 1px;
-    line-height: 1.5rem;
+    line-height: 1.8;
+    font-size: 20px
 }
 .hero-overlay span {
     position: absolute;
@@ -132,9 +133,6 @@ a:hover {
     left: calc(100% / 5);
 }
 
-.header {
-    padding-top: 110px;
-}
 .header-img {
     overflow: hidden;
 }
@@ -228,6 +226,11 @@ a:hover {
     color: #f8ba10;
     letter-spacing: 2px;
     margin-bottom: 64px;
+}
+
+
+.landing p{
+    line-height: 2;
 }
 
 .city {

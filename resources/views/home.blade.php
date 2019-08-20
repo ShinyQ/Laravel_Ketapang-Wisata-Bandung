@@ -17,9 +17,7 @@
                     <div class="col-md-5">
                       <div class="header">
                         <h1>Ketapang</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa vel, provident libero eius
-                            dignissimos ducimus facere voluptate quae ex nostrum sit, non impedit earum atque suscipit
-                            fugit magnam rem eveniet!</p>
+                        <p>Temukan dan Jelajahi Beragam Tempat Wisata Nan Indah Dan Menarik <br>Di <strong>Paris Van Java-nya</strong><br> Indonesia </p>
                       </div>
                     </div>
                     <div class="col-md-7">
@@ -33,9 +31,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <h2>Bandung</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus sapiente
-                        asperiores dolorum, est perferendis facilis quam? Sequi ab eveniet id numquam sed, autem
-                        architecto, voluptates dolor inventore nobis asperiores?</p>
+                    <p>Paris van Java merupakan sebutan untuk Kota Bandung pada zaman kolonial Belanda yang memiliki arti
+                       <strong><i>"Paris Van Java"</i></strong> julukan ini diberikan karena Kota
+                       Bandung terkenal dengan keindahan alam dan kesejukan udaranya. Meskipun julukan tersebut hanya sampai zaman kolonial
+                       akan tetapi.<br> sisa-sisa <strong><i>"Paris Van Java"</i></strong> tersebut, masih terasa sampai sekarang.
+                    </p>
                 </div>
                 <div class="col-md-6">
 
