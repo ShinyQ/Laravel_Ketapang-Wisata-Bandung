@@ -2,7 +2,7 @@
 
 @section('konten')
 <!-- Hero Landing-->
-    <section class="hero" id="hero">
+    <section class="hero">
     <div class="hero-overlay">
             <span></span>
             <span></span>
@@ -23,9 +23,6 @@
                       </div>
                     </div>
                     <div class="col-md-7">
-                      <!-- <center>
-                        <img class="float-right header-img" src="{{url('assets/images/wisata/gedungsate_bitmap.png')}}" width="100%" alt="">
-                      </center> -->
                     </div>
                 </div>
             </div>
@@ -69,8 +66,10 @@
                 </div>
             </div>
         </div>
+        <div id="news"></div>
     </section>
-    <section class="landing news" id="news">
+
+    <section class="landing news">
 
         <div class="container">
             <h2>Berita Terkini</h2>
@@ -86,16 +85,6 @@
             <center><h2 style="margin-top:10px">Wisata Bandung</h2></center>
         </div>
         <div class="owl-carousel owl-theme">
-            <!-- <div class="item item-wisata">
-                <div class="item-slanted">
-                    <div class="item-overlay">
-                    </div>
-                    <img src="{{url('assets/images/wisata/farmhouse-lembang.jpg')}}">
-                </div>
-                <h4 class="heading-item">
-                    <span>Farmhouse Lembang</span>
-                </h4>
-            </div> -->
           <div class="item shadow-sm">
             <a href="#">
               <div class="item-image">
@@ -141,18 +130,19 @@
               </a>
             </div>
         </div>
-        <div style="margin-top: 40px; padding-bottom:50px" class="container d-flex justify-content-center">
-            <a style="font-weight: 600" class="btn btn-primary" href="/wisata">
+        <div style="margin-top: 40px; padding-bottom:40px" class="container d-flex justify-content-center">
+            <a style="font-weight: 700" class="btn btn-primary" href="/wisata">
                 Lihat Semua
             </a>
         </div>
-        <div class="features-slanted">
-
-            </div>
+        <div class="features-slanted"></div>
     </section>
-    <section class="landing paket" id="paket">
+
+    <div id="paket"></div>
+
+    <section class="landing paket">
         <div class="container">
-            <h2>Paket Wisata</h2>
+            <h2 style="margin-top: 200px; margin-bottom:50px">Paket Wisata</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, hic dolor. Voluptates praesentium</p>
             <div class="row">
                 <div class="col-md-4">
@@ -167,31 +157,40 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                        <div class="plans-card d-flex flex-column">
-                            <div class="plans-header d-flex align-items-center justify-content-center">
-                                <p>paket</p>
-                                <h2>Menengah</h2>
-                            </div>
-                            <div class="plans-content">
-                                <button class="btn btn-primary">Pilih Paket</button>
-                            </div>
+                    <div class="plans-card d-flex flex-column">
+                        <div class="plans-header d-flex align-items-center justify-content-center">
+                            <p>paket</p>
+                            <h2>Menengah</h2>
+                        </div>
+                        <div class="plans-content">
+                            <button class="btn btn-primary">Pilih Paket</button>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                            <div class="plans-card d-flex flex-column">
-                                <div class="plans-header d-flex align-items-center justify-content-center">
-                                    <p>paket</p>
-                                    <h2>Soeltan</h2>
-                                </div>
-                                <div class="plans-content">
-                                    <button class="btn btn-primary">Pilih Paket</button>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="plans-card d-flex flex-column">
+                        <div class="plans-header d-flex align-items-center justify-content-center">
+                            <p>paket</p>
+                            <h2>Soeltan</h2>
                         </div>
+                        <div class="plans-content">
+                            <button class="btn btn-primary">Pilih Paket</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer  -->
+    <section style="margin-top:0!important" class="footer">
+        <div class="container">
+          <center>
+            <img src="{{url('assets/images/logo/KetapangLogo-White.png')}}" width="150px" alt="Logo">
+             <font color="#f5f5f5" class="font-segoe text-center nopadding">&#8212; &nbsp; Copyright &copy; 2019 - Ketapang - Telkom University</p>
+          </center>
+        </div>
+    </section>
     <!-- End of Footer  -->
 </body>
 <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
@@ -202,25 +201,6 @@
 <script>
 // Owl Carousel
 $('.owl-carousel').owlCarousel({
-// <<<<<<< HEAD
-//   loop:true,
-//   margin:18,
-// //   autoplay:true,
-//   items:2,
-//   center:true,
-//   responsive:{
-//       0:{
-//           items:1,
-//           center:false
-//       },
-//       600:{
-//           center:false,
-//           items:1
-//       },
-//       1000:{
-//           items:2
-//       }
-// =======
   loop: true,
   margin: 10,
   dots: false,
@@ -270,22 +250,18 @@ axios.get(newsUrl).then(resp => {
   }
 });
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+
+        });
+    });
+});
 </script>
 
-<script>
-  var scroll = new SmoothScroll('a[href*="#"]', {
-    // Function. Custom easing pattern
-    // If this is set to anything other than null, will override the easing option above
-    customEasing: function (time) {
-
-      // return <your formulate with time as a multiplier>
-
-      // Example: easeInOut Quad
-      return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
-
-    }
-  });
-</script>
 
 @endsection
 

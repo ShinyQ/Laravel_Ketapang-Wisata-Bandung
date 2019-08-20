@@ -15,6 +15,7 @@
 
 <body>
     <!-- Navbar -->
+    <div id="hero"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
             <a class="navbar-brand nav-home" href="/">
@@ -31,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-        				<a data-scroll class="nav-link" href="#hero">Beranda</a>
+        				<a  class="nav-link" data-scroll href="#hero">Beranda</a>
         			</li>
         			<li class="nav-item">
         				<a data-scroll class="nav-link" href="#news">Berita</a>
@@ -65,12 +66,3 @@
   </body>
 
 @yield('konten')
-
-<section class="footer">
-    <div class="container">
-      <center>
-        <img src="{{url('assets/images/logo/KetapangLogo-White.png')}}" width="150px" alt="Logo">
-         <font color="#f5f5f5" class="font-segoe text-center nopadding">&#8212; &nbsp; Copyright &copy; 2019 - Ketapang - Telkom University</p>
-      </center>
-    </div>
-</section>
