@@ -34,7 +34,7 @@
                     <p>Paris van Java merupakan sebutan untuk Kota Bandung pada zaman kolonial Belanda yang memiliki arti
                        <strong><i>"Paris Van Java"</i></strong> julukan ini diberikan karena Kota
                        Bandung terkenal dengan keindahan alam dan kesejukan udaranya. Meskipun julukan tersebut hanya sampai zaman kolonial
-                       akan tetapi.<br> sisa-sisa <strong><i>"Paris Van Java"</i></strong> tersebut, masih terasa sampai sekarang.
+                       akan tetapi,<br> sisa-sisa <strong><i>"Paris Van Java"</i></strong> tersebut, masih terasa sampai sekarang.
                     </p>
                 </div>
                 <div class="col-md-6">

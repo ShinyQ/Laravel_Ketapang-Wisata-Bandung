@@ -56,7 +56,7 @@ Route::prefix('admin')->group(function(){
   });
   Route::prefix('transaksi')->group(function(){
     Route::get('/', 'Admin\TransaksiController@index');
-    Route::get('/terima', 'Admin\WisataController@terima');
-    Route::post('/tolak', 'Admin\WisataController@tolak');
+    Route::get('/terima/{id}', 'Admin\TransaksiController@terima');
+    Route::get('/tolak/{id}', 'Admin\TransaksiController@tolak');
   });
 });

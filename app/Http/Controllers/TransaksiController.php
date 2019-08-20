@@ -44,10 +44,10 @@ class TransaksiController extends Controller
       }
       else{
         $data = new Transaksi($request->except("_token"));
-        $data->status = "Belum Dibayar";
+        $data->status = "Belum Mengupload Bukti Bayar";
         $data->save();
         $request->session()->flash('message','Sukses Menambah Jadwal, Silahkan Mengupload Bukti Bayar');
-        return redirect('tranasaksi');
+        return redirect('transaksi');
       }
     }
 

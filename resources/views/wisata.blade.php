@@ -39,7 +39,7 @@
                       @foreach($wisata as $data)
                         <div class="col-md-6">
                           <a href="/wisata/{{$data->id}}">
-                          <div class="wisata-card" style="background-image: url({{asset('images')}}/{{ $data->background }})">
+                          <div class="wisata-card" style="background-image: url({{asset('images/wisata')}}/{{ $data->background }})">
                               <div class="wisata-card-desc">
                                   <h5>{{ $data->nama }}</h5>
                                   <p>{{ $data->alamat }}</p>
@@ -70,7 +70,7 @@
 
       $("input[name='options']").click(function(){
         console.log($("input[name='options']:checked").val());
-      })      
+      })
     $(".wisata-card-desc p").each(function(a){
       locationArr.push($(this).text())
     })

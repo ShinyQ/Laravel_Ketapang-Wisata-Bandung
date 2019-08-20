@@ -23,7 +23,7 @@ class TransaksiController extends Controller
 
   public function index(){
     $counter = 1;
-    $transaksi = Transaksi::query()->latest();
+    $transaksi = Transaksi::query()->where('status', 'Menunggu Dikonfirmasi')->latest();
     if (request()->has("search") && strlen(request()->query("search")) >= 1) {
       $transaksi->where(
         "transaksis.nama", "like", "%" . request()->query("search") . "%"
@@ -38,16 +38,18 @@ class TransaksiController extends Controller
     return view('admin.transaksi', compact('transaksi'));
   }
 
-  public function terima(){
-    $data = Transaksis::find($id);
+  public function terima(Request $request, $id){
+    $data = Transaksi::find($id);
     $data->status = "Jadwal Wisata Diterima";
+    $data->save();
     $request->session()->flash('message','Berhasil Menerima Jadwal Wisata');
     return redirect()->back();
   }
 
-  public function tolak(){
-    $data = Transaksis::find($id);
+  public function tolak(Request $request, $id){
+    $data = Transaksi::find($id);
     $data->status = "Jadwal Wisata Ditolak";
+    $data->save();
     $request->session()->flash('message','Berhasil Menolak Data');
     return redirect()->back();
   }
