@@ -66,7 +66,6 @@
     async defer></script>
     <script>
 
-
     let locationArr = [];
 
     $(".wisata-card-desc p").each(function(a){

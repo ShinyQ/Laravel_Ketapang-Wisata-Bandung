@@ -10,6 +10,7 @@
                 <button class="btn btn-primary ">Add Wisata</button>
             </a>
         </div>
+
         <div class="content-admin">
             <div class="row">
                 @foreach($wisata as $data)
