@@ -40,7 +40,15 @@ a:hover {
     font-weight: bold;
     margin: 16px;
 }
-
+.nav-brand img {
+    height: 50;
+}
+.nav-brand img:first-child {
+    display: block;
+}
+.nav-brand img:nth-child(2) {
+    display: none;
+}
 .hero {
     position: relative;
     margin-bottom: 64px;
@@ -360,7 +368,11 @@ a:hover {
 /* Carousel */
 
 .owl-carousel .item {
-    background: linear-gradient( 45deg, rgba(247, 151, 30, 0.70) 0%, rgba(255, 210, 0, 0.75) 80% );
+    background: linear-gradient(
+        45deg,
+        rgba(247, 151, 30, 0.7) 0%,
+        rgba(255, 210, 0, 0.75) 80%
+    );
     background-repeat: no-repeat;
     border: 1px solid #d9d7da;
     text-align: center;
@@ -382,7 +394,6 @@ a:hover {
     text-transform: capitalize;
     font-size: 25px;
     margin-top: 25px;
-
 }
 
 .owl-carousel .item .item-title {
@@ -395,14 +406,14 @@ a:hover {
     margin-left: 20px;
     margin-right: 20px;
 }
-.item-image{
-  border-radius: 16px;
-  min-height: 220px!important;
+.item-image {
+    border-radius: 16px;
+    min-height: 220px !important;
 }
 
-.item-image img{
-  min-height: 220px!important;
-  max-height: 220px!important;
+.item-image img {
+    min-height: 220px !important;
+    max-height: 220px !important;
 }
 
 /* End of Card */
@@ -579,6 +590,31 @@ a:hover {
         position: relative;
         width: 100%;
         height: auto;
+    }
+}
+@media (max-width: 992px) {
+    .nav-home {
+        background: transparent;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        border-radius: 8px;
+        position: relative;
+    }
+    .nav-brand {
+        color: white;
+        font-weight: bold;
+        margin: 6px;
+    }
+    .nav-brand img {
+        height: 50;
+    }
+    .nav-brand img:first-child {
+        display: none;
+    }
+
+    .nav-brand img:nth-child(2) {
+        display: block;
     }
 }
 @media (min-width: 576px) {
