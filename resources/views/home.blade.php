@@ -192,21 +192,12 @@
         </div>
     </section>
 
-    <section class="footer">
-        <div class="container">
-          <center>
-            <img src="{{url('assets/images/logo/KetapangLogo-White.png')}}" width="150px" alt="Logo">
-             <font color="#f5f5f5" class="font-segoe text-center nopadding">&#8212; &nbsp; Copyright &copy; 2019 - Ketapang - Telkom University</p>
-          </center>
-        </div>
-    </section>
     <!-- End of Footer  -->
 </body>
 <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
 <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
 <script src="{{url('assets/scripts/bootstrap/bootstrap.bundle.min.js')}}"></script>
 <script src="{{url('assets/scripts/owl.carousel.min.js')}}"></script>
-<script src="{{url('assets/scripts/smooth-scroll.polyfills.min.js')}}"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 // Owl Carousel

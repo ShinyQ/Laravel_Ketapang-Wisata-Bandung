@@ -81,12 +81,6 @@
     </section>
     <!-- Detail Content (Deskripsi)-->
 
-    <section class="footer">
-        <div class="container">
-            <p class="float-right">Copyright &copy; 2019 - Ketapang - Telkom University</p>
-        </div>
-    </section>
-    <!-- End of Footer  -->
     </body>
     <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
     <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
