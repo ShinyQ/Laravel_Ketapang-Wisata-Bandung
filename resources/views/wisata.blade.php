@@ -69,6 +69,9 @@
 
     let locationArr = [];
 
+      $("input[name='options']").click(function(){
+        console.log($("input[name='options']:checked").val());
+      })      
     $(".wisata-card-desc p").each(function(a){
       locationArr.push($(this).text())
     })

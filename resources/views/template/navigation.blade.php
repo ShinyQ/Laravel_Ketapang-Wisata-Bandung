@@ -19,8 +19,8 @@
         <div class="container">
             <a class="navbar-brand nav-home" href="/">
                 <div class="nav-brand">
-                    <img src="{{url('assets/images/logo/KetapangLogoOnly-White.png')}}" height="50" alt="">
-
+                    <img classname="d-sm-none d-md-block" src="{{url('assets/images/logo/KetapangLogoOnly-White.png')}}"  alt="">
+                    <img classname="d-sm-block d-md-none" src="{{url('assets/images/logo/KetapangLogoOnly-Color.png')}}"  alt="">
                 </div>
             </a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
