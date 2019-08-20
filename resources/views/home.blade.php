@@ -78,10 +78,12 @@
 
             </div>
         </div>
+
     </section>
+
     <section class="landing wisata" id="wisata">
-        <div class="container">
-            <h2>Wisata Bandung</h2>
+        <div style="padding-top: 60px" class="container">
+            <center><h2 style="margin-top:10px">Wisata Bandung</h2></center>
         </div>
         <div class="owl-carousel owl-theme">
             <!-- <div class="item item-wisata">
@@ -97,7 +99,7 @@
           <div class="item shadow-sm">
             <a href="#">
               <div class="item-image">
-                <img class="item-image img-fluid" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}"  width="auto"  alt="">
+                <img class="item-image" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}"  width="auto"  alt="">
               </div>
               <div class="item-text">
                 <span class="item-kicker">Gedung Sate</span>
@@ -108,7 +110,7 @@
             <div class="item">
               <a href="#">
                 <div class="item-image">
-                  <img class="item-image img-fluid" src="https://media.licdn.com/dms/image/C4E1BAQFDh6RkZHC8wQ/company-background_10000/0?e=2159024400&v=beta&t=y8YAaNEzLcxeayPjz_odIIuSRPEScsjKsNfboJvVAAU"  width="auto"  alt="">
+                  <img class="item-image " src="https://media.licdn.com/dms/image/C4E1BAQFDh6RkZHC8wQ/company-background_10000/0?e=2159024400&v=beta&t=y8YAaNEzLcxeayPjz_odIIuSRPEScsjKsNfboJvVAAU"  width="auto"  alt="">
                 </div>
                 <div class="item-text">
                   <span class="item-kicker">Telkom University</span>
@@ -119,7 +121,7 @@
             <div class="item">
               <a href="#">
                 <div class="item-image">
-                  <img class="item-image img-fluid" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}"  width="auto"  alt="">
+                  <img class="item-image" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}"  width="auto"  alt="">
                 </div>
                 <div class="item-text">
                   <span class="item-kicker">Gunung Tangkuban Parahu</span>
@@ -130,7 +132,7 @@
             <div class="item">
               <a href="#">
                 <div class="item-image">
-                  <img class="item-image img-fluid" src="http://yourbandung.com/wp-content/uploads/2018/09/DSCF3923.jpg"  width="auto"  alt="">
+                  <img class="item-image" src="http://yourbandung.com/wp-content/uploads/2018/09/DSCF3923.jpg"  width="auto"  alt="">
                 </div>
                 <div class="item-text">
                   <span class="item-kicker">Alun Alun Bandung</span>
@@ -139,8 +141,8 @@
               </a>
             </div>
         </div>
-        <div class="container d-flex justify-content-end">
-            <a href="/wisata">
+        <div style="margin-top: 40px; padding-bottom:50px" class="container d-flex justify-content-center">
+            <a style="font-weight: 600" class="btn btn-primary" href="/wisata">
                 Lihat Semua
             </a>
         </div>
@@ -229,20 +231,21 @@ $('.owl-carousel').owlCarousel({
 //       }
 // =======
   loop: true,
-  margin: 30,
+  margin: 10,
   dots: false,
   nav: false,
+  autoplay:true,
   responsiveClass: true,
   responsive: {
     0: {
-      items: 2,
-      margin: 10,
-      stagePadding: 20,
+      items: 1,
+      margin: 2,
+      stagePadding: 10,
     },
     600: {
       items: 3,
-      margin: 20,
-      stagePadding: 50,
+      margin: 10,
+      stagePadding: 40,
     },
     1000: {
       items: 4
