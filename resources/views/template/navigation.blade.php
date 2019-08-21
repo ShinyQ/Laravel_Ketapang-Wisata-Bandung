@@ -16,7 +16,7 @@
 <body>
     <!-- Navbar -->
     <div id="hero"></div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow">
         <div class="container">
             <a class="navbar-brand nav-home" href="/">
                 <div class="nav-brand">
