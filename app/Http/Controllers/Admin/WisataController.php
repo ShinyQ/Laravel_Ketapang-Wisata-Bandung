@@ -26,7 +26,7 @@ class WisataController extends Controller
         return $next($request);
       }
     });
-}
+  }
 
   public function index()
   {

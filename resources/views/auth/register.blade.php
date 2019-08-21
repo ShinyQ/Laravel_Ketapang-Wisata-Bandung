@@ -70,7 +70,7 @@
 
           <div class="text-center google-auth-btn">
             <a href="/auth/google">
-              <img src="https://user-images.githubusercontent.com/1531669/41761219-0e0e4d80-7629-11e8-9663-aabe62025d57.png" width="250px" alt="">
+              <img src="{{asset('assets/images/signin.png')}}" width="250px" alt="">
             </a>
           </div>
             <center>

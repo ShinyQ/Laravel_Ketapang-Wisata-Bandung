@@ -23,7 +23,7 @@ Route::prefix('register')->group(function(){
   Route::post('/', 'Auth\RegisterController@doRegister');
 });
 
-Route::get('/logout', 'Auth\LoginController@doLogout');
+Route::get('/logout', 'HomeController@logout');
 
 Route::prefix('auth')->group(function(){
   Route::get('/{provider}', 'Auth\AuthController@redirectToProvider');
@@ -34,7 +34,8 @@ Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
 Route::prefix('wisata')->group(function(){
   Route::get('/', 'HomeController@wisata');
-  Route::get('/{id}', 'Admin\WisataController@detail');
+  Route::get('/{id}', 'HomeController@wisata_detail');
+  Route::get('/{id}/gallery', 'HomeController@wisata');
 });
 
 Route::prefix('paket')->group(function(){
