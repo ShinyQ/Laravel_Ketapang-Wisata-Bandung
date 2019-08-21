@@ -23,12 +23,12 @@ a:hover {
 .color-black {
     color: #212121;
 }
-.color-disable{
-  color: #AFAFAF;
-  text-decoration: line-through;
+.color-disable {
+    color: #afafaf;
+    text-decoration: line-through;
 }
-.bg-grey{
-  background: #FAFAFA;
+.bg-grey {
+    background: #fafafa;
 }
 
 /* Landing Style */
@@ -110,7 +110,7 @@ a:hover {
 .hero-content p {
     letter-spacing: 1px;
     line-height: 1.8;
-    font-size: 20px
+    font-size: 20px;
 }
 .hero-overlay span {
     position: absolute;
@@ -233,8 +233,7 @@ a:hover {
     margin-bottom: 64px;
 }
 
-
-.landing p{
+.landing p {
     line-height: 2;
 }
 
@@ -342,37 +341,32 @@ a:hover {
 .plans-content {
     position: relative;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding-right: 10px;
+    padding: 16px;
 }
 .plans-content button {
     width: 100%;
-    position: absolute;
-    margin: 10px;
-    bottom: 0;
+    margin-top: 32px;
 }
-.plans-content h3{
-  color: #faac14;
-  font-size: 30px;
-  font-style: italic;
-  font-weight: bold;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-top: 25px;
+.plans-content h3 {
+    color: #faac14;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 25px;
 }
-.plans-content h3 span  {
-  color: #faac14;
-  font-size: 15px;
-  font-style: italic;
-  font-weight: bold;
+.plans-content h3 span {
+    color: #faac14;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
 }
-.plans-content p  {
-  clear: both;
-  padding: 0;
-  margin: 0;
+.plans-content p {
+    clear: both;
+    padding: 0;
+    margin: 0;
 }
-
 
 .footer {
     background: #faac14;
@@ -595,7 +589,11 @@ a:hover {
 .container-toggler {
     margin: 16px;
 }
-
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
 @media (max-width: 800px) {
     .detail-content-desc {
         text-align: left;
@@ -1070,7 +1068,7 @@ input:focus + label {
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #f8ba10;
+    background-color: #af8103;
     border-color: transparent;
 }
 

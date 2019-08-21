@@ -50,7 +50,7 @@
     <!-- End of Admin Navbar -->
 
     <!-- Admin Sidebar -->
-    <div class="admin-sidebar">
+    <div class="admin-sidebar" style="z-index:999">
         <ul class="nav flex-column nav-sidebar">
             <li class="nav-item">
                 <a class="nav-link active" href="/admin/wisata">

@@ -10,9 +10,17 @@
       }
     </style>
     <div class="container-wisata">
+    <div class="container-fluid">
+    <div class="container-toggler d-flex align-content-end justify-content-end">
+                <div class="btn-group btn-group-toggle d-lg-none d-sm-block" data-toggle="buttons">
+                  <button class="btn btn-primary active" id="btn-list">List</button>
+                  <button class="btn btn-primary" id="btn-maps">Maps</button>
+              </div>
+    </div>
         <div class="row no-gutters">
             <div class="col-md-5">
-                <form class="navbar-search">
+            <div class="list-wisata-container">
+            <form class="navbar-search">
                   <div class="form-group">
                       <div class="input-group input-group-alternative">
                           <div class="input-group-prepend">
@@ -24,16 +32,7 @@
                       </div>
                   </div>
                 </form>
-                <div class="container-toggler d-flex align-content-end justify-content-end">
-                <div class="btn-group btn-group-toggle d-lg-none d-sm-block" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input type="radio" name="options" id="option1" autocomplete="off" checked> List
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off"> Maps
-                </label>
-              </div>
-                </div>
+                
                 <div class="list-wisata">
                     <div class="row" id="list-wisata">
                       @foreach($wisata as $data)
@@ -52,6 +51,8 @@
                     <ul style="padding-bottom:100px" class="pagination justify-content-center">{!! $wisata->appends(request()->all())->links() !!}</ul>
                 </div>
             </div>
+              
+            </div>
             <div class="col-md-7">
                  <div class="map-wisata " id="mapWisata">
                  </div>
@@ -68,8 +69,17 @@
 
     let locationArr = [];
 
-      $("input[name='options']").click(function(){
-        console.log($("input[name='options']:checked").val());
+      $('#btn-maps').click(()=>{
+        $('#btn-maps').addClass('active');
+        $('#btn-list').removeClass('active')
+        $('.list-wisata-container').css("display",'none');
+        $('.map-wisata').css("display",'block');
+      })
+      $('#btn-list').click(()=>{
+        $('#btn-list').addClass('active');
+        $('#btn-maps').removeClass('active')
+        $('.list-wisata-container').css("display",'block');
+        $('.map-wisata').css("display",'none');
       })
     $(".wisata-card-desc p").each(function(a){
       locationArr.push($(this).text())

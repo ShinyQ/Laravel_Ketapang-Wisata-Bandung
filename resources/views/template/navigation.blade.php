@@ -56,7 +56,9 @@
                         </div>
                 </li>
                 @else
-                <a href="/login">Login</a>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link">Login</a>
+                </li>
                 @endif
             </ul>
             </div>
