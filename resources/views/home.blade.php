@@ -152,6 +152,17 @@
                             <h2>Misqueen</h2>
                         </div>
                         <div class="plans-content">
+                            <h3 class="font-segoe color-black text-center">
+                              Rp. 1.000.000,-
+                              <span> / pax </span>
+                            </h3>
+                            <br>
+                            <hr>
+                            <p class="font-segoe color-black text-center">Telkom University</p>
+                            <p class="font-segoe color-black text-center bg-grey">PT. Telekomunikasi</p>
+                            <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
+                            <p class="font-segoe color-black text-center bg-grey color-disable">SMA Pariwisata Telkom Bandung</p>
+                            <p class="font-segoe color-black text-center color-disable">SMK Telkom Malang bojongsoank</p>
                             <button class="btn btn-primary">Pilih Paket</button>
                         </div>
                     </div>
@@ -163,6 +174,17 @@
                             <h2>Menengah</h2>
                         </div>
                         <div class="plans-content">
+                            <h3 class="font-segoe color-black text-center">
+                              Rp. 2.000.000,-
+                              <span> / pax </span>
+                            </h3>
+                            <br>
+                            <hr>
+                            <p class="font-segoe color-black text-center">Telkom University</p>
+                            <p class="font-segoe color-black text-center bg-grey">PT. Telekomunikasi</p>
+                            <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
+                            <p class="font-segoe color-black text-center bg-grey">SMA Pariwisata Telkom Bandung</p>
+                            <p class="font-segoe color-black text-center color-disable">SMK Telkom Malang bojongsoank</p>
                             <button class="btn btn-primary">Pilih Paket</button>
                         </div>
                     </div>
@@ -174,6 +196,17 @@
                             <h2>Soeltan</h2>
                         </div>
                         <div class="plans-content">
+                            <h3 class="font-segoe color-black text-center">
+                              Rp. 3.000.000,-
+                              <span> / pax </span>
+                            </h3>
+                            <br>
+                            <hr>
+                            <p class="font-segoe color-black text-center">Telkom University</p>
+                            <p class="font-segoe color-black text-center bg-grey">PT. Telekomunikasi</p>
+                            <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
+                            <p class="font-segoe color-black text-center bg-grey">SMA Pariwisata Telkom Bandung</p>
+                            <p class="font-segoe color-black text-center">SMK Telkom Malang bojongsoank</p>
                             <button class="btn btn-primary">Pilih Paket</button>
                         </div>
                     </div>

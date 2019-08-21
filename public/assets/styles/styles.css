@@ -23,7 +23,12 @@ a:hover {
 .color-black {
     color: #212121;
 }
-.verticalline-left {
+.color-disable{
+  color: #AFAFAF;
+  text-decoration: line-through;
+}
+.bg-grey{
+  background: #FAFAFA;
 }
 
 /* Landing Style */
@@ -347,6 +352,27 @@ a:hover {
     margin: 10px;
     bottom: 0;
 }
+.plans-content h3{
+  color: #faac14;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 25px;
+}
+.plans-content h3 span  {
+  color: #faac14;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.plans-content p  {
+  clear: both;
+  padding: 0;
+  margin: 0;
+}
+
 
 .footer {
     background: #faac14;
