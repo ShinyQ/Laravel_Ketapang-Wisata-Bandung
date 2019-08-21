@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Wisatas;
 use App\Paket;
+use Illuminate\Support\Facades\Auth;
+use Session;
 
 class HomeController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -50,4 +53,10 @@ class HomeController extends Controller
       return view('paket', compact('data'));
     }
 
+    public function logout()
+    {
+      Auth::logout();
+      Session::flash('message', 'Sukses Keluar Akun');
+      return redirect('/login');
+    }
 }

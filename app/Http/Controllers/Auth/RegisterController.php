@@ -18,6 +18,20 @@ use App\Http\Requests\RegisterValidation;
 
 class RegisterController extends Controller
 {
+
+    public function __construct()
+    {
+      $this->middleware(function ($request, $next){
+        if(Auth::user()){
+          return redirect('/');
+          return $next($request);
+        }
+        else{
+          return $next($request);
+        }
+      });
+    }
+
    public function index(){
        if(Auth::user()){
          if(Auth::user()->role == "admin"){

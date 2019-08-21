@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Session;
 use Hash;
@@ -14,6 +14,19 @@ use App\Http\Requests\LoginValidation;
 
 class LoginController extends Controller
 {
+
+  public function __construct()
+  {
+    $this->middleware(function ($request, $next){
+      if(Auth::user()){
+        return redirect('/');
+        return $next($request);
+      }
+      else{
+        return $next($request);
+      }
+    });
+  }
 
   public function index(){
        if(Auth::user()){
@@ -49,18 +62,5 @@ class LoginController extends Controller
           return redirect('/');
       }
    }
-
-  /**
-  * logout user
-  */
-
-
-  public function doLogout()
-  {
-    Auth::logout();
-    Session::flash('message', 'Sukses Keluar Akun');
-    return redirect('/login');
-  }
-
 
 }
