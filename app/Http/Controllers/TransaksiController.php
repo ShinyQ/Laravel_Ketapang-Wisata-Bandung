@@ -95,6 +95,7 @@ class TransaksiController extends Controller
           request()->background->move(public_path('images/bukti'), $imageName);
           $data->bukti = $imageName;
           $data->tanggal = $request->tanggal;
+          $data->status = "Menunggu Konfirmasi"
           $data->save();
           $request->session()->flash('message','Berhasil Menambahkan Bukti Bayar');
           return redirect()->back();

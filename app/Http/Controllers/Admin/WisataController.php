@@ -43,8 +43,8 @@ class WisataController extends Controller
     if( request()->has('page') && request()->get('page') > 1){
       $counter += (request()->get('page')- 1) * $pagination;
     }
-
-    return view('admin.wisata', compact('wisata','counter'));
+    $active = ["active",""];
+    return view('admin.wisata', compact('wisata','counter', 'active'));
   }
 
   public function create()

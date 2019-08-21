@@ -23,19 +23,22 @@ class TransaksiController extends Controller
 
   public function index(){
     $counter = 1;
-    $transaksi = Transaksi::query()->where('status', 'Menunggu Dikonfirmasi')->latest();
+    $transaksi = Transaksi::query()->where('status', 'Menunggu Konfirmasi')->orderBy('created_at', 'desc');
     if (request()->has("search") && strlen(request()->query("search")) >= 1) {
       $transaksi->where(
         "transaksis.nama", "like", "%" . request()->query("search") . "%"
       );
     }
 
-    $pagination = 4;
+    $pagination = 6;
     $transaksi = $transaksi->paginate($pagination);
     if( request()->has('page') && request()->get('page') > 1){
       $counter += (request()->get('page')- 1) * $pagination;
     }
-    return view('admin.transaksi', compact('transaksi'));
+
+    $active = ["","active"];
+
+    return view('admin.transaksi', compact('transaksi','active'));
   }
 
   public function terima(Request $request, $id){

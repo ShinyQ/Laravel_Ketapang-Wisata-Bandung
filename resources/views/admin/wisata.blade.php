@@ -26,7 +26,7 @@
                 </div>
                 @endforeach
             </div>
-            
+
             <ul style="padding-bottom:50px" class="pagination justify-content-center">{!! $wisata->appends(request()->all())->links() !!}</ul>
         </div>
     </div>

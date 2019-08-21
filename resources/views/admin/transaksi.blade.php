@@ -18,8 +18,8 @@
         </div>
         <div class="content-admin">
             <div class="row">
-                @foreach($transaksi as $data)
-                <div class="col-md-4 col-sm-12">
+                @forelse($transaksi as $data)
+                <div style="margin-top: 20px" class="col-md-4 col-sm-12">
                   <div class="card-body">
                        <h5><strong>{{ $data->pakets->nama }}</strong></h5><br>
                        <p>Nama Pelanggan : {{ $data->users->name }} </p>
@@ -32,11 +32,15 @@
                          <a style="width: 49%" href="/admin/transaksi/terima/{{ $data->id }}" class="btn btn-success">Setujui</a>
                          <a style="width: 49%" href="/admin/transaksi/tolak/{{ $data->id }}" class="btn btn-danger">Tolak</a>
                        </div>
+                       @empty
+                       <div class="col-6">
+                        <h5>Tidak Ada Paket Yang harus Di Konfirmasi</h5>
+                       </div>
                   </div>
                 </div>
-                @endforeach
+                @endforelse
             </div>
-             <ul style="padding-bottom:50px" class="pagination justify-content-center">{!! $transaksi->appends(request()->all())->links() !!}</ul>
+             <ul style="padding-top: 40px; padding-bottom:50px" class="pagination justify-content-center">{!! $transaksi->appends(request()->all())->links() !!}</ul>
       </div>
     </div>
     <!-- End of Wisata Content -->
