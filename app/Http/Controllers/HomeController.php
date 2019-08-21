@@ -38,6 +38,12 @@ class HomeController extends Controller
       return view('wisata', compact('wisata','counter'));
     }
 
+    public function wisata_detail($id)
+    {
+      $data = Wisatas::find($id);
+      return view('wisata_detail', compact('data'));
+    }
+
     public function paket($id)
     {
       $data = Paket::find($id);
