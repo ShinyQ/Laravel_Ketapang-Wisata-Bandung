@@ -88,50 +88,19 @@ Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni ban
             <center><h2 style="margin-top:10px">Wisata Bandung</h2></center>
         </div>
         <div class="owl-carousel owl-theme">
-          <div class="item shadow-sm">
-            <a href="#">
-              <div class="item-image">
-                <img class="item-image" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}"  width="auto"  alt="">
-              </div>
-              <div class="item-text">
-                <span class="item-kicker">Gedung Sate</span>
-                <h3 class="item-title">Jl. Diponegoro No.22, Citarum, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40115</h3>
-              </div>
-            </a>
-          </div>
+            @foreach($wisata as $data)
             <div class="item">
-              <a href="#">
+              <a href="/wisata/{{ $data->id }}">
                 <div class="item-image">
-                  <img class="item-image " src="https://media.licdn.com/dms/image/C4E1BAQFDh6RkZHC8wQ/company-background_10000/0?e=2159024400&v=beta&t=y8YAaNEzLcxeayPjz_odIIuSRPEScsjKsNfboJvVAAU"  width="auto"  alt="">
+                  <img class="item-image " src="{{asset('assets/images/wisata')}}/{{ $data->background }}"  width="auto"  alt="">
                 </div>
                 <div class="item-text">
-                  <span class="item-kicker">Telkom University</span>
-                  <h3 class="item-title">Jl. Telekomunikasi Jl. Terusan Buah Batu No.01, Sukapura, Kec. Dayeuhkolot, Kota Bandung, Jawa Barat 40257</h3>
+                  <span class="item-kicker">{{ $data->nama }}</span>
+                  <h3 class="item-title">{{ $data->alamat }}</h3>
                 </div>
               </a>
             </div>
-            <div class="item">
-              <a href="#">
-                <div class="item-image">
-                  <img class="item-image" src="{{url('assets/images/wisata/gedungsate_bitmap.jpg')}}"  width="auto"  alt="">
-                </div>
-                <div class="item-text">
-                  <span class="item-kicker">Gunung Tangkuban Parahu</span>
-                  <h3 class="item-title">Cikahuripan, Lembang, Kabupaten Bandung Barat, Jawa Barat</h3>
-                </div>
-              </a>
-            </div>
-            <div class="item">
-              <a href="#">
-                <div class="item-image">
-                  <img class="item-image" src="http://yourbandung.com/wp-content/uploads/2018/09/DSCF3923.jpg"  width="auto"  alt="">
-                </div>
-                <div class="item-text">
-                  <span class="item-kicker">Alun Alun Bandung</span>
-                  <h3 class="item-title">Jl. Asia Afrika, Balonggede, Kec. Regol, Kota Bandung, Jawa Barat 40251</h3>
-                </div>
-              </a>
-            </div>
+            @endforeach
         </div>
         <div style="margin-top: 40px; padding-bottom:40px" class="container d-flex justify-content-center">
             <a style="font-weight: 700" class="btn btn-primary" href="/wisata">

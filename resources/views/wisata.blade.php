@@ -32,13 +32,13 @@
                       </div>
                   </div>
                 </form>
-                
+
                 <div class="list-wisata">
                     <div class="row" id="list-wisata">
                       @foreach($wisata as $data)
                         <div class="col-md-6">
                           <a href="/wisata/{{$data->id}}">
-                          <div class="wisata-card" style="background-image: url({{asset('images/wisata')}}/{{ $data->background }})">
+                          <div class="wisata-card" style="background-image: url({{asset('assets/images/wisata')}}/{{ $data->background }})">
                               <div class="wisata-card-desc">
                                   <h5>{{ $data->nama }}</h5>
                                   <p>{{ $data->alamat }}</p>
@@ -51,7 +51,7 @@
                     <ul style="padding-bottom:100px" class="pagination justify-content-center">{!! $wisata->appends(request()->all())->links() !!}</ul>
                 </div>
             </div>
-              
+
             </div>
             <div class="col-md-7">
                  <div class="map-wisata " id="mapWisata">

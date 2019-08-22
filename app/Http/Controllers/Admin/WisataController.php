@@ -93,8 +93,8 @@ class WisataController extends Controller
   {
     $data = Wisatas::find($id);
         if($request->background){
-          $imageName = time().'.'.request()->foto->getClientOriginalExtension();
-          request()->background->move(public_path('images'), $imageName);
+          $imageName = time().'.'.request()->background->getClientOriginalExtension();
+          request()->background->move(public_path('assets/images/wisata'), $imageName);
           $data->background = $imageName;
           $data->nama = $request->nama;
           $data->deskripsi = $request->deskripsi;

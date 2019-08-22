@@ -56,7 +56,7 @@ class RegisterController extends Controller
         'token' => str_random(40)
       ]);
       Mail::to($request->email)->send(new VerifyMail($user));
-      Session::flash('message', 'Sukses Mendaftar Akun Silahkan, Cek Email Untuk Konfirmasi');
+      Session::flash('message', 'Silahkan Cek Email Untuk Verifikasi');
       return redirect('/login');
     }
 
@@ -69,7 +69,7 @@ class RegisterController extends Controller
               $time = Carbon::now();
               $verifyUser->email_verified_at = $time;
               $verifyUser->save();
-              Session::flash('message', 'Sukses Melakukan Konfirmasi, Silahkan Login');
+              Session::flash('message', 'Sukses Melakukan Konfirmasi');
           }else{
             Session::flash('message_gagal', 'Anda Sudah Mengkonfirmasi Akun');
           }

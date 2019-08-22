@@ -501,14 +501,14 @@ a:hover {
 }
 
 .hero-detail {
-    max-height: 340px;
+    max-height: 380px;
     width: 100%;
-    min-height: 300px;
+    min-height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .hero-detail .container {
-    height: 340px;
+    height: 390px;
     z-index: 20;
 }
 .deskripsi-detail {

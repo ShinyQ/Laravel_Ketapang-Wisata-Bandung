@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $wisata = Wisatas::query()->latest()->limit(5);
+      $wisata = Wisatas::query()->orderBy('nama', 'asc')->limit(5)->get();
       return view('home', compact('wisata'));
     }
 
