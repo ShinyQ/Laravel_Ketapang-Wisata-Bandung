@@ -17,6 +17,7 @@ class UpdateTransaksiTable extends Migration
         $table->string('bukti')->after('harga');
         $table->string('status')->after('bukti');
         $table->integer('id_paket')->after('id_user');
+        $table->string('admin')->after('id_user');
       });
     }
 

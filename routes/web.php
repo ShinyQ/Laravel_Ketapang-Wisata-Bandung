@@ -60,4 +60,6 @@ Route::prefix('admin')->group(function(){
     Route::get('/terima/{id}', 'Admin\TransaksiController@terima');
     Route::get('/tolak/{id}', 'Admin\TransaksiController@tolak');
   });
+
+  Route::get('/riwayat', 'Admin\TransaksiController@riwayat');
 });

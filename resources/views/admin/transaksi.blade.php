@@ -11,6 +11,10 @@
       .card-body p{
         margin-top: -5px
       }
+
+      .gambar:hover {
+        transform: scale(3.5);
+      }
     </style>
     <div class="main-admin">
         <div class="header-admin">
@@ -27,7 +31,7 @@
                           $date = $data->tanggal;
                         ?>
                        <p>Tanggal Wisata : {{ date('D, d F Y', strtotime($date)) }} </p>
-                       <p>Bukti Bayar : <br> <img style="max-height: 250px" src="{{asset('assets/images/bukti')}}/{{ $data->bukti }}" width="100%"></P>
+                       <p>Bukti Bayar : <img class="gambar" src="{{asset('assets/images/bukti')}}/{{ $data->bukti }}" width="100px"></p>
                        <div class="justify-content-center">
                          <a style="width: 49%" href="/admin/transaksi/terima/{{ $data->id }}" class="btn btn-success">Setujui</a>
                          <a style="width: 49%" href="/admin/transaksi/tolak/{{ $data->id }}" class="btn btn-danger">Tolak</a>

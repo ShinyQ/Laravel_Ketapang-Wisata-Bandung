@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Transaksi;
+use App\Wisatas;
 use Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -36,7 +37,7 @@ class TransaksiController extends Controller
       $counter += (request()->get('page')- 1) * $pagination;
     }
 
-    $active = ["","active"];
+    $active = ["","active",""];
 
     return view('admin.transaksi', compact('transaksi','active'));
   }
@@ -56,4 +57,13 @@ class TransaksiController extends Controller
     $request->session()->flash('message','Berhasil Menolak Data');
     return redirect()->back();
   }
+
+  public function riwayat(){
+    $no = 1;
+    $active = ["","","active"];
+    $riwayat = Transaksi::all();
+
+    return view('admin.riwayat', compact('riwayat','active','no'));
+  }
+
 }

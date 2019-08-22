@@ -43,13 +43,14 @@ class WisataController extends Controller
     if( request()->has('page') && request()->get('page') > 1){
       $counter += (request()->get('page')- 1) * $pagination;
     }
-    $active = ["active",""];
+    $active = ["active","",""];
     return view('admin.wisata', compact('wisata','counter', 'active'));
   }
 
   public function create()
   {
-      return view('admin.wisata_add');
+      $active = ["active","",""];
+      return view('admin.wisata_add',compact('active'));
   }
 
   public function store(WisataValidation $request)
@@ -76,14 +77,16 @@ class WisataController extends Controller
 
   public function detail($id)
   {
+    $active = ["active","",""];
     $data = Wisatas::find($id);
-    return view('wisata_detail', compact('data'));
+    return view('wisata_detail', compact('data','active'));
   }
 
   public function edit($id)
   {
     $data = Wisatas::find($id);
-    return view('admin.wisata_edit', compact('data'));
+    $active = ["active","",""];
+    return view('admin.wisata_edit', compact('data','active'));
   }
 
   public function update($id, Request $request)
