@@ -2,6 +2,6 @@
 
 @section('konten')
 
-jdjsjdsj
+
 
 @endsection

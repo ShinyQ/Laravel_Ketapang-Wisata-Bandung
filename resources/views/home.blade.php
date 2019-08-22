@@ -49,20 +49,19 @@
                 <div class="col-md-4">
                     <img src="{{url('assets/images/highlight/kuliner.png')}}" width="120px" alt="">
                     <h3>Kuliner</h3>
-                    <p>Kuliner enak dan murah meriah memang identik dengan kota yang satu ini, kuliner jajanan yang unik dan legendaris menggoyang lidah pun ada disini. Temui dan rasakan bedanya.
+                    <p>Kuliner enak dan murah meriah memang identik dengan kota yang satu ini. Kuliner jajanan yang unik dan legendaris menggoyang lidah pun ada disini.
                     </p>
                 </div>
                 <div class="col-md-4">
                     <img src="{{url('assets/images/highlight/wisata.png')}}" width="120px" alt="">
                     <h3>Wisata</h3>
-                    <p>Destinasi wisata serta pemandangan alam yang di gemari wisatawan lokal maupun mancanegara sangatlah beraneka ragam dan cocok untuk dikunjungi untuk berlibur dan bersantai.
+                    <p>Bagi kalian yang berencana menghabiskan akhir tahun, Kota Bandung memang cocok untuk Anda kunjungi.
                     </p>
                 </div>
                 <div class="col-md-4">
                     <img src="{{url('assets/images/highlight/sejarah.png')}}" width="120px" alt="">
                     <h3>Sejarah</h3>
-                    <p>
-Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni banyak bangunan bersejarah sebagai saksi kemerdekaan Indonesia yang masih terasa sampai sekarang.
+                    <p>Selain memiliki berbagai destinasi wisata alam, Bandung turut dihuni banyak bangunan bersejarah saksi kemerdekaan Indonesia.
                     </p>
                 </div>
             </div>
@@ -164,7 +163,7 @@ Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni ban
                             <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
                             <p class="font-segoe color-black text-center bg-grey color-disable">SMA Pariwisata Telkom Bandung</p>
                             <p class="font-segoe color-black text-center color-disable">SMK Telkom Malang bojongsoank</p>
-                            <button class="btn btn-primary">Detail Paket</button>
+                            <button class="btn btn-primary">Pilih Paket</button>
                         </div>
                     </div>
                 </div>
@@ -172,7 +171,7 @@ Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni ban
                     <div class="plans-card d-flex flex-column">
                         <div class="plans-header d-flex align-items-center justify-content-center">
                             <p>paket</p>
-                            <h2>Merakyat</h2>
+                            <h2>Menengah</h2>
                         </div>
                         <div class="plans-content">
                             <h3 class="font-segoe color-black text-center">
@@ -186,7 +185,7 @@ Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni ban
                             <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
                             <p class="font-segoe color-black text-center bg-grey">SMA Pariwisata Telkom Bandung</p>
                             <p class="font-segoe color-black text-center color-disable">SMK Telkom Malang bojongsoank</p>
-                            <button class="btn btn-primary">Detail Paket</button>
+                            <button class="btn btn-primary">Pilih Paket</button>
                         </div>
                     </div>
                 </div>
@@ -208,7 +207,7 @@ Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni ban
                             <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
                             <p class="font-segoe color-black text-center bg-grey">SMA Pariwisata Telkom Bandung</p>
                             <p class="font-segoe color-black text-center">SMK Telkom Malang bojongsoank</p>
-                            <button class="btn btn-primary">Detail Paket</button>
+                            <button class="btn btn-primary">Pilih Paket</button>
                         </div>
                     </div>
                 </div>
@@ -287,13 +286,14 @@ axios.get(newsUrl).then(resp => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
+        
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
 
         });
     });
 });
+
 </script>
 
 
