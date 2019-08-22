@@ -2,7 +2,7 @@
 
 @section('konten')
     <!-- Detail Hero -->
-    <section style="background-image: url({{asset('images')}}/{{ $data->background }})" class="hero-detail">
+    <section style="background-image: url({{asset('assets/images/wisata')}}/{{ $data->background }})" class="hero-detail">
         <div class="container d-flex flex-column-reverse align-items-start">
             <p style="color:white" class="detail-text-hl">{{ $data->alamat }}</p>
             <span class="detail-title">{{ $data->nama }}</span>

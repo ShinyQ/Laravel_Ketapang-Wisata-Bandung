@@ -57,7 +57,7 @@ class WisataController extends Controller
   {
     $data = new Wisatas($request->except("_token"));
     $imageName = time().'.'.request()->background->getClientOriginalExtension();
-    request()->background->move(public_path('images'), $imageName);
+    request()->background->move(public_path('assets/images/wisata'), $imageName);
     $data->background = $imageName;
     $data->save();
 

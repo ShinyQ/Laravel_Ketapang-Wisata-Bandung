@@ -21,7 +21,7 @@
              <form role="form" action ="/admin/wisata/{{ $data->id }}" method="post" enctype="multipart/form-data">
                @csrf
                <div class="content-admin content-bg">
-                 <img src="{{asset('images')}}/{{ $data->background }}" class="img-fluid"/>
+                 <img src="{{asset('assets/images/wisata')}}/{{ $data->background }}" class="img-fluid"/>
                  <div class="form-group row">
                      <div class="col-sm-12">
                          <div class="custom-file">
