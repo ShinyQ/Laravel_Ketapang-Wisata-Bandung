@@ -95,7 +95,7 @@
     // AIzaSyDYTqP6EacKcUYlnQaaGs2TlrKwAhUonoY
     function initMap() {
       const map = new google.maps.Map(document.getElementById("mapWisata"), {
-        center:  {lat: -6.9009925, lng: 107.6314009},
+        center:  {lat: -6.893396, lng: 107.62067},
         zoom: 12
       });
 

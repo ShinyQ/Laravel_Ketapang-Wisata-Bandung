@@ -32,7 +32,7 @@ class HomeController extends Controller
         );
       }
 
-      $pagination = 6;
+      $pagination = 8;
       $wisata = $wisata->paginate($pagination);
       if( request()->has('page') && request()->get('page') > 1){
         $counter += (request()->get('page')- 1) * $pagination;

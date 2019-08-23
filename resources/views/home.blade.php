@@ -49,13 +49,15 @@
                 <div class="col-md-4">
                     <img src="{{url('assets/images/highlight/kuliner.png')}}" width="120px" alt="">
                     <h3>Kuliner</h3>
-                    <p>Kuliner enak dan murah meriah memang identik dengan kota yang satu ini, kuliner jajanan yang unik dan legendaris menggoyang lidah pun ada disini. Temui dan rasakan bedanya.
+                    <p>
+                      Kuliner enak dan murah meriah memang identik dengan kota yang satu ini, kuliner jajanan yang unik dan legendaris menggoyang lidah pun ada disini. Temui dan rasakan bedanya.
                     </p>
                 </div>
                 <div class="col-md-4">
                     <img src="{{url('assets/images/highlight/wisata.png')}}" width="120px" alt="">
                     <h3>Wisata</h3>
-                    <p>Destinasi wisata serta pemandangan alam yang di gemari wisatawan lokal maupun mancanegara sangatlah beraneka ragam dan cocok untuk dikunjungi untuk berlibur dan bersantai.
+                    <p>
+                      Destinasi wisata serta pemandangan alam yang di gemari wisatawan lokal maupun mancanegara sangatlah beraneka ragam dan cocok untuk dikunjungi untuk berlibur dan bersantai.
                     </p>
 
                 </div>
@@ -63,7 +65,7 @@
                     <img src="{{url('assets/images/highlight/sejarah.png')}}" width="120px" alt="">
                     <h3>Sejarah</h3>
                     <p>
-Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni banyak bangunan bersejarah sebagai saksi kemerdekaan Indonesia yang masih terasa sampai sekarang.
+                      Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni banyak bangunan bersejarah sebagai saksi kemerdekaan Indonesia yang masih terasa sampai sekarang.
                    </p>
 
                 </div>
