@@ -25,13 +25,17 @@
 
         <div class="collapse navbar-collapse nav-admin" id="navbaradmin">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active nav-main-admin">
-                    <a class="nav-link" href="/admin/wisata">
-                        <span class="sr-only">(current)</span>Wisata</a>
+                <li class="nav-item nav-main-admin">
+                    <a class="nav-link {{ $active[0] }}" href="/admin/wisata">
+                        <span class="sr-only"></span>Wisata</a>
                 </li>
                 <li class="nav-item nav-main-admin">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link {{ $active[1] }}" href="/admin/transaksi">
                         <span class="sr-only"></span>Transaksi</a>
+                </li>
+                <li class="nav-item nav-main-admin">
+                    <a class="nav-link {{ $active[2] }}" href="/admin/riwayat">
+                        <span class="sr-only"></span>Riwayat Transaksi</a>
                 </li>
                 <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

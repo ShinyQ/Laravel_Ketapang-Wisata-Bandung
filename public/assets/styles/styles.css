@@ -5,19 +5,19 @@ select:focus {
     outline: none !important;
 }
 
-::-webkit-scrollbar{
-  width: 7px;
-  height: 7px;
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
 }
-::-webkit-scrollbar-thumb{
-  background-color: #F8BA10;
-  transition: 0.5s;
+::-webkit-scrollbar-thumb {
+    background-color: #f8ba10;
+    transition: 0.5s;
 }
-::-webkit-scrollbar-track{
-  background-color: #f1f1f1;
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #FFDE83;
+    background: #ffde83;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -26,7 +26,7 @@ a:hover {
     text-decoration: none;
 }
 .font-segoe {
-    font-famil y: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nopadding {
@@ -611,7 +611,7 @@ a:hover {
 .show > .btn-primary.dropdown-toggle:focus {
     box-shadow: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
     .detail-content-desc {
         text-align: left;
     }
