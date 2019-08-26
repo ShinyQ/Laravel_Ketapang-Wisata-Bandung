@@ -74,7 +74,11 @@ class TransaksiController extends Controller
     public function show($id)
     {
         $data = Transaksi::find($id);
-        return view('transaksi_detail', compact('data'));
+        if($data){
+          return view('transaksi_detail', compact('data'));
+        }else{
+          return abort('404');
+        }
     }
 
     /**

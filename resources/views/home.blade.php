@@ -38,7 +38,9 @@
                     </p>
                 </div>
                 <div class="col-md-6">
-
+                  <iframe width="88%" height="280" src="https://www.youtube.com/embed/DOYnxZHWSV8"
+                  frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                  </iframe>
                 </div>
             </div>
         </div>

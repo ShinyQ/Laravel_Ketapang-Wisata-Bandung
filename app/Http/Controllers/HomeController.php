@@ -44,13 +44,21 @@ class HomeController extends Controller
     public function wisata_detail($id)
     {
       $data = Wisatas::find($id);
-      return view('wisata_detail', compact('data'));
+      if($data){
+          return view('wisata_detail', compact('data'));
+      }else{
+        return abort('404');
+      }
     }
 
     public function paket($id)
     {
       $data = Paket::find($id);
-      return view('paket', compact('data'));
+      if($data){
+        return view('paket', compact('data'));
+      }else{
+        return abort('404');
+      }
     }
 
     public function logout()
