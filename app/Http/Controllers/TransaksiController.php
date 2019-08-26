@@ -84,7 +84,7 @@ class TransaksiController extends Controller
     public function update(Request $request, $id)
     {
       $now = Carbon::today();
-
+      $data = Transaksi::find($id);
       if($request->tanggal < $now){
         $request->session()->flash('message_gagal','Tanggal Jadwal Sudah Lewat');
         return redirect()->back();

@@ -12,10 +12,10 @@
     <div class="container-wisata">
     <div class="container-fluid">
     <div class="container-toggler d-flex align-content-end justify-content-end">
-                <div class="btn-group btn-group-toggle d-lg-none d-sm-block" data-toggle="buttons">
-                  <button class="btn btn-primary active" id="btn-list">List</button>
-                  <button class="btn btn-primary" id="btn-maps">Maps</button>
-              </div>
+        <div class="btn-group btn-group-toggle d-lg-none d-sm-block" data-toggle="buttons">
+          <button class="btn btn-primary active" id="btn-list">List</button>
+          <button class="btn btn-primary" id="btn-maps">Maps</button>
+      </div>
     </div>
         <div class="row no-gutters">
             <div class="col-md-5">

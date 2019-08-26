@@ -55,7 +55,7 @@ class LoginController extends Controller
       }
       elseif(Auth::user()->role == "admin"){
           Session::flash('message', 'Halo Admin Selamat Datang !');
-          return redirect('/admin');
+          return redirect('/admin/wisata');
       }
       else{
         Session::flash('message', 'Halo Penguna Selamat Datang !');
