@@ -45,6 +45,7 @@ class TransaksiController extends Controller
   public function terima(Request $request, $id){
     $data = Transaksi::find($id);
     $data->status = "Jadwal Wisata Diterima";
+    $data->admin = \Auth::user()->name;
     $data->save();
     $request->session()->flash('message','Berhasil Menerima Jadwal Wisata');
     return redirect()->back();
@@ -53,6 +54,7 @@ class TransaksiController extends Controller
   public function tolak(Request $request, $id){
     $data = Transaksi::find($id);
     $data->status = "Jadwal Wisata Ditolak";
+    $data->admin = \Auth::user()->name;
     $data->save();
     $request->session()->flash('message','Berhasil Menolak Data');
     return redirect()->back();

@@ -31,6 +31,7 @@
                           $date = $data->tanggal;
                         ?>
                        <p>Tanggal Wisata : {{ date('D, d F Y', strtotime($date)) }} </p>
+                       <p>Harga :  Rp{{ number_format($data->pakets->harga ,2,',','.') }} </p>
                        <p>Bukti Bayar : <img class="gambar" src="{{asset('assets/images/bukti')}}/{{ $data->bukti }}" width="100px"></p>
                        <div class="justify-content-center">
                          <a style="width: 49%" href="/admin/transaksi/terima/{{ $data->id }}" class="btn btn-success">Setujui</a>

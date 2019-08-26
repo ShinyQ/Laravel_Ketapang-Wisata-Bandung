@@ -15,6 +15,7 @@ class WisataController extends Controller
   {
     $this->middleware(function ($request, $next){
       if(!Auth::user()){
+        \Session::flash('message_gagal', 'Anda Harus Login Dahulu');
         return redirect('/login');
         return $next($request);
       }

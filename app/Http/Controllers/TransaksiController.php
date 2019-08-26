@@ -7,6 +7,20 @@ use App\Transaksi;
 
 class TransaksiController extends Controller
 {
+
+    public function __construct()
+    {
+      $this->middleware(function ($request, $next){
+        if(\Auth::user()){
+          return $next($request);
+        }
+        else{
+          \Session::flash('message_gagal', 'Anda Harus Login Dahulu');
+          return redirect('/login');
+          return $next($request);
+        }
+      });
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +28,8 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-      $data = Transaksi::where('id_user', \Auth::user()->id);
-      return view('transaksi', compact('$data'));
+      $transaksi = Transaksi::where('id_user', \Auth::user()->id)->get();
+      return view('transaksi', compact('transaksi'));
     }
 
     /**
@@ -95,7 +109,7 @@ class TransaksiController extends Controller
           request()->background->move(public_path('images/bukti'), $imageName);
           $data->bukti = $imageName;
           $data->tanggal = $request->tanggal;
-          $data->status = "Menunggu Konfirmasi"
+          $data->status = "Menunggu Konfirmasi";
           $data->save();
           $request->session()->flash('message','Berhasil Menambahkan Bukti Bayar');
           return redirect()->back();

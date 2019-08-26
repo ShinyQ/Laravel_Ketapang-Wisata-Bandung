@@ -1,4 +1,4 @@
-@extends('template.navigation')
+@extends('template.navigation2')
 
 @section('konten')
     </section>

@@ -32,16 +32,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-        				<a class="nav-link" href="#hero">Beranda</a>
+        				<a class="nav-link" href="/#hero">Beranda</a>
         			</li>
         			<li class="nav-item">
-        				<a class="nav-link" href="#news">Berita</a>
+        				<a class="nav-link" href="/#news">Berita</a>
 			        </li>
               <li class="nav-item">
-        				<a class="nav-link" href="#wisata">Wisata</a>
+        				<a class="nav-link" href="/#wisata">Wisata</a>
 			        </li>
               <li class="nav-item">
-        				<a class="nav-link" href="#paket">Paket</a>
+        				<a class="nav-link" href="/#paket">Paket</a>
 			        </li>
              @if(Auth::user())
                 <li class="nav-item dropdown">
@@ -73,3 +73,5 @@
   </body>
 
 @yield('konten')
+  <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
+  <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
