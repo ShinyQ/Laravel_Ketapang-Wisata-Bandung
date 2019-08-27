@@ -470,80 +470,105 @@ a:hover {
 }
 
 .bg-card-t img {
-  position: absolute;
-  z-index: 10;
+    position: absolute;
+    z-index: 10;
 }
 .bg-card-t {
-  position: absolute;
-  width: 230px;
-  height: 100%;
-  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    position: absolute;
+    width: 230px;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
 }
 .bg-card-t img {
-  height: 160%;
+    height: 160%;
 }
 .transaksi {
-  margin-top: 64px;
+    margin-top: 64px;
 }
 .transaksi h2 {
-  font-weight: bold;
-  color: #f8ba10;
-  letter-spacing: 2px;
-  margin-bottom: 64px;
+    font-weight: bold;
+    color: #f8ba10;
+    letter-spacing: 2px;
+    margin-bottom: 64px;
 }
 .content-card {
-  padding: 20px 20px 0 20px;
+    padding: 20px 20px 0 20px;
 }
 .content-card h5 {
-  font-weight: bold;
-  letter-spacing: 0.3;
+    font-weight: bold;
+    letter-spacing: 0.3;
 }
 .content-card p {
-  font-weight: bold;
-  color: rgb(248, 140, 16);
+    font-weight: bold;
+    color: rgb(248, 140, 16);
 }
 .brief-card {
-  border-right: 1px solid #d4d4d4;
+    border-right: 1px solid #d4d4d4;
 }
 .brief-card hr {
-  display: none;
+    display: none;
 }
 
 .detail-card-t div {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .detail-card-t .btn {
-  width: 100%;
+    width: 100%;
 }
 @media (max-width: 768px) {
-  .brief-card hr {
-    display: block;
-  }
-  .content-card {
-    padding-bottom: unset;
-  }
-  .overlay-t {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    z-index: 99;
-    clip-path: unset;
-    background: #f8ba1067;
-  }
-  .bg-card-t {
-    position: relative;
-    width: 100%;
-    min-height: 100px;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-  .bg-card-t img {
-    width: 100%;
-  }
-  .brief-card {
-    border-right: none;
-  }
+    .brief-card hr {
+        display: block;
+    }
+    .content-card {
+        padding-bottom: unset;
+    }
+    .overlay-t {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        z-index: 99;
+        clip-path: unset;
+        background: #f8ba1067;
+    }
+    .bg-card-t {
+        position: relative;
+        width: 100%;
+        min-height: 100px;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .bg-card-t img {
+        width: 100%;
+    }
+    .brief-card {
+        border-right: none;
+    }
 }
 /* End of Transaksi */
+
+/* Transaksi Detail */
+.transaksi-detail {
+    margin-top: 64px;
+}
+.transaksi-detail h2 {
+    font-weight: bold;
+    color: #f8ba10;
+    letter-spacing: 2px;
+    margin-bottom: 64px;
+}
+.transaksi-detail h6 {
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.transaksi-detail h4 {
+    font-weight: 500;
+    margin-top: 16px;
+}
+.payment-method {
+    border: 0.6px solid #e9e9e9;
+    border-radius: 8px;
+    padding: 16px;
+}
+/* End of Transaksi Detail */
 
 /* Detail Style */
 
