@@ -119,26 +119,29 @@
     <section class="landing paket">
         <div class="container">
             <h2 style="margin-top: 200px; margin-bottom:50px">Paket Wisata</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, hic dolor. Voluptates praesentium</p>
+            <p>Jelajahi Dan Kunjungi Tempat Wisata Nan Indah Di Bandung Dengan Paket Wisata Kami</p>
             <div class="row">
                 <div class="col-md-4">
                     <div class="plans-card d-flex flex-column">
                         <div class="plans-header d-flex align-items-center justify-content-center">
                             <p>paket</p>
-                            <h2>Misqueen</h2>
+                            <h2>Merakyat</h2>
                         </div>
                         <div class="plans-content">
                             <h3 class="font-segoe color-black text-center">
-                              Rp. 1.000.000,-
+                              Rp. 1.600.000,-
                               <span> / pax </span>
                             </h3>
                             <br>
                             <hr>
-                            <p class="font-segoe color-black text-center">Telkom University</p>
-                            <p class="font-segoe color-black text-center bg-grey">PT. Telekomunikasi</p>
-                            <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
-                            <p class="font-segoe color-black text-center bg-grey color-disable">SMA Pariwisata Telkom Bandung</p>
-                            <p class="font-segoe color-black text-center color-disable">SMK Telkom Malang bojongsoank</p>
+                            <p class="font-segoe color-black text-center">Floating Market Lembang</p>
+                            <p class="font-segoe color-black text-center bg-grey">Farmhouse Lembang</p>
+                            <p class="font-segoe color-black text-center">Gedung Sate</p>
+                            <p class="font-segoe color-black text-center bg-grey">Alun – Alun Bandung</p>
+                            <p class="font-segoe color-black text-center">Gedung Asia Afrika</p>
+                            <p class="font-segoe color-black text-center  bg-grey color-disable">De’Ranch Lembang</p>
+                            <p class="font-segoe color-black text-center color-disable">Cihampelas Walk</p>
+                            <p class="font-segoe color-black text-center  bg-grey color-disable">Kebun Begonia</p>
                             <button class="btn btn-primary">Detail Paket</button>
                         </div>
                     </div>
@@ -151,16 +154,19 @@
                         </div>
                         <div class="plans-content">
                             <h3 class="font-segoe color-black text-center">
-                              Rp. 2.000.000,-
+                              Rp. 1.750.000,-
                               <span> / pax </span>
                             </h3>
                             <br>
                             <hr>
-                            <p class="font-segoe color-black text-center">Telkom University</p>
-                            <p class="font-segoe color-black text-center bg-grey">PT. Telekomunikasi</p>
-                            <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
-                            <p class="font-segoe color-black text-center bg-grey">SMA Pariwisata Telkom Bandung</p>
-                            <p class="font-segoe color-black text-center color-disable">SMK Telkom Malang bojongsoank</p>
+                            <p class="font-segoe color-black text-center">Floating Market Lembang</p>
+                            <p class="font-segoe color-black text-center bg-grey">Farmhouse Lembang</p>
+                            <p class="font-segoe color-black text-center">De’Ranch Lembang</p>
+                            <p class="font-segoe color-black text-center  bg-grey">Gedung Sate</p>
+                            <p class="font-segoe color-black text-center ">Gedung Asia Afrika</p>
+                            <p class="font-segoe color-black text-center bg-grey">Alun – Alun Bandung</p>
+                            <p class="font-segoe color-black text-center color-disable">Cihampelas Walk</p>
+                            <p class="font-segoe color-black text-center  bg-grey color-disable">Kebun Begonia</p>
                             <button class="btn btn-primary">Detail Paket</button>
                         </div>
                     </div>
@@ -173,16 +179,19 @@
                         </div>
                         <div class="plans-content">
                             <h3 class="font-segoe color-black text-center">
-                              Rp. 3.000.000,-
+                              Rp. 2.200.000,-
                               <span> / pax </span>
                             </h3>
                             <br>
                             <hr>
-                            <p class="font-segoe color-black text-center">Telkom University</p>
-                            <p class="font-segoe color-black text-center bg-grey">PT. Telekomunikasi</p>
-                            <p class="font-segoe color-black text-center">SMA Telkom Bandung</p>
-                            <p class="font-segoe color-black text-center bg-grey">SMA Pariwisata Telkom Bandung</p>
-                            <p class="font-segoe color-black text-center">SMK Telkom Malang bojongsoank</p>
+                            <p class="font-segoe color-black text-center">Floating Market Lembang</p>
+                            <p class="font-segoe color-black text-center bg-grey">Farmhouse Lembang</p>
+                            <p class="font-segoe color-black text-center">Kebun Begonia</p>
+                            <p class="font-segoe color-black text-center bg-grey">De’Ranch Lembang</p>
+                            <p class="font-segoe color-black text-center">Gedung Sate</p>
+                            <p class="font-segoe color-black text-center bg-grey">Gedung Asia Afrika</p>
+                            <p class="font-segoe color-black text-center">Cihampelas Walk</p>
+                            <p class="font-segoe color-black text-center bg-grey">Alun – Alun Bandung</p>
                             <button class="btn btn-primary">Detail Paket</button>
                         </div>
                     </div>

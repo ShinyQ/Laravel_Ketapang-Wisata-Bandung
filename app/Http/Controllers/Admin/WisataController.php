@@ -80,14 +80,22 @@ class WisataController extends Controller
   {
     $active = ["active","",""];
     $data = Wisatas::find($id);
-    return view('wisata_detail', compact('data','active'));
+    if($data){
+      return view('wisata_detail', compact('data','active'));
+    }else{
+      return abort('404');
+    }
   }
 
   public function edit($id)
   {
     $data = Wisatas::find($id);
     $active = ["active","",""];
-    return view('admin.wisata_edit', compact('data','active'));
+    if($data){
+      return view('admin.wisata_edit', compact('data','active'));
+    }else{
+      return abort('404');
+    }
   }
 
   public function update($id, Request $request)
