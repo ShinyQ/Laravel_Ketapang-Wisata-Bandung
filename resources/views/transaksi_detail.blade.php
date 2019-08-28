@@ -69,6 +69,7 @@
     </section>
     <!-- End of Footer  -->
 
-</script>
+    <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
+    <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
 
     @endsection

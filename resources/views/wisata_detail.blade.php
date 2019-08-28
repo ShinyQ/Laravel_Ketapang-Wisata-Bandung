@@ -99,7 +99,6 @@
     </body>
     <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
     <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
-    <script src="{{url('assets/scripts/bootstrap/bootstrap.bundle.min.js')}}"></script>
     <script src="{{url('assets/scripts/masonry.pkgd.min.js')}}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYTqP6EacKcUYlnQaaGs2TlrKwAhUonoY&callback=initMap"
     async defer></script>

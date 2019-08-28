@@ -84,6 +84,5 @@
   </body>
   <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
   <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
-  <script src="{{url('assets/scripts/bootstrap/bootstrap.bundle.min.js')}}"></script>
   </html>
      <!-- End of Wisata Content -->
