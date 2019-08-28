@@ -64,13 +64,21 @@
                     <div class="group-content-information">
                         <h6>Tanggal Didirikan</h6>
                         <p class="content-text">
+                            @if($data->tanggal_dibangun)
                             {{ $data->tanggal_dibangun }}
+                            @else
+                            -
+                            @endif
                         </p>
                     </div>
                     <div class="group-content-information">
                         <h6>Telepon</h6>
                         <p class="content-text">
-                            {{ $data->telepon }}
+                          @if($data->telepon)
+                          {{ $data->telepon }}
+                          @else
+                          -
+                          @endif
                         </p>
                     </div>
                 </div>

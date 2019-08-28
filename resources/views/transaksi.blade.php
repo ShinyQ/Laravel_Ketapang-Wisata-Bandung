@@ -41,9 +41,9 @@
                                               </div>
                                               <div class="col-lg-6">
                                                   <h6>Status</h6>
-                                                  @if($data->status == "Jadwal Ditolak")
+                                                  @if($data->status == "Jadwal Wisata Ditolak")
                                                   <strong><span style="color:red">{{ $data->status }}</span></strong>
-                                                  @elseif($data->status == "Jadwal Diterima")
+                                                  @elseif($data->status == "Jadwal Wisata Diterima")
                                                   <strong><span style="color:green">{{ $data->status }}</span></strong>
                                                   @else
                                                   <strong><span style="color:orange">{{ $data->status }}</span></strong>
