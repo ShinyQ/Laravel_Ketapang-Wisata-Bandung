@@ -3,7 +3,9 @@
 @section('konten')
 <section class="transaksi">
   <div class="container">
-      <h2>Transaksi</h2>
+  <h2>
+    Transaksi
+  </h2>
       <div class="row">
           @forelse($transaksi as $data)
           <div class="col-lg-12">

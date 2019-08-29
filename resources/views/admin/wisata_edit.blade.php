@@ -21,6 +21,7 @@
              <form role="form" action ="/admin/wisata/{{ $data->id }}" method="post" enctype="multipart/form-data">
                @csrf
                <div class="content-admin content-bg">
+                 <h4>Background Wisata</h4>
                  <img src="{{asset('assets/images/wisata')}}/{{ $data->background }}" class="img-fluid"/>
                  <div class="form-group row">
                      <div class="col-sm-12">

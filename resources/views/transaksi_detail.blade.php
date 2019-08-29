@@ -5,7 +5,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h2 style="margin-bottom: 10px;">{{ $data->pakets->nama }}</h2>
+                    <h2 style="margin-bottom: 10px;">
+                      {{ $data->pakets->nama }}
+                    </h2>
                     <h6>  {{ date('D, d F Y', strtotime($data->tanggal)) }}</h6>
                     <p>Isinya paket miskin</p>
                 </div>

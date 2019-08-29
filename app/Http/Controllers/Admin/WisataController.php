@@ -101,32 +101,36 @@ class WisataController extends Controller
   public function update($id, Request $request)
   {
     $data = Wisatas::find($id);
-        if($request->background){
-          $imageName = time().'.'.request()->background->getClientOriginalExtension();
-          request()->background->move(public_path('assets/images/wisata'), $imageName);
-          $data->background = $imageName;
-          $data->nama = $request->nama;
-          $data->deskripsi = $request->deskripsi;
-          $data->alamat = $request->alamat;
-          $data->waktu = $request->waktu;
-          $data->tanggal_dibangun = $request->tanggal_dibangun;
-          $data->telepon = $request->telepon;
-          $data->save();
+    if($data){
+      if($request->background){
+        $imageName = time().'.'.request()->background->getClientOriginalExtension();
+        request()->background->move(public_path('assets/images/wisata'), $imageName);
+        $data->background = $imageName;
+        $data->nama = $request->nama;
+        $data->deskripsi = $request->deskripsi;
+        $data->alamat = $request->alamat;
+        $data->waktu = $request->waktu;
+        $data->tanggal_dibangun = $request->tanggal_dibangun;
+        $data->telepon = $request->telepon;
+        $data->save();
 
-          $request->session()->flash('message','Berhasil Mengedit Data');
-          return redirect()->back();
-        }
-        else{
-          $data->nama = $request->nama;
-          $data->deskripsi = $request->deskripsi;
-          $data->alamat = $request->alamat;
-          $data->waktu = $request->waktu;
-          $data->tanggal_dibangun = $request->tanggal_dibangun;
-          $data->telepon = $request->telepon;
-          $data->save();
+        $request->session()->flash('message','Berhasil Mengedit Data');
+        return redirect()->back();
+      }
+      else{
+        $data->nama = $request->nama;
+        $data->deskripsi = $request->deskripsi;
+        $data->alamat = $request->alamat;
+        $data->waktu = $request->waktu;
+        $data->tanggal_dibangun = $request->tanggal_dibangun;
+        $data->telepon = $request->telepon;
+        $data->save();
 
-          $request->session()->flash('message','Berhasil Mengedit Data');
-          return redirect()->back();
-        }
+        $request->session()->flash('message','Berhasil Mengedit Data');
+        return redirect()->back();
+      }
+    }else{
+      return abort('404');
+    }
   }
 }
