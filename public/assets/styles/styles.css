@@ -455,6 +455,17 @@ a:hover {
     min-height: 220px !important;
     max-height: 220px !important;
 }
+.card-detailpaket img{
+    border-radius: 16px;
+    min-height: 162px;
+}
+.card-detailpaket p{
+  color: #f5f5f5;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  margin-top: 2%;
+}
 
 /* End of Card */
 

@@ -11,19 +11,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>{{ $data->nama }}</h2>
                     <div class="owl-carousel">
                         <div class="item">
-                            <h4>1</h4>
+                          <div class="card-detailpaket">
+                            <img class="img-fluid" src="{{url('assets/images/wisata/1566520303.jpg')}}" width="auto" alt="">
+                            <p>Floating Market Lembang</p>
+                          </div>
                         </div>
                         <div class="item">
-                            <h4>2</h4>
+                          <div class="card-detailpaket">
+                            <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                            <p>Farming House</p>
+                          </div>
                         </div>
                         <div class="item">
-                            <h4>3</h4>
+                          <div class="card-detailpaket">
+                            <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                            <p>Gedung Sate</p>
+                          </div>
                         </div>
                         <div class="item">
-                            <h4>4</h4>
+                          <div class="card-detailpaket">
+                            <img class="img-fluid" src="{{url('assets/images/wisata/1566519008.jpg')}}" width="auto" alt="">
+                            <p>Alun - Alun Bandung</p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="card-detailpaket">
+                            <img class="img-fluid" src="{{url('assets/images/wisata/1566560914.jpg')}}" width="auto" alt="">
+                            <p>Gedung Asia Afrika</p>
+                          </div>
                         </div>
                     </div>
                     <br>
@@ -71,19 +88,42 @@
           <div class="container">
               <div class="row">
                   <div class="col-lg-12">
-                      <h2>{{ $data->nama }}</h2>
                       <div class="owl-carousel">
                           <div class="item">
-                              <h4>1</h4>
+                            <div class="card-detailpaket">
+                              <img class="img-fluid" src="{{url('assets/images/wisata/1566520303.jpg')}}" width="auto" alt="">
+                              <p>Floating Market Lembang</p>
+                            </div>
                           </div>
                           <div class="item">
-                              <h4>2</h4>
+                            <div class="card-detailpaket">
+                              <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                              <p>Farming House</p>
+                            </div>
                           </div>
                           <div class="item">
-                              <h4>3</h4>
+                            <div class="card-detailpaket">
+                              <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                              <p>Gedung Sate</p>
+                            </div>
                           </div>
                           <div class="item">
-                              <h4>4</h4>
+                            <div class="card-detailpaket">
+                              <img class="img-fluid" src="{{url('assets/images/wisata/1566519008.jpg')}}" width="auto" alt="">
+                              <p>Alun - Alun Bandung</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="card-detailpaket">
+                              <img class="img-fluid" src="{{url('assets/images/wisata/1566560914.jpg')}}" width="auto" alt="">
+                              <p>Gedung Asia Afrika</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="card-detailpaket">
+                              <img class="img-fluid" src="{{url('assets/images/wisata/1566519777.jpg')}}" width="auto" alt="">
+                              <p>De’Ranch Lembang</p>
+                            </div>
                           </div>
                       </div>
                       <br>
@@ -132,19 +172,54 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2>{{ $data->nama }}</h2>
                         <div class="owl-carousel">
                             <div class="item">
-                                <h4>1</h4>
+                              <div class="card-detailpaket">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566520303.jpg')}}" width="auto" alt="">
+                                <p>Floating Market Lembang</p>
+                              </div>
                             </div>
                             <div class="item">
-                                <h4>2</h4>
+                              <div class="card-detailpaket">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                                <p>Farming House</p>
+                              </div>
                             </div>
                             <div class="item">
-                                <h4>3</h4>
+                              <div class="card-detailpaket">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                                <p>Gedung Sate</p>
+                              </div>
                             </div>
                             <div class="item">
-                                <h4>4</h4>
+                              <div class="card-detailpaket">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566519008.jpg')}}" width="auto" alt="">
+                                <p>Alun - Alun Bandung</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <div class="card-detailpaket">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566560914.jpg')}}" width="auto" alt="">
+                                <p>Gedung Asia Afrika</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <div class="card-detailpaket">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566519777.jpg')}}" width="auto" alt="">
+                                <p>De’Ranch Lembang</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <div class="card-detailpaket">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566488627.jpg')}}" width="auto" alt="">
+                                <p>Cihampelas Walk</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <div class="card-detailpaket">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566520816.jpg')}}" width="auto" alt="">
+                                <p>Kebun Begonia</p>
+                              </div>
                             </div>
                         </div>
                         <br>
