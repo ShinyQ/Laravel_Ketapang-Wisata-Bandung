@@ -10,7 +10,7 @@
   <section class="transaksi-detail">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-9 vertical-line">
                     <div class="owl-carousel">
                         <div class="item">
                           <a href="" class="card-detailpaket">
@@ -68,25 +68,26 @@
                     <div class="map-pkt" id="mapPaket"></div>
 
                 </div>
-            </div>
-        </div>
-        <div class="sticky-book">
-            <div class="booking-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6">
-                            <h4>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</h4>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex justify-content-center align-items-center">
-                                @if(Auth::user())
-                                <button class="btn btn-primary" style="width: 100%">Booking Now</button>
-                                @else
-                                <button class="btn btn-primary" style="width: 100%">Login Untuk Booking</button>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-3">
+                  <div class="sticky-book">
+                      <div class="booking-section">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-12">
+                                      <h4>Total</h4>
+                                      <p>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</p>
+                                  </div>
+                                  <div class="col-12">
+                                        @if(Auth::user())
+                                        <button class="btn btn-primary">Booking Now</button>
+                                        @else
+                                        <button class="btn btn-primary">Login Untuk Booking</button>
+                                        @endif
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -97,7 +98,7 @@
     <section class="transaksi-detail">
           <div class="container">
               <div class="row">
-                  <div class="col-lg-12">
+                  <div class="col-lg-9 vertical-line">
                       <div class="owl-carousel">
                           <div class="item">
                             <div class="card-detailpaket">
@@ -164,25 +165,26 @@
                       <div class="map-pkt" id="mapPaket"></div>
 
                   </div>
-              </div>
-          </div>
-          <div class="sticky-book">
-              <div class="booking-section">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-6">
-                              <h4>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</h4>
-                          </div>
-                          <div class="col-6">
-                              <div class="d-flex justify-content-center align-items-center">
-                                  @if(Auth::user())
-                                  <button class="btn btn-primary" style="width: 100%">Booking Now</button>
-                                  @else
-                                  <button class="btn btn-primary" style="width: 100%">Login Untuk Booking</button>
-                                  @endif
-                              </div>
-                          </div>
-                      </div>
+                  <div class="col-lg-3">
+                    <div class="sticky-book">
+                        <div class="booking-section">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4>Total</h4>
+                                        <p>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</p>
+                                    </div>
+                                    <div class="col-12">
+                                          @if(Auth::user())
+                                          <button class="btn btn-primary">Booking Now</button>
+                                          @else
+                                          <button class="btn btn-primary">Login Untuk Booking</button>
+                                          @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                   </div>
               </div>
           </div>
@@ -193,7 +195,7 @@
       <section class="transaksi-detail">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-9 vertical-line">
                         <div class="owl-carousel">
                             <div class="item">
                               <div class="card-detailpaket">
@@ -278,25 +280,26 @@
                         <div class="map-pkt" id="mapPaket"></div>
 
                     </div>
-                </div>
-            </div>
-            <div class="sticky-book">
-                <div class="booking-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6">
-                                <h4>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</h4>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    @if(Auth::user())
-                                    <button class="btn btn-primary" style="width: 100%">Booking Now</button>
-                                    @else
-                                    <button class="btn btn-primary" style="width: 100%">Login Untuk Booking</button>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-lg-3">
+                      <div class="sticky-book">
+                          <div class="booking-section">
+                              <div class="container-fluid">
+                                  <div class="row">
+                                      <div class="col-12">
+                                          <h4>Total</h4>
+                                          <p>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</p>
+                                      </div>
+                                      <div class="col-12">
+                                            @if(Auth::user())
+                                            <button class="btn btn-primary">Booking Now</button>
+                                            @else
+                                            <button class="btn btn-primary">Login Untuk Booking</button>
+                                            @endif
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                     </div>
                 </div>
             </div>
