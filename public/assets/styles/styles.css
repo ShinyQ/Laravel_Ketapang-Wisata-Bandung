@@ -455,18 +455,6 @@ a:hover {
     min-height: 220px !important;
     max-height: 220px !important;
 }
-.card-detailpaket img{
-    border-radius: 16px;
-    min-height: 162px;
-}
-.card-detailpaket p{
-  color: #f5f5f5;
-  font-size: 16px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
-  margin-top: 2%;
-}
-
 /* End of Card */
 
 /* Start Transaksi */
@@ -1245,17 +1233,44 @@ input:focus + label {
 /* End of Admin Style */
 
 /* Booking Section */
-
+.transaksi-detail{
+  margin: auto;
+}
+.transaksi-detail .owl-carousel{
+  margin-top: 50px;
+}
+.vertical-line{
+  border-right: 3px solid #ebebeb;
+}
 .booking-section {
     width: 100%;
     background: white;
     position: fixed;
-    bottom: 0;
-    border: 1px solid #ebebeb;
+    margin-top: 50px;
     padding: 16px;
 }
 .booking-section h4 {
     font-weight: bold;
+}
+.booking-section button{
+    width: 20%;
+}
+.card-detailpaket img{
+    border-radius: 16px;
+    min-height: 162px;
+}
+.card-detailpaket p{
+    color: #f5f5f5;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin-top: 2%;
+}
+@media only screen and (max-width: 441px) {
+  .card-detailpaket img{
+      border-radius: 16px;
+      max-height: 50px;
+  }
 }
 .detail-content-pkt {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
