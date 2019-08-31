@@ -161,10 +161,10 @@
                             <hr>
                             <p class="font-segoe color-black text-center">Floating Market Lembang</p>
                             <p class="font-segoe color-black text-center bg-grey">Farmhouse Lembang</p>
-                            <p class="font-segoe color-black text-center">De’Ranch Lembang</p>
-                            <p class="font-segoe color-black text-center  bg-grey">Gedung Sate</p>
-                            <p class="font-segoe color-black text-center ">Gedung Asia Afrika</p>
+                            <p class="font-segoe color-black text-center">Gedung Sate</p>
                             <p class="font-segoe color-black text-center bg-grey">Alun – Alun Bandung</p>
+                            <p class="font-segoe color-black text-center">Gedung Asia Afrika</p>
+                            <p class="font-segoe color-black text-center  bg-grey">De’Ranch Lembang</p>
                             <p class="font-segoe color-black text-center color-disable">Cihampelas Walk</p>
                             <p class="font-segoe color-black text-center  bg-grey color-disable">Kebun Begonia</p>
                             <button class="btn btn-primary">Detail Paket</button>
@@ -186,12 +186,12 @@
                             <hr>
                             <p class="font-segoe color-black text-center">Floating Market Lembang</p>
                             <p class="font-segoe color-black text-center bg-grey">Farmhouse Lembang</p>
-                            <p class="font-segoe color-black text-center">Kebun Begonia</p>
-                            <p class="font-segoe color-black text-center bg-grey">De’Ranch Lembang</p>
                             <p class="font-segoe color-black text-center">Gedung Sate</p>
-                            <p class="font-segoe color-black text-center bg-grey">Gedung Asia Afrika</p>
-                            <p class="font-segoe color-black text-center">Cihampelas Walk</p>
                             <p class="font-segoe color-black text-center bg-grey">Alun – Alun Bandung</p>
+                            <p class="font-segoe color-black text-center">Gedung Asia Afrika</p>
+                            <p class="font-segoe color-black text-center  bg-grey">De’Ranch Lembang</p>
+                            <p class="font-segoe color-black text-center">Cihampelas Walk</p>
+                            <p class="font-segoe color-black text-center  bg-grey">Kebun Begonia</p>
                             <button class="btn btn-primary">Detail Paket</button>
                         </div>
                     </div>
