@@ -47,11 +47,21 @@
                     <h3>Destinasi Wisata</h3>
                     <div class="detail-content-pkt">
                         <ul class="destinasi-pkt">
-                            <li>Floating Market Lembang</li>
-                            <li>Farmhouse Lembang</li>
-                            <li>Gedung Sate</li>
-                            <li>Alun – Alun Bandung</li>
-                            <li>Gedung Asia Afrika</li>
+                            <li>Floating Market Lembang
+                              <span>Rp. 500.000,-</span>
+                            </li>
+                            <li>Farmhouse Lembang
+                              <span>Rp. 450.000,-</span>
+                            </li>
+                            <li>Gedung Sate
+                              <span>Rp. 250.000,-</span>
+                            </li>
+                            <li>Alun – Alun Bandung
+                              <span>Rp. 200.000,-</span>
+                            </li>
+                            <li>Gedung Asia Afrika
+                              <span>Rp. 200.000,-</span>
+                            </li>
                         </ul>
                     </div>
 
@@ -130,12 +140,24 @@
                       <h3>Destinasi Wisata</h3>
                       <div class="detail-content-pkt">
                           <ul class="destinasi-pkt">
-                            <li>Floating Market Lembang</li>
-                            <li>Farmhouse Lembang</li>
-                            <li>Gedung Sate</li>
-                            <li>Alun – Alun Bandung</li>
-                            <li>Gedung Asia Afrika</li>
-                            <li>De’Ranch Lembang</li>
+                            <li>Floating Market Lembang
+                              <span>Rp. 500.000,-</span>
+                            </li>
+                            <li>Farmhouse Lembang
+                              <span>Rp. 450.000,-</span>
+                            </li>
+                            <li>Gedung Sate
+                              <span>Rp. 250.000,-</span>
+                            </li>
+                            <li>Alun – Alun Bandung
+                              <span>Rp. 200.000,-</span>
+                            </li>
+                            <li>Gedung Asia Afrika
+                              <span>Rp. 200.000,-</span>
+                            </li>
+                            <li>De’Ranch Lembang
+                              <span>Rp. 150.000,-</span>
+                            </li>
                           </ul>
                       </div>
 
@@ -226,14 +248,30 @@
                         <h3>Destinasi Wisata</h3>
                         <div class="detail-content-pkt">
                             <ul class="destinasi-pkt">
-                              <li>Floating Market Lembang</li>
-                              <li>Farmhouse Lembang</li>
-                              <li>Gedung Sate</li>
-                              <li>Alun – Alun Bandung</li>
-                              <li>Gedung Asia Afrika</li>
-                              <li>De’Ranch Lembang</li>
-                              <li>Cihampes Walk</li>
-                              <li>Kebun Begonia</li>
+                              <li>Floating Market Lembang
+                                <span>Rp. 500.000,-</span>
+                              </li>
+                              <li>Farmhouse Lembang
+                                <span>Rp. 450.000,-</span>
+                              </li>
+                              <li>Gedung Sate
+                                <span>Rp. 250.000,-</span>
+                              </li>
+                              <li>Alun – Alun Bandung
+                                <span>Rp. 200.000,-</span>
+                              </li>
+                              <li>Gedung Asia Afrika
+                                <span>Rp. 200.000,-</span>
+                              </li>
+                              <li>De’Ranch Lembang
+                                <span>Rp. 150.000,-</span>
+                              </li>
+                              <li>Cihampes Walk
+                                <span>Rp. 250.000,-</span>
+                              </li>
+                              <li>Kebun Begonia
+                                <span>Rp. 200.000,-</span>
+                              </li>
                             </ul>
                         </div>
 
