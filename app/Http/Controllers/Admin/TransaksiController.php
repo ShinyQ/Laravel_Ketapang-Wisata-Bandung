@@ -56,7 +56,7 @@ class TransaksiController extends Controller
     $data->status = "Jadwal Wisata Ditolak";
     $data->admin = \Auth::user()->name;
     $data->save();
-    $request->session()->flash('message','Berhasil Menolak Data');
+    $request->session()->flash('message','Berhasil Menolak Jadwal Wisata');
     return redirect()->back();
   }
 

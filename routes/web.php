@@ -54,6 +54,7 @@ Route::prefix('admin')->group(function(){
     Route::post('/', 'Admin\WisataController@store');
     Route::get('/{id}/edit', 'Admin\WisataController@edit');
     Route::post('/{id}', 'Admin\WisataController@update');
+    Route::get('/{id}', 'Admin\WisataController@destroy');
   });
   Route::prefix('transaksi')->group(function(){
     Route::get('/', 'Admin\TransaksiController@index');

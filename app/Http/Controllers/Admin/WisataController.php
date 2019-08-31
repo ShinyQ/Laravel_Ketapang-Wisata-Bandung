@@ -71,7 +71,7 @@ class WisataController extends Controller
     $data = Wisatas::find($id);
     $data->delete();
     if($data) {
-        Session::flash('message','Berhasil menghapus Data');
+        Session::flash('message','Berhasil menghapus Data Wisata');
     }
     return redirect()->back();
   }

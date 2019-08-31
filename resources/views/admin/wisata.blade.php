@@ -10,7 +10,9 @@
                 <button class="btn btn-primary ">Add Wisata</button>
             </a>
         </div>
-
+          @if (Session::has('message'))
+            <h5><font color="green"> {{ Session::get('message') }}</font></h5><br>
+          @endif
         <div class="content-admin">
             <div class="row">
                 @foreach($wisata as $data)
@@ -20,9 +22,13 @@
                             <div class="wisata-card-desc">
                                 <h5>{{ $data->nama }}</h5>
                                 <p>{{ $data->alamat }}</p>
+                                <a style="float: right;" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Tempat Wisata ?')" href="/admin/wisata/{{ $data->id }}">
+                                    <svg style="fill: #f8ba10!important" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+                                </a>
                             </div>
                         </div>
                     </a>
+
                 </div>
                 @endforeach
             </div>

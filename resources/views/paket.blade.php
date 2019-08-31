@@ -13,10 +13,10 @@
                 <div class="col-lg-12">
                     <div class="owl-carousel">
                         <div class="item">
-                          <div class="card-detailpaket">
+                          <a href="" class="card-detailpaket">
                             <img class="img-fluid" src="{{url('assets/images/wisata/1566520303.jpg')}}" width="auto" alt="">
                             <p>Floating Market Lembang</p>
-                          </div>
+                          </a>
                         </div>
                         <div class="item">
                           <div class="card-detailpaket">
