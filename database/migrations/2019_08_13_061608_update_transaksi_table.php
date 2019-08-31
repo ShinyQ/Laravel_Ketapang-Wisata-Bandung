@@ -14,10 +14,10 @@ class UpdateTransaksiTable extends Migration
     public function up()
     {
       Schema::table('transaksis', function (Blueprint $table) {
-        $table->string('bukti')->after('harga');
+        $table->string('bukti')->after('harga')->nullable();
         $table->string('status')->after('bukti');
         $table->integer('id_paket')->after('id_user');
-        $table->string('admin')->after('id_user');
+        $table->string('admin')->after('id_user')->nullable();
       });
     }
 

@@ -12,7 +12,7 @@
         <h4>Riwayat Transaksi</h4>
     </div>
 
-    <div class="content-admin">
+    <div class="content-admin" style="margin-bottom: 50px">
           <table width="100%" class="table table-striped">
           <thead>
             <tr>
@@ -62,6 +62,7 @@
             @endforeach
           </tbody>
         </table>
+         <ul style="padding-top: 40px;" class="pagination justify-content-center">{!! $riwayat->appends(request()->all())->links() !!}</ul>
     </div>
 </div>
 @endsection

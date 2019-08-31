@@ -45,6 +45,8 @@ Route::prefix('paket')->group(function(){
 Route::prefix('transaksi')->group(function(){
   Route::get('/', 'TransaksiController@index');
   Route::get('/{id}', 'TransaksiController@show');
+  Route::post('/', 'TransaksiController@store');
+  Route::post('/{id}', 'TransaksiController@update');
 });
 
 Route::prefix('admin')->group(function(){

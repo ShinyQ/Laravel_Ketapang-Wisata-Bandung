@@ -1245,7 +1245,6 @@ input:focus + label {
 .booking-section {
     width: 100%;
     background: white;
-    position: fixed;
     margin-top: 50px;
     padding: 16px;
 }
@@ -1253,7 +1252,7 @@ input:focus + label {
     font-weight: bold;
 }
 .booking-section button{
-    width: 20%;
+    width: 100%;
 }
 .card-detailpaket img{
     border-radius: 16px;
@@ -1279,7 +1278,6 @@ input:focus + label {
 }
 .map-pkt {
     height: 400px;
-    margin-bottom: 128px;
 }
 
 .sticky-book .sticky-top {

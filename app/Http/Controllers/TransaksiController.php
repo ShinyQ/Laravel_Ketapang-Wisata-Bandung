@@ -28,7 +28,7 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-      $transaksi = Transaksi::where('id_user', \Auth::user()->id)->get();
+      $transaksi = Transaksi::where('id_user', \Auth::user()->id)->orderBy('updated_at', 'desc')->get();
       return view('transaksi', compact('transaksi'));
     }
 
@@ -50,19 +50,13 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-      $now = Carbon::today();
-
-      if($request->tanggal < $now){
-        $request->session()->flash('message_gagal','Tanggal Jadwal Sudah Lewat');
-        return redirect()->back();
-      }
-      else{
         $data = new Transaksi($request->except("_token"));
-        $data->status = "Belum Mengupload Bukti Bayar";
+        $data->status = "Upload Bukti Bayar";
+        $data->id_user = \Auth::user()->id;
         $data->save();
         $request->session()->flash('message','Sukses Menambah Jadwal, Silahkan Mengupload Bukti Bayar');
         return redirect('transaksi');
-      }
+
     }
 
     /**
@@ -89,7 +83,7 @@ class TransaksiController extends Controller
      */
     public function edit($id)
     {
-        
+
     }
 
     /**
@@ -103,10 +97,9 @@ class TransaksiController extends Controller
     {
       $data = Transaksi::find($id);
 
-      $imageName = time().'.'.request()->foto->getClientOriginalExtension();
-      request()->background->move(public_path('images/bukti'), $imageName);
+      $imageName = time().'.'.request()->bukti->getClientOriginalExtension();
+      request()->bukti->move(public_path('assets/images/bukti'), $imageName);
       $data->bukti = $imageName;
-      $data->tanggal = $request->tanggal;
       $data->status = "Menunggu Konfirmasi";
       $data->save();
 

@@ -63,7 +63,13 @@ class TransaksiController extends Controller
   public function riwayat(){
     $no = 1;
     $active = ["","","active"];
-    $riwayat = Transaksi::all();
+    $riwayat = Transaksi::query()->orderBy('created_at', 'desc');
+
+    $pagination = 5;
+    $riwayat = $riwayat->paginate($pagination);
+    if( request()->has('page') && request()->get('page') > 1){
+      $counter += (request()->get('page')- 1) * $pagination;
+    }
 
     return view('admin.riwayat', compact('riwayat','active','no'));
   }

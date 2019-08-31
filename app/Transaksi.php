@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Transaksi extends Model
 {
     public $timestamps = true;
-    protected $fillable = ['id_user', 'id_paket', 'bukti', 'status'];
+    protected $fillable = ['id_user', 'id_paket', 'admin', 'tanggal', 'harga', 'bukti', 'status'];
 
     public function pakets()
     {

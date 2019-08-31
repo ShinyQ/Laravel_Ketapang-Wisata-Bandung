@@ -5,64 +5,70 @@
   .item{
     height: 200!important
   }
+
+  p{
+    font-size: 16px!important;
+  }
 </style>
   @if($data->id == 1)
+  <br> <br>
   <section class="transaksi-detail">
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 vertical-line">
-                    <div class="owl-carousel">
-                        <div class="item">
-                          <a href="" class="card-detailpaket">
-                            <img class="img-fluid" src="{{url('assets/images/wisata/1566520303.jpg')}}" width="auto" alt="">
-                            <p>Floating Market Lembang</p>
-                          </a>
+                  <br><h2 style="margin-bottom: -10px"> {{ $data->nama }} </h2>
+                  <div class="owl-carousel">
+                      <div class="item">
+                        <a href="" class="card-detailpaket">
+                          <img class="img-fluid" src="{{url('assets/images/wisata/1566520303.jpg')}}" width="auto" alt="">
+                          <p>Floating Market Lembang</p>
+                        </a>
+                      </div>
+                      <div class="item">
+                        <div class="card-detailpaket">
+                          <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                          <p>Farming House</p>
                         </div>
-                        <div class="item">
-                          <div class="card-detailpaket">
-                            <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
-                            <p>Farming House</p>
-                          </div>
+                      </div>
+                      <div class="item">
+                        <div class="card-detailpaket">
+                          <img class="img-fluid" src="{{url('assets/images/wisata/1566481584.jpg')}}" width="auto" alt="">
+                          <p>Gedung Sate</p>
                         </div>
-                        <div class="item">
-                          <div class="card-detailpaket">
-                            <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
-                            <p>Gedung Sate</p>
-                          </div>
+                      </div>
+                      <div class="item">
+                        <div class="card-detailpaket">
+                          <img class="img-fluid" src="{{url('assets/images/wisata/1566519008.jpg')}}" width="auto" alt="">
+                          <p>Alun - Alun Bandung</p>
                         </div>
-                        <div class="item">
-                          <div class="card-detailpaket">
-                            <img class="img-fluid" src="{{url('assets/images/wisata/1566519008.jpg')}}" width="auto" alt="">
-                            <p>Alun - Alun Bandung</p>
-                          </div>
+                      </div>
+                      <div class="item">
+                        <div class="card-detailpaket">
+                          <img class="img-fluid" src="{{url('assets/images/wisata/1566560914.jpg')}}" width="auto" alt="">
+                          <p>Gedung Asia Afrika</p>
                         </div>
-                        <div class="item">
-                          <div class="card-detailpaket">
-                            <img class="img-fluid" src="{{url('assets/images/wisata/1566560914.jpg')}}" width="auto" alt="">
-                            <p>Gedung Asia Afrika</p>
-                          </div>
-                        </div>
-                    </div>
+                      </div>
+                  </div>
                     <br>
                     <h3>Destinasi Wisata</h3>
                     <div class="detail-content-pkt">
-                        <ul class="destinasi-pkt">
-                            <li>Floating Market Lembang
-                              <span>Rp. 500.000,-</span>
-                            </li>
-                            <li>Farmhouse Lembang
-                              <span>Rp. 450.000,-</span>
-                            </li>
-                            <li>Gedung Sate
-                              <span>Rp. 250.000,-</span>
-                            </li>
-                            <li>Alun – Alun Bandung
-                              <span>Rp. 200.000,-</span>
-                            </li>
-                            <li>Gedung Asia Afrika
-                              <span>Rp. 200.000,-</span>
-                            </li>
-                        </ul>
+                      <ul class="destinasi-pkt">
+                          <li>Floating Market Lembang
+                            <span>Rp. 500.000,-</span>
+                          </li>
+                          <li>Farmhouse Lembang
+                            <span>Rp. 450.000,-</span>
+                          </li>
+                          <li>Gedung Sate
+                            <span>Rp. 250.000,-</span>
+                          </li>
+                          <li>Alun – Alun Bandung
+                            <span>Rp. 200.000,-</span>
+                          </li>
+                          <li>Gedung Asia Afrika
+                            <span>Rp. 200.000,-</span>
+                          </li>
+                      </ul>
                     </div>
 
                     <div class="map-pkt" id="mapPaket"></div>
@@ -73,17 +79,24 @@
                       <div class="booking-section">
                           <div class="container-fluid">
                               <div class="row">
+                                  <form role="form" action="/transaksi" method="POST">
+                                  @csrf
                                   <div class="col-12">
                                       <h4>Total</h4>
                                       <p>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</p>
                                   </div>
+                                  <input type="hidden" name="harga" value="{{$data->harga}}">
                                   <div class="col-12">
+                                    <input name="tanggal" type="date" class="form-control" min="<?php echo date("Y-m-d"); ?>">
+                                    <input type="hidden" name="id_paket" value="{{ $data->id }}">
+                                        <br>
                                         @if(Auth::user())
-                                        <button class="btn btn-primary">Booking Now</button>
+                                        <button type="submit" class="btn btn-primary"> Booking Now </button>
                                         @else
-                                        <button class="btn btn-primary">Login Untuk Booking</button>
+                                        <a href="/login" class="btn btn-primary">Login Untuk Booking</a>
                                         @endif
                                   </div>
+                                </form>
                               </div>
                           </div>
                       </div>
@@ -99,6 +112,7 @@
           <div class="container">
               <div class="row">
                   <div class="col-lg-9 vertical-line">
+                      <br><br><h2 style="margin-bottom: -10px"> {{ $data->nama }} </h2>
                       <div class="owl-carousel">
                           <div class="item">
                             <div class="card-detailpaket">
@@ -114,7 +128,7 @@
                           </div>
                           <div class="item">
                             <div class="card-detailpaket">
-                              <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                            <img class="img-fluid" src="{{url('assets/images/wisata/1566481584.jpg')}}" width="auto" alt="">
                               <p>Gedung Sate</p>
                             </div>
                           </div>
@@ -170,17 +184,24 @@
                         <div class="booking-section">
                             <div class="container-fluid">
                                 <div class="row">
+                                    <form role="form" action="/transaksi" method="POST">
+                                    @csrf
                                     <div class="col-12">
                                         <h4>Total</h4>
                                         <p>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</p>
                                     </div>
+                                    <input type="hidden" name="harga" value="{{$data->harga}}">
                                     <div class="col-12">
+                                      <input name="tanggal" type="date" class="form-control" min="<?php echo date("Y-m-d"); ?>">
+                                      <input type="hidden" name="id_paket" value="{{ $data->id }}">
+                                          <br>
                                           @if(Auth::user())
-                                          <button class="btn btn-primary">Booking Now</button>
+                                          <button type="submit" class="btn btn-primary"> Booking Now </button>
                                           @else
-                                          <button class="btn btn-primary">Login Untuk Booking</button>
+                                          <a href="/login" class="btn btn-primary">Login Untuk Booking</a>
                                           @endif
                                     </div>
+                                  </form>
                                 </div>
                             </div>
                         </div>
@@ -196,6 +217,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 vertical-line">
+                      <br><br><h2 style="margin-bottom: -10px"> {{ $data->nama }} </h2>
                         <div class="owl-carousel">
                             <div class="item">
                               <div class="card-detailpaket">
@@ -211,7 +233,7 @@
                             </div>
                             <div class="item">
                               <div class="card-detailpaket">
-                                <img class="img-fluid" src="{{url('assets/images/wisata/1566475566.jpg')}}" width="auto" alt="">
+                                <img class="img-fluid" src="{{url('assets/images/wisata/1566481584.jpg')}}" width="auto" alt="">
                                 <p>Gedung Sate</p>
                               </div>
                             </div>
@@ -285,17 +307,24 @@
                           <div class="booking-section">
                               <div class="container-fluid">
                                   <div class="row">
+                                      <form role="form" action="/transaksi" method="POST">
+                                      @csrf
                                       <div class="col-12">
                                           <h4>Total</h4>
                                           <p>Rp{{ number_format($data->harga ,2,',','.') }}- /pax</p>
                                       </div>
+                                      <input type="hidden" name="harga" value="{{$data->harga}}">
                                       <div class="col-12">
+                                        <input name="tanggal" type="date" class="form-control" min="<?php echo date("Y-m-d"); ?>">
+                                        <input type="hidden" name="id_paket" value="{{ $data->id }}">
+                                            <br>
                                             @if(Auth::user())
-                                            <button class="btn btn-primary">Booking Now</button>
+                                            <button type="submit" class="btn btn-primary"> Booking Now </button>
                                             @else
-                                            <button class="btn btn-primary">Login Untuk Booking</button>
+                                            <a href="/login" class="btn btn-primary">Login Untuk Booking</a>
                                             @endif
                                       </div>
+                                    </form>
                                   </div>
                               </div>
                           </div>
@@ -304,10 +333,20 @@
                 </div>
             </div>
         </section>
-
     @else
 
     @endif
+    <!-- Footer  -->
+    <section style="margin-top:100px!important;" class="footer">
+        <div class="container">
+          <center>
+            <img src="{{url('assets/images/logo/KetapangLogo-White.png')}}" width="150px" alt="Logo">
+             <font color="#f5f5f5" class="font-segoe text-center nopadding">&#8212; &nbsp; Copyright &copy; 2019 - Ketapang - Telkom University</p>
+          </center>
+        </div>
+    </section>
+    <!-- End of Footer  -->
+
     <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
     <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
         <script src="{{url('assets/scripts/owl.carousel.min.js')}}"></script>
@@ -376,7 +415,7 @@ $('.owl-carousel').owlCarousel({
       stagePadding:10,
     },
     1000: {
-      items: 4
+      items: 3
     }
   }
 });

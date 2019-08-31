@@ -3,12 +3,15 @@
 @section('konten')
 <section class="transaksi">
   <div class="container">
-  <h2>
+  <h2 style="margin-bottom: 30px">
     Transaksi
   </h2>
+  @if (Session::has('message'))
+    <h5><font color="green"> {{ Session::get('message') }}</font></h5><br>
+  @endif
       <div class="row">
           @forelse($transaksi as $data)
-          <div class="col-lg-12">
+          <div class="col-lg-12" style="margin-top: 20px!important;">
               <div class="card-transaksi">
                   <div class="row">
                       <div class="col-lg-3">
@@ -47,6 +50,8 @@
                                                   <strong><span style="color:red">{{ $data->status }}</span></strong>
                                                   @elseif($data->status == "Jadwal Wisata Diterima")
                                                   <strong><span style="color:green">{{ $data->status }}</span></strong>
+                                                  @elseif($data->status == "Upload Bukti Bayar")
+                                                  <strong><span style="color:red">{{ $data->status }}</span></strong>
                                                   @else
                                                   <strong><span style="color:orange">{{ $data->status }}</span></strong>
                                                   @endif

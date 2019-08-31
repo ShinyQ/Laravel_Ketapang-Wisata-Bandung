@@ -35,7 +35,7 @@ class WisataController extends Controller
     $wisata = Wisatas::query()->latest();
     if (request()->has("search") && strlen(request()->query("search")) >= 1) {
       $wisata->where(
-        "wisata.nama", "like", "%" . request()->query("search") . "%"
+        "wisatas.nama", "like", "%" . request()->query("search") . "%"
       );
     }
 

@@ -13,24 +13,6 @@
     </section>
     <!-- End of Detail Hero -->
 
-    <!-- Detail Tabs -->
-    <section class="hero-tabs">
-        <div class="container">
-            <ul class="nav nav-fill nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Deskripsi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="detail-gallery.html">Galeri</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">QnA</a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- End of Detail Tabs -->
-
     <!-- Detail Content (Deskripsi) -->
     <section class="deskripsi-detail">
         <div class="container">

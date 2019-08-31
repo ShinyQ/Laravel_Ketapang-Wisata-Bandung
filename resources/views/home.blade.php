@@ -142,7 +142,7 @@
                             <p class="font-segoe color-black text-center  bg-grey color-disable">De’Ranch Lembang</p>
                             <p class="font-segoe color-black text-center color-disable">Cihampelas Walk</p>
                             <p class="font-segoe color-black text-center  bg-grey color-disable">Kebun Begonia</p>
-                            <a href="/paket/1" target="_blank">
+                            <a href="/paket/1">
                               <button class="btn btn-primary">Detail Paket</button>
                             </a>
                         </div>
@@ -169,7 +169,7 @@
                             <p class="font-segoe color-black text-center  bg-grey">De’Ranch Lembang</p>
                             <p class="font-segoe color-black text-center color-disable">Cihampelas Walk</p>
                             <p class="font-segoe color-black text-center  bg-grey color-disable">Kebun Begonia</p>
-                            <a href="/paket/2" target="_blank">
+                            <a href="/paket/2">
                               <button class="btn btn-primary">Detail Paket</button>
                             </a>
                         </div>
@@ -196,7 +196,7 @@
                             <p class="font-segoe color-black text-center  bg-grey">De’Ranch Lembang</p>
                             <p class="font-segoe color-black text-center">Cihampelas Walk</p>
                             <p class="font-segoe color-black text-center  bg-grey">Kebun Begonia</p>
-                            <a href="/paket/3" target="_blank">
+                            <a href="/paket/3">
                               <button class="btn btn-primary">Detail Paket</button>
                             </a>
                         </div>

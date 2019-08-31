@@ -10,9 +10,22 @@
                 <button class="btn btn-primary ">Add Wisata</button>
             </a>
         </div>
+        <form style="margin-left: -2px; width: 50%; margin-bottom: 30px;" class="navbar-search">
+              <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-search"></i></span>
+                      </div>
+                      <form action="/wisata" method="GET">
+                        <input class="form-control" type="text" name="search" value="{{ request()->get('search') }}" placeholder="Cari Wisata">
+                      </form>
+                  </div>
+              </div>
+            </form>
           @if (Session::has('message'))
             <h5><font color="green"> {{ Session::get('message') }}</font></h5><br>
           @endif
+
         <div class="content-admin">
             <div class="row">
                 @foreach($wisata as $data)
