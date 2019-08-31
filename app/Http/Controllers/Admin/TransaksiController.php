@@ -68,7 +68,7 @@ class TransaksiController extends Controller
     $pagination = 5;
     $riwayat = $riwayat->paginate($pagination);
     if( request()->has('page') && request()->get('page') > 1){
-      $counter += (request()->get('page')- 1) * $pagination;
+      $no += (request()->get('page')- 1) * $pagination;
     }
 
     return view('admin.riwayat', compact('riwayat','active','no'));
