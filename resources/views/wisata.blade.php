@@ -40,6 +40,7 @@
                           <a href="/wisata/{{$data->id}}">
                           <div class="wisata-card" style="background-image: url({{asset('assets/images/wisata')}}/{{ $data->background }})">
                               <div class="wisata-card-desc">
+                                  <span style="display:none">{{$data->id}}^{{asset('assets/images/wisata')}}/{{ $data->background }}</span>
                                   <h5>{{ $data->nama }}</h5>
                                   <p>{{ $data->alamat }}</p>
                               </div>
@@ -67,6 +68,9 @@
     <script>
 
     let locationArr = [];
+    let locationId = [];
+    let locationImg = []
+    let locationInfo = []
 
       $('#btn-maps').click(()=>{
         $('#btn-maps').addClass('active');
@@ -80,7 +84,19 @@
         $('.list-wisata-container').css("display",'block');
         $('.map-wisata').css("display",'none');
       })
+
+    $(".wisata-card-desc h5").each(function(a){
+      // console.log($(this).text())
+      locationInfo.push($(this).text())
+    })
+    $(".wisata-card-desc span").each(function(a){
+      const splitString = $(this).text().split("^")
+      // console.log(splitString)
+      locationId.push(splitString[0])
+      locationImg.push(splitString[1])
+    })
     $(".wisata-card-desc p").each(function(a){
+      // console.log($(this).text())
       locationArr.push($(this).text())
     })
     // Function to determine the size of the map div
@@ -105,7 +121,11 @@
 
     function geoLocation(geocoder, mapResults) {
 
-      locationArr.map(location=>{
+      
+
+        
+
+      locationArr.map((location, i)=>{
         geocoder.geocode({ address: location }, function(res, status) {
         if (status == "OK") {
             // mapResults.setCenter(res[0].geometry.location);
@@ -114,13 +134,36 @@
             position: res[0].geometry.location
           });
 
+          const contentString = `
+            <div style="min-width:500px">
+              <div style="height:100px; background:url(${locationImg[i]}); background-size:cover">
+              </div>
+              <h5 style="font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+    color: #404244; margin-top:16px">
+              ${locationInfo[i]}
+              </h5>
+              <p>${location}</p>
+              <a href="/wisata/${locationId[i]}" class="btn btn-primary" style="width:100%">Detail</a>
+            </div>
+          `;
+          const infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth:800
+           });
+
+          // console.log(contentString)
+
           marker.addListener('click',()=>{
-              console.log('clicked')
-              mapResults.setZoom(15);
+              // console.log('clicked')
+              
+              // mapResults.setZoom(15);
               mapResults.setCenter(res[0].geometry.location)
+              infowindow.open(mapResults, marker);
           })
         } else {
-          console.log(status);
+          // console.log(status);
         }
       });
       })
