@@ -74,11 +74,9 @@
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="owl-carousel owl-theme anu">
               <div class="item">
-                <a href="#">
                   <div class="item-image">
-                    <img class="item-image " src="{{asset('assets/images/wisata')}}/{{ $data->background }}"  width="auto"  alt="">
+                    <img class="item-image " src="{{asset('assets/images/wisata')}}/{{ $data->background }}"  width="auto" alt="">
                   </div>
-                </a>
               </div>
             </div>
           <div>

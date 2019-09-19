@@ -1171,14 +1171,13 @@ input:focus + label {
 }
 
 .anu .item{
-  height: auto!important;
+  height: 250px!important;
   margin-bottom: 50px;
 }
 .anu .item-image{
   width: auto;
-  height: auto;
+  min-height: 250px!important;
 }
-
 
 .btn-submit-wisata {
     height: 50px;
