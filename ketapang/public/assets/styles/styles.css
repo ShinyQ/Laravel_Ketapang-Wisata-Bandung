@@ -1170,6 +1170,16 @@ input:focus + label {
     border: 1px solid #dee2e6;
 }
 
+.anu .item{
+  height: auto!important;
+  margin-bottom: 50px;
+}
+.anu .item-image{
+  width: auto;
+  height: auto;
+}
+
+
 .btn-submit-wisata {
     height: 50px;
     margin-top: 20px;

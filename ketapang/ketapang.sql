@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Agu 2019 pada 18.36
+-- Waktu pembuatan: 19 Sep 2019 pada 09.05
 -- Versi server: 10.1.40-MariaDB
 -- Versi PHP: 7.3.5
 
@@ -21,6 +21,20 @@ SET time_zone = "+00:00";
 --
 -- Database: `ketapang`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` int(11) NOT NULL,
+  `foto` varchar(100) NOT NULL,
+  `id_wisata` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -195,7 +209,8 @@ INSERT INTO `transaksis` (`id`, `id_user`, `admin`, `id_paket`, `tanggal`, `harg
 (3, 3, '', 2, '2019-08-26', '1500000000', 'bukti.jpeg', 'Menunggu Konfirmasi', NULL, '2019-08-25 23:37:21'),
 (4, 3, NULL, 3, '2019-08-31', '2200000', NULL, 'Upload Bukti Bayar', '2019-08-31 08:11:42', '2019-08-31 08:11:42'),
 (5, 3, 'Ketapang Admin', 1, '2019-08-31', '1600000', '1567267634.jpg', 'Jadwal Wisata Diterima', '2019-08-31 08:32:26', '2019-08-31 09:09:03'),
-(6, 3, NULL, 2, '2019-09-02', '1750000', NULL, 'Upload Bukti Bayar', '2019-08-31 08:32:45', '2019-08-31 08:32:45');
+(6, 3, NULL, 2, '2019-09-02', '1750000', NULL, 'Upload Bukti Bayar', '2019-08-31 08:32:45', '2019-08-31 08:32:45'),
+(7, 4, NULL, 2, '2019-09-27', '1750000', NULL, 'Upload Bukti Bayar', '2019-09-18 19:23:13', '2019-09-18 19:23:13');
 
 -- --------------------------------------------------------
 
@@ -207,6 +222,7 @@ CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `telepon` varchar(13) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `role` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -222,9 +238,10 @@ CREATE TABLE `users` (
 -- Dumping data untuk tabel `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `password`, `token`, `provider`, `provider_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'kurniadi wijaya', 'kurniadiahmadwijaya@gmail.com', 'admin', '2019-08-22 04:57:25', '', 'TpNsv9Nr2VyH5V1jWDehrLHYjKinlxHmJU6EWHj3', 'google', '107828218356289425039', 'L5qiPCKDQxnJjYBD9aJaPAR5fFuduKG6Tc35kYVfDVlQR0dGAC3wUT5ITfxf', '2019-08-22 04:57:25', '2019-08-22 04:57:25'),
-(3, 'Ketapang Admin', 'ketapangbdg@gmail.com', 'admin', '2019-08-22 05:01:41', '$2y$10$E92FEj3RBinVfx0rKa8RcOlBS.52PSmH1O6bbys0oMHrBiDnEmzxW', 'cCSubulVbDVEkCQ1Y7QzfYNvMeZLO0RjzpeDYiOy', NULL, NULL, NULL, '2019-08-22 05:01:25', '2019-08-22 05:01:41');
+INSERT INTO `users` (`id`, `name`, `email`, `telepon`, `role`, `email_verified_at`, `password`, `token`, `provider`, `provider_id`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'kurniadi wijaya', 'kurniadiahmadwijaya@gmail.com', '08124047478', 'admin', '2019-08-22 04:57:25', 'domino12345', 'TpNsv9Nr2VyH5V1jWDehrLHYjKinlxHmJU6EWHj3', 'google', '107828218356289425039', 'X83wBqjZSnwVBYp9ZSmo3bc9lnuO3Hz5Kvb5Pt7xVjPbJkktnJkPLfgGlMi8', '2019-08-22 04:57:25', '2019-09-18 18:56:02'),
+(3, 'Ketapang Admin', 'ketapangbdg@gmail.com', '0', 'admin', '2019-08-22 05:01:41', '$2y$10$E92FEj3RBinVfx0rKa8RcOlBS.52PSmH1O6bbys0oMHrBiDnEmzxW', 'cCSubulVbDVEkCQ1Y7QzfYNvMeZLO0RjzpeDYiOy', NULL, NULL, NULL, '2019-08-22 05:01:25', '2019-08-22 05:01:41'),
+(4, 'Kurniadi Ahmad Wijaya', 'kurniadi_wijaya_25rpl@student.smktelkom-mlg.sch.id', '08124047478', 'user', '2019-09-18 19:13:00', 'hallo', 'mBV5wfaeitHmeGpuLzENmujKJRpZG8jNOJ0dI0uW', 'google', '107655273057335375377', 'pRDoatwxI1ByEoPolWnzPzYRj3dxLvialKHYAw1B9nl1LXIV84fChKcFZFNI', '2019-09-18 19:13:00', '2019-09-18 19:29:17');
 
 -- --------------------------------------------------------
 
@@ -268,6 +285,12 @@ INSERT INTO `wisatas` (`id`, `nama`, `deskripsi`, `alamat`, `waktu`, `tanggal_di
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `galleries`
+--
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `migrations`
@@ -345,6 +368,12 @@ ALTER TABLE `wisatas`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
@@ -372,19 +401,19 @@ ALTER TABLE `pakets`
 -- AUTO_INCREMENT untuk tabel `transaksis`
 --
 ALTER TABLE `transaksis`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `wisatas`
 --
 ALTER TABLE `wisatas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
