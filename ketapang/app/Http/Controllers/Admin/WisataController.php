@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Wisatas;
+use App\Gallery;
 use Session;
 use Illuminate\Http\Request;
 use App\Http\Requests\WisataValidation;
@@ -134,4 +135,42 @@ class WisataController extends Controller
       return abort('404');
     }
   }
+
+  public function gallery($id)
+  {
+    $id_gallery = $id;
+    $counter = 1;
+    $gallery = Gallery::query()->where('id_wisata', $id)->orderBy('id', 'desc');
+    $pagination = 8;
+    $gallery = $gallery->paginate($pagination);
+    if( request()->has('page') && request()->get('page') > 1){
+      $counter += (request()->get('page')- 1) * $pagination;
+    }
+    $active = ["active","",""];
+    return view('admin.gallery', compact('gallery','counter', 'active','id_gallery'));
+  }
+
+  public function galleryAdd($id, Request $request)
+  {
+    $data = new Gallery($request->except("_token"));
+    $imageName = time().'.'.request()->foto->getClientOriginalExtension();
+    request()->foto->move(public_path('assets/images/galeri'), $imageName);
+    $data->foto = $imageName;
+    $data->id_wisata = $id;
+    $data->save();
+
+    $request->session()->flash('message','Berhasil Menambahkan Foto');
+    return redirect()->back();
+  }
+
+  public function galleryDelete($id)
+  {
+    $data = Gallery::find($id);
+    $data->delete();
+    if($data) {
+        Session::flash('message','Berhasil menghapus Data Wisata');
+    }
+    return redirect()->back();
+  }
+
 }

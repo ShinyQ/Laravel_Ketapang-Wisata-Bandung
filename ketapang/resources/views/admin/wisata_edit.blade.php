@@ -29,6 +29,8 @@
                              <input name="background" type="file" class="custom-file-input" id="customFile">
                              <label class="custom-file-label" for="customFile">Pilih file</label>
                          </div>
+                         <br><br>
+                         <a href="/admin/wisata/{{ $data->id }}/gallery" style="width:100%!important" class="btn btn-primary">Kelola Galeri</a>
                      </div>
                  </div>
                </div>
@@ -110,6 +112,7 @@
              </div>
          </div>
      </div>
+     <br><br>
  </div>
  <!-- End of Wisata Content -->
 
