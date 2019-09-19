@@ -224,11 +224,11 @@
 <script>
 // Owl Carousel
 $('.owl-carousel').owlCarousel({
-  loop: true,
+  loop: false,
   margin: 10,
   dots: false,
   nav: false,
-  autoplay:true,
+  autoplay:false,
   responsiveClass: true,
   responsive: {
     0: {
