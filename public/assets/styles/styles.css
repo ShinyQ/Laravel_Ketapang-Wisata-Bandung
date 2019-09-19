@@ -455,6 +455,14 @@ a:hover {
     min-height: 220px !important;
     max-height: 220px !important;
 }
+.anu .item{
+  height: auto!important;
+  margin-bottom: 50px;
+}
+.anu .item-image{
+  width: auto;
+  height: auto;
+}
 /* End of Card */
 
 /* Start Transaksi */

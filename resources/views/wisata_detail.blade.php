@@ -66,6 +66,22 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h3 class="title-content text-center">Gallery</h3>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="owl-carousel owl-theme anu">
+              <div class="item">
+                <a href="#">
+                  <div class="item-image">
+                    <img class="item-image " src="{{asset('assets/images/wisata')}}/{{ $data->background }}"  width="auto"  alt="">
+                  </div>
+                </a>
+              </div>
+            </div>
+          <div>
+        </div>
         <div class="map-detail" id="map">
         </div>
     </section>
@@ -82,6 +98,7 @@
     <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
     <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
     <script src="{{url('assets/scripts/masonry.pkgd.min.js')}}"></script>
+    <script src="{{url('assets/scripts/owl.carousel.min.js')}}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYTqP6EacKcUYlnQaaGs2TlrKwAhUonoY&callback=initMap"
     async defer></script>
     <script>
@@ -91,7 +108,29 @@
       columnWidth: 350,
       gutter: 10
     });
-
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      dots: false,
+      nav: false,
+      autoplay:true,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          margin: 2,
+          stagePadding: 10,
+        },
+        600: {
+          items: 3,
+          margin: 10,
+          stagePadding: 40,
+        },
+        1000: {
+          items: 4
+        }
+      }
+    });
     // AIzaSyDYTqP6EacKcUYlnQaaGs2TlrKwAhUonoY
     function initMap() {
       const map = new google.maps.Map(document.getElementById("map"), {
@@ -118,6 +157,9 @@
         }
       });
     }
+    </script>
+    <script>
+
     </script>
     </html>
 @endsection
