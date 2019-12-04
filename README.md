@@ -23,7 +23,7 @@
 - Melihat Berita Wisata Bandung
 
 ## Tech Stack
-- [Laravel 5.5](https://github.com/laravel/laravel)
+- [Laravel 5.6](https://github.com/laravel/laravel)
 
 ## Proses Pengembangan Aplikasi
 Aplikasi ini telah digunakan pada kompetisi Web Development di Universitas Negeri Sebelas Maret dengan memperoleh juara 2. Dalam pembuatannya aplikasinya ini belum terlalu menerapkan konsep development yang baik dan benar, adapun beberapa tahap dalam fase development aplikasi ini adalah :
@@ -49,19 +49,22 @@ Aplikasi ini telah digunakan pada kompetisi Web Development di Universitas Neger
         <div>
          <img width="222px" src="https://i.imgur.com/pndhVK1.png">
      </div>
-          <b>Muhammad Ilham Mubarak</b>
+            <b><a href="https://github.com/milhamm">Muhammad Ilham Mubarak</a></b><br>
+            Front-End Engineer
         </td>
         <td align="center" valign="middle">
         <div>
             <img width="222px" src="https://i.imgur.com/MFNoivL.png">
         </div>
-        <b>Kurniadi Ahmad Wijaya</b>
+            <b><a href="https://github.com/ShinyQ">Kurniadi Ahmad Wijaya</a></b><br>
+            Backend-End Engineer
         </td>
         <td align="center" valign="middle">
         <div>
             <img width="222px" src="https://i.imgur.com/8exxaRQ.png">
         </div>
-        <b>Muhammad Rezki Ananda</b>
+            <b><a href="https://github.com/rezkiananda25">Muhammad Rezki Ananda</a></b><br>
+            Front-End Engineer
         </td>
   </table>
 </p>
